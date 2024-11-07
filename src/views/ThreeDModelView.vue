@@ -22,7 +22,6 @@ const openIntro = () => {
         class="w-full h-full object-cover cursor-pointer"
         src="https://cdnb.artstation.com/p/assets/images/images/052/116/789/large/yize-huang-plastic-wrap-protection-laocoon-and-his-sons.jpg?1658985491"
       />
-
       <infoTag />
     </section>
     <section
@@ -58,20 +57,23 @@ const openIntro = () => {
         loop
         muted
       ></video>
+      <infoTag />
     </section>
 
     <section
       id="4"
-      class="flex justify-center items-center w-full h-screen bg-gradient-to-b from-[#010e68] to-[#4b14ff]"
+      class="relative flex justify-center items-center w-full h-screen bg-gradient-to-b from-[#010e68] to-[#4b14ff]"
     >
-      <img
-        src="@/assets/img/3Droom.png"
-        class="cursor-pointer h-4/5 drop-shadow-2xl"
-      />
+      <div
+        class="bg-#2c2726 cursor-pointer w-3/5 h-4/5 overflow-auto touch-auto drop-shadow-2xl"
+      >
+        <img src="@/assets/img/3Droom.png" class="w-[100%] max-w-none h-auto" />
+      </div>
+
+      <infoTag />
     </section>
   </div>
 
-  <!--         tags              -->
   <!--         tags              -->
   <!--         tags              -->
   <!--         tags              -->

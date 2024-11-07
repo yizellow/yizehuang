@@ -41,7 +41,7 @@ const openInfo = () => {
 
   <div
     id="tag"
-    class="p-3 flex row items-center fixed bottom-20 right-5 -translate-y-1/2 z-10 hover:animate-bounce cursor-pointer"
+    class=" hover:opacity-35 backdrop-blur-sm h-10 p-1 flex row items-center absolute top-3/4 right-8 -translate-y-1/2 z-10 cursor-pointer bg-white/5"
     v-if="showInfoTag"
     @click="openInfo"
   >
@@ -51,7 +51,7 @@ const openInfo = () => {
       color="white"
       class="mr-2 opacity-70 cursor-pointer"
     />
-    <div class="text-green-400 opacity-80 text-2xl">Info</div>
+    <div class="text-green-400 opacity-80 text-2xl m-1">Info</div>
   </div>
 </template>
 <style scoped>
