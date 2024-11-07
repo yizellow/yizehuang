@@ -4,7 +4,6 @@ import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <p>ddd</p>
   <Navbar />
   <main class="pt-14">
     <RouterView />
