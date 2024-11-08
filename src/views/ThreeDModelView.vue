@@ -16,8 +16,8 @@ const openIntro = () => {
 </script>
 
 <template>
-  <div class="-mt-14">
-    <section id="1" class="relative">
+  <div class="-mt-14 snap-y">
+    <section id="1" class="relative snap-center">
       <img
         class="w-full h-full object-cover cursor-pointer"
         src="https://cdnb.artstation.com/p/assets/images/images/052/116/789/large/yize-huang-plastic-wrap-protection-laocoon-and-his-sons.jpg?1658985491"
@@ -26,7 +26,7 @@ const openIntro = () => {
     </section>
     <section
       id="2"
-      class="pr-[100px] relative w-full h-[600px] overflow-hidden flex items-center justify-start bg-right bg-[#e5e4e1]"
+      class="snap-center pr-[100px] relative w-full h-[600px] overflow-hidden flex items-center justify-start bg-right bg-[#e5e4e1]"
       style="
         background-image: url('https://cdna.artstation.com/p/assets/images/images/052/282/404/large/yize-huang-sde.jpg?1659416576');
         background-repeat: no-repeat;
@@ -46,7 +46,7 @@ const openIntro = () => {
     </section>
     <section
       id="3"
-      class="relative w-full h-screen"
+      class="snap-center relative w-full h-screen"
       style="background-color: #010e68"
     >
       <video
@@ -62,7 +62,7 @@ const openIntro = () => {
 
     <section
       id="4"
-      class="relative flex justify-center items-center w-full h-screen bg-gradient-to-b from-[#010e68] to-[#4b14ff]"
+      class="snap-center relative flex justify-center items-center w-full h-screen bg-gradient-to-b from-[#010e68] to-[#4b14ff]"
     >
       <div
         class="bg-#2c2726 cursor-pointer w-3/5 h-4/5 overflow-auto touch-auto drop-shadow-2xl"
