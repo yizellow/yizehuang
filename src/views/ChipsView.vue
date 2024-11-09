@@ -1,6 +1,13 @@
 <script setup></script>
 <template>
-  <div>
+  <div class="bg-neutral-900">
+    <section class="h-[692px] w-full flex items-center justify-center">
+      <img
+        class="w-3/4"
+        src="https://cdna.artstation.com/p/assets/images/images/081/756/450/large/yize-huang-.jpg?1731128444"
+      />
+    </section>
+
     <section>
       <div class="banner">
         <div class="slider" style="--quantity: 12">
@@ -85,32 +92,6 @@
   </div>
 </template>
 <style scoped>
-.banner {
-  text-align: certer;
-  overflow: hidden;
-  position: relative;
-}
-.banner .slider {
-  position: absolute;
-  width: 200px;
-  height: 250px;
-  top: 10%;
-  left: calc(50% -100px);
-  transform-style: preserve-3d;
-  transform: perspective(1000px);
-}
-.banner .slider .item {
-  position: absolute;
-  inset: 0 0 0 0;
-  transform: rotateY(calc(var(--position)-1) * (360 / var(--quantity)) * 1deg)
-    translateZ(550px);
-}
-.banner .slider .item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .banner {
   width: 100%;
   height: 100vh;
