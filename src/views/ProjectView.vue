@@ -8,6 +8,8 @@ import { RouterLink } from "vue-router";
     <RouterLink to="/Project/ThreeDModelView"
       ><button>3D Modeling</button></RouterLink
     >
+    <br />
+    <RouterLink to="/Project/Yizellow"><button>Yizellow</button></RouterLink>
   </main>
 </template>
 <style></style>
