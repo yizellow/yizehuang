@@ -244,58 +244,44 @@ jQuery(document).ready(function ($) {
       color="lightgray"
     />
   </section>
-  <section class="w-full h-[692px] bg-slate-200">
-    <div class="grid-wrapper">
-      <div>
-        <img
-          src="https://cdna.artstation.com/p/assets/images/images/081/883/882/large/yize-huang-2024-11-13-5-25-22.jpg?1731489978"
-        />
-      </div>
-      <div>
-        <img
-          src="https://cdna.artstation.com/p/assets/images/images/081/883/884/large/yize-huang-2024-11-13-5-24-19.jpg?1731489983"
-        />
-      </div>
-      <div>
-        <img
-          src="https://cdnb.artstation.com/p/assets/images/images/081/883/885/large/yize-huang-2024-11-13-5-24-11.jpg?1731489989"
-        />
-      </div>
-      <div>
-        <img
-          src="https://cdnb.artstation.com/p/assets/images/images/081/883/887/large/yize-huang-2024-11-13-5-24-00.jpg?1731489996"
-        />
-      </div>
-      <div>
-        <img
-          src="https://cdna.artstation.com/p/assets/images/images/081/883/890/large/yize-huang-2024-11-13-5-23-43.jpg?1731490003"
-        />
-      </div>
-      <div>
-        <img
-          src="https://cdnb.artstation.com/p/assets/images/images/081/883/895/large/yize-huang-2024-11-13-5-23-32.jpg?1731490008"
-        />
-      </div>
-      <div>
-        <img
-          src="https://cdna.artstation.com/p/assets/images/images/081/883/896/large/yize-huang-2024-11-13-5-24-27.jpg?1731490014"
-        />
-      </div>
-      <div>
-        <img
-          src="https://cdnb.artstation.com/p/assets/images/images/081/883/897/large/yize-huang-2024-11-13-5-24-39.jpg?1731490018"
-        />
-      </div>
-      <div>
-        <img
-          src="https://cdna.artstation.com/p/assets/images/images/081/883/898/large/yize-huang-2024-11-13-5-24-53.jpg?1731490026"
-        />
-      </div>
-      <div>
-        <img
-          src="https://cdna.artstation.com/p/assets/images/images/081/883/902/large/yize-huang-2024-11-13-5-25-02.jpg?1731490032"
-        />
-      </div>
+  <section
+    class="w-full h-[692px] p-5 flex items-center justify-center flex-col"
+  >
+    <p class="text-2xl mb-5">Tattoo</p>
+    <div
+      id="gridBox"
+      class="w-full h-full grid grid-cols-5 grid-rows-3 gap-6 p-3"
+    >
+      <div
+        class="col-span-1 row-span-2 gridImg bg-[url('https://cdna.artstation.com/p/assets/images/images/081/883/882/large/yize-huang-2024-11-13-5-25-22.jpg?1731489978')]"
+      ></div>
+      <div
+        class="row-span-1 col-span-1 gridImg bg-[url('https://cdna.artstation.com/p/assets/images/images/081/883/884/large/yize-huang-2024-11-13-5-24-19.jpg?1731489983')]"
+      ></div>
+      <div
+        class="col-span-1 row-span-2 gridImg bg-[url('https://cdna.artstation.com/p/assets/images/images/081/883/890/large/yize-huang-2024-11-13-5-23-43.jpg?1731490003')]"
+      ></div>
+      <div
+        class="row-span-1 col-span-1 gridImg bg-[url('https://cdnb.artstation.com/p/assets/images/images/081/883/885/large/yize-huang-2024-11-13-5-24-11.jpg?1731489989')]"
+      ></div>
+      <div
+        class="col-span-1 row-span-1 gridImg bg-[url('https://cdnb.artstation.com/p/assets/images/images/081/883/887/large/yize-huang-2024-11-13-5-24-00.jpg?1731489996')]"
+      ></div>
+      <div
+        class="col-span-1 row-span-2 gridImg bg-[url('https://cdnb.artstation.com/p/assets/images/images/081/883/895/large/yize-huang-2024-11-13-5-23-32.jpg?1731490008')]"
+      ></div>
+      <div
+        class="col-span-1 row-span-2 gridImg bg-[url('https://cdna.artstation.com/p/assets/images/images/081/883/898/large/yize-huang-2024-11-13-5-24-53.jpg?1731490026')]"
+      ></div>
+      <div
+        class="col-span-1 row-span-2 gridImg bg-[url('https://cdnb.artstation.com/p/assets/images/images/081/883/897/large/yize-huang-2024-11-13-5-24-39.jpg?1731490018')]"
+      ></div>
+      <div
+        class="col-span-1 row-span-1 gridImg bg-[url('https://cdna.artstation.com/p/assets/images/images/081/883/896/large/yize-huang-2024-11-13-5-24-27.jpg?1731490014')]"
+      ></div>
+      <div
+        class="col-span-1 row-span-1 gridImg bg-[url('https://cdnb.artstation.com/p/assets/images/images/081/896/775/large/yize-huang-2024-11-14-12-09-44.jpg?1731514213')]"
+      ></div>
     </div>
   </section>
 </template>
@@ -320,49 +306,22 @@ jQuery(document).ready(function ($) {
   width: 300px;
   height: 300px;
   margin: 20px;
-  background-color: aliceblue;
   border-radius: 3px;
   overflow: hidden;
   cursor: pointer;
   object-fit: cover;
 }
 /* ******************************** */
-
-.grid-wrapper img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-  display: inline-block;
-}
-.grid-wrapper > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.grid-wrapper > div > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.gridImg {
   border-radius: 5px;
+  background-color: aqua;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-.grid-wrapper {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-flow: 200px;
-  grid-auto-flow: dense;
-}
-
-.grid-wrapper .wide {
-  grid-column: span 2;
-}
-.grid-wrapper .tall {
-  grid-row: span 2;
-}
-.grid-wrapper .big {
-  grid-column: span 2;
-  grid-row: span 2;
-
+.gridImg:hover {
+  filter: blur(1px);
+  opacity: 0.8;
 }
 
 /* ******************************** */
