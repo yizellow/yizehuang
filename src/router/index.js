@@ -3,7 +3,7 @@ import HomeView from "@/views/HomeView.vue";
 import ProjectView from "@/views/ProjectView.vue";
 import AboutMeView from "@/views/AboutMe.vue";
 import ContactView from "@/views/Contact.vue";
-import ThreeDModelView from "@/views/Projects/ThreeDModelView.vue";
+import dddView from "@/views/Projects/dddView.vue";
 import ChipsView from "@/views/Projects/ChipsView.vue";
 import YizellowView from "@/views/Projects/YizellowView.vue";
 
@@ -38,9 +38,9 @@ const router = createRouter({
       component: ChipsView,
     },
     {
-      path: "/Project/ThreeDModel",
-      name: "ThreeDModel",
-      component: ThreeDModelView,
+      path: "/Project/ddd",
+      name: "ddd",
+      component: dddView,
     },
     {
       path: "/Project/Yizellow",

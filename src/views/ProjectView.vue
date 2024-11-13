@@ -5,9 +5,7 @@ import { RouterLink } from "vue-router";
   <main class="bg-sky-900">
     <RouterLink to="/Project/Chips"><button>Chips</button></RouterLink>
     <br />
-    <RouterLink to="/Project/ThreeDModelView"
-      ><button>3D Modeling</button></RouterLink
-    >
+    <RouterLink to="/Project/ddd"><button>3D Modeling</button></RouterLink>
     <br />
     <RouterLink to="/Project/Yizellow"><button>Yizellow</button></RouterLink>
   </main>
