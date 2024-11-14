@@ -1,135 +1,64 @@
 <script setup></script>
+<script setup></script>
 <template>
-  <div class="bg-neutral-900">
-    <section class="h-[692px] w-full flex items-center justify-center">
-      <img
-        class="w-3/4"
-        src="https://cdna.artstation.com/p/assets/images/images/081/756/450/large/yize-huang-.jpg?1731128444"
-      />
-    </section>
+  <section
+    class="relative w-full h-[692px] flex justify-center items-center z-0"
+  >
+    <video
+      class="w-full h-full bg-neutral-900 absolute z-1"
+      src="@/assets/img/ChipsImg/classic_tv_fin_1.mp4"
+      autoplay
+      loop
+      muted
+    ></video>
+    <div id="tag" class="p-5 w-3/5 h-2/5 tagg absolute z-2">
+      <h1 class="text-gray-200">Chips</h1>
+      <p>
+        Trump enters his second term as president facing an unprecedented
+        combination of targeted cyber and physical threats. China has tried to
+        hack the communications of Trump and his inner circle. Iran has
+        allegedly tried to kill him. And during the campaign, Trump survived two
+        separate assassination attempts. Unwelcome guests have been a security
+        issue before at Mar-a-Lago. Since July, a Chinese national has been
+        arrested multiple times for trying to get onto the property. Yet sources
+        told CNN that there’s only so much they can do to ratchet up security
+        there. “We can’t put him in a bubble,” one Secret Service official told
+        CNN, adding that “everyone’s waiting” to see what the coming presidency
+        will look like and what security challenges lay ahead.
+      </p>
+    </div>
+  </section>
+  <section class="w-full h-[692px] bg-neutral-900 flex">
+    <img
+      class="w-3/5 auto  bg-center overflow-hidden"
+      src="@/assets/img/ChipsImg/cursor.png "
+    />
+  </section>
 
-    <section>
-      <div class="banner">
-        <div class="slider" style="--quantity: 12">
-          <div class="item" style="--position: 1">
-            <img
-              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
-              alt=""
-            />
-          </div>
-          <div class="item" style="--position: 2">
-            <img
-              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
-              alt=""
-            />
-          </div>
-          <div class="item" style="--position: 3">
-            <img
-              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
-              alt=""
-            />
-          </div>
-          <div class="item" style="--position: 4">
-            <img
-              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
-              alt=""
-            />
-          </div>
-          <div class="item" style="--position: 5">
-            <img
-              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
-              alt=""
-            />
-          </div>
-          <div class="item" style="--position: 6">
-            <img
-              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
-              alt=""
-            />
-          </div>
-          <div class="item" style="--position: 7">
-            <img
-              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
-              alt=""
-            />
-          </div>
-          <div class="item" style="--position: 8">
-            <img
-              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
-              alt=""
-            />
-          </div>
-          <div class="item" style="--position: 9">
-            <img
-              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
-              alt=""
-            />
-          </div>
-          <div class="item" style="--position: 10">
-            <img
-              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
-              alt=""
-            />
-          </div>
-          <div class="item" style="--position: 11">
-            <img
-              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
-              alt=""
-            />
-          </div>
-          <div class="item" style="--position: 12">
-            <img
-              src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg?sfvrsn=64942d53_4"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+  <section class="relative w-full h-[692px] bg-neutral-900 flex items-center">
+    <video
+      class="w-full h-[692px] bg-neutral-900 absolute z-1"
+      src="@/assets/img/ChipsImg/test55_fin.mp4"
+      autoplay
+      loop
+      muted
+    ></video>
+  </section>
+  <section class="w-full h-[692px] bg-neutral-900"></section>
 
-    <section class="h-[692px] bg-slate-500"></section>
-    <section class="h-[692px]"></section>
-  </div>
+  <section class="w-full h-[692px] bg-neutral-900"></section>
 </template>
-<style scoped>
-.banner {
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-}
-.banner .slider {
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  top: 30%;
-  left: calc(50% - 100px);
-  transform-style: preserve-3d;
-  transform: perspective(600px);
-  /* animation: autoRun 20s linear infinite; */
-  z-index: 2;
-}
-@keyframes autoRun {
-  from {
-    transform: perspective(1000px) rotateX(-0deg) rotateY(0deg);
-  }
-  to {
-    transform: perspective(1000px) rotateX(-0deg) rotateY(360deg);
-  }
-}
 
-.banner .slider .item {
-  position: absolute;
-  inset: 0 0 0 0;
-  transform: rotateY(
-      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
-    )
-    translateZ(700px);
+<style scoped>
+.tagg {
+  opacity: 0.2;
+  color: white;
+  background-color: blue;
+  border-radius: 5px;
 }
-.banner .slider .item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.tagg:hover {
+  opacity: 0.9;
+  color: white;
+  background-color: rgb(18, 18, 18);
 }
 </style>

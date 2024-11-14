@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
 });
 </script>
 
-<template>
+<template >
   <section
     id="intro"
     class="w-full h-[692px] flex p-10 justify-end items-center bg-gray-200"
@@ -30,6 +30,8 @@ jQuery(document).ready(function ($) {
       </p>
     </div>
   </section>
+  <!-- -------------------------------------- -->
+
   <section class="w-full h-[692px] flex items-center justify-center flex-col">
     <h1 class="text-2xl mt-5">OIL PAINTING</h1>
     <div class="w-full h-[302px] slider-container p-10">
@@ -114,136 +116,144 @@ jQuery(document).ready(function ($) {
       </div>
     </div>
   </section>
+  <!-- -------------------------------------- -->
 
   <section
     id="Doodle"
-    class="shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] w-full h-auto bg-gray-100 flex items-center justify-center flex-col"
+    class="bg-white w-full h-auto flex items-center justify-center flex-col"
   >
-    <h1 class="text-2xl mt-5">Doodle</h1>
+  <h1 class="cinzel  mt-5	 justify-self-start ">Doodle</h1>
+
     <div
-      class="flex-wrap m-10 w-full h-full bg-lightgray-100 flex items-centers justify-center flex-row"
+      class="drop-shadow-xl rounded-lg w-11/12 h-11/12  m-5 py-10 items-center justify-center flex-col bg-white"
     >
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdna.artstation.com/p/assets/images/images/081/859/726/large/yize-huang-2024-11-12-11-53-41.jpg?1731427170"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdnb.artstation.com/p/assets/images/images/081/859/885/large/yize-huang-2024-11-12-11-56-52.jpg?1731427388"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdnb.artstation.com/p/assets/images/images/081/859/881/large/yize-huang-2024-11-12-11-56-42.jpg?1731427382"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdnb.artstation.com/p/assets/images/images/081/859/877/large/yize-huang-2024-11-12-11-56-20.jpg?1731427372"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdnb.artstation.com/p/assets/images/images/081/859/869/large/yize-huang-2024-11-12-11-57-39.jpg?1731427360"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdna.artstation.com/p/assets/images/images/081/859/838/large/yize-huang-2024-11-12-11-56-29.jpg?1731427313"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdnb.artstation.com/p/assets/images/images/081/859/833/large/yize-huang-2024-11-12-11-55-38.jpg?1731427307"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdna.artstation.com/p/assets/images/images/081/859/824/large/yize-huang-2024-11-12-11-55-31.jpg?1731427298"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdnb.artstation.com/p/assets/images/images/081/859/817/large/yize-huang-2024-11-12-11-55-55.jpg?1731427285"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdna.artstation.com/p/assets/images/images/081/859/804/large/yize-huang-2024-11-12-11-56-03.jpg?1731427275"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdna.artstation.com/p/assets/images/images/081/859/730/large/yize-huang-2024-11-12-11-53-52.jpg?1731427178"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdna.artstation.com/p/assets/images/images/081/859/738/large/yize-huang-2024-11-12-11-54-01.jpg?1731427187"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdna.artstation.com/p/assets/images/images/081/859/742/large/yize-huang-2024-11-12-11-54-14.jpg?1731427197"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdna.artstation.com/p/assets/images/images/081/859/748/large/yize-huang-2024-11-12-11-54-25.jpg?1731427204"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdna.artstation.com/p/assets/images/images/081/859/764/large/yize-huang-2024-11-12-11-55-19.jpg?1731427221"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdnb.artstation.com/p/assets/images/images/081/859/773/large/yize-huang-2024-11-12-11-55-05.jpg?1731427234"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdna.artstation.com/p/assets/images/images/081/859/778/large/yize-huang-2024-11-12-11-54-57.jpg?1731427242"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdnb.artstation.com/p/assets/images/images/081/859/781/large/yize-huang-2024-11-12-11-54-43.jpg?1731427250"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdna.artstation.com/p/assets/images/images/081/859/792/large/yize-huang-2024-11-12-11-55-45.jpg?1731427264"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdnb.artstation.com/p/assets/images/images/081/859/785/large/yize-huang-2024-11-12-11-54-33.jpg?1731427255"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdnb.artstation.com/p/assets/images/images/081/860/593/large/yize-huang-2024-11-13-12-18-39.jpg?1731428338"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdna.artstation.com/p/assets/images/images/081/860/596/large/yize-huang-2024-11-13-12-18-22.jpg?1731428344"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdna.artstation.com/p/assets/images/images/081/860/602/large/yize-huang-2024-11-13-12-18-08.jpg?1731428351"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdnb.artstation.com/p/assets/images/images/081/860/607/large/yize-huang-2024-11-13-12-17-50.jpg?1731428358"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdna.artstation.com/p/assets/images/images/081/860/614/large/yize-huang-2024-11-12-11-57-39.jpg?1731428368"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdna.artstation.com/p/assets/images/images/081/860/622/large/yize-huang-2024-11-12-11-57-21.jpg?1731428376"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdnb.artstation.com/p/assets/images/images/081/860/625/large/yize-huang-2024-11-12-11-57-11.jpg?1731428384"
-      />
-      <img
-        class="doodleImg drop-shadow"
-        src="https://cdna.artstation.com/p/assets/images/images/081/860/708/large/yize-huang-2024-11-13-12-21-14.jpg?1731428504"
+      <div
+        class=" flex-wrap  w-full h-full bg-lightgray-100 flex items-centers justify-center flex-row"
+      >
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdna.artstation.com/p/assets/images/images/081/859/726/large/yize-huang-2024-11-12-11-53-41.jpg?1731427170"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdnb.artstation.com/p/assets/images/images/081/859/885/large/yize-huang-2024-11-12-11-56-52.jpg?1731427388"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdnb.artstation.com/p/assets/images/images/081/859/881/large/yize-huang-2024-11-12-11-56-42.jpg?1731427382"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdnb.artstation.com/p/assets/images/images/081/859/877/large/yize-huang-2024-11-12-11-56-20.jpg?1731427372"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdnb.artstation.com/p/assets/images/images/081/859/869/large/yize-huang-2024-11-12-11-57-39.jpg?1731427360"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdna.artstation.com/p/assets/images/images/081/859/838/large/yize-huang-2024-11-12-11-56-29.jpg?1731427313"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdnb.artstation.com/p/assets/images/images/081/859/833/large/yize-huang-2024-11-12-11-55-38.jpg?1731427307"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdna.artstation.com/p/assets/images/images/081/859/824/large/yize-huang-2024-11-12-11-55-31.jpg?1731427298"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdnb.artstation.com/p/assets/images/images/081/859/817/large/yize-huang-2024-11-12-11-55-55.jpg?1731427285"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdna.artstation.com/p/assets/images/images/081/859/804/large/yize-huang-2024-11-12-11-56-03.jpg?1731427275"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdna.artstation.com/p/assets/images/images/081/859/730/large/yize-huang-2024-11-12-11-53-52.jpg?1731427178"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdna.artstation.com/p/assets/images/images/081/859/738/large/yize-huang-2024-11-12-11-54-01.jpg?1731427187"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdna.artstation.com/p/assets/images/images/081/859/742/large/yize-huang-2024-11-12-11-54-14.jpg?1731427197"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdna.artstation.com/p/assets/images/images/081/859/748/large/yize-huang-2024-11-12-11-54-25.jpg?1731427204"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdna.artstation.com/p/assets/images/images/081/859/764/large/yize-huang-2024-11-12-11-55-19.jpg?1731427221"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdnb.artstation.com/p/assets/images/images/081/859/773/large/yize-huang-2024-11-12-11-55-05.jpg?1731427234"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdna.artstation.com/p/assets/images/images/081/859/778/large/yize-huang-2024-11-12-11-54-57.jpg?1731427242"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdnb.artstation.com/p/assets/images/images/081/859/781/large/yize-huang-2024-11-12-11-54-43.jpg?1731427250"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdna.artstation.com/p/assets/images/images/081/859/792/large/yize-huang-2024-11-12-11-55-45.jpg?1731427264"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdnb.artstation.com/p/assets/images/images/081/859/785/large/yize-huang-2024-11-12-11-54-33.jpg?1731427255"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdnb.artstation.com/p/assets/images/images/081/860/593/large/yize-huang-2024-11-13-12-18-39.jpg?1731428338"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdna.artstation.com/p/assets/images/images/081/860/596/large/yize-huang-2024-11-13-12-18-22.jpg?1731428344"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdna.artstation.com/p/assets/images/images/081/860/602/large/yize-huang-2024-11-13-12-18-08.jpg?1731428351"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdnb.artstation.com/p/assets/images/images/081/860/607/large/yize-huang-2024-11-13-12-17-50.jpg?1731428358"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdna.artstation.com/p/assets/images/images/081/860/614/large/yize-huang-2024-11-12-11-57-39.jpg?1731428368"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdna.artstation.com/p/assets/images/images/081/860/622/large/yize-huang-2024-11-12-11-57-21.jpg?1731428376"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdnb.artstation.com/p/assets/images/images/081/860/625/large/yize-huang-2024-11-12-11-57-11.jpg?1731428384"
+        />
+        <img
+          class="doodleImg drop-shadow"
+          src="https://cdna.artstation.com/p/assets/images/images/081/860/708/large/yize-huang-2024-11-13-12-21-14.jpg?1731428504"
+        />
+      </div>
+      <Icon
+        icon="iconamoon:arrow-up-6-circle-light"
+        width="45"
+        class="cursor-pointer justify-self-end m-10 hover:scale-150 transition-transform duration-300"
+        id="canceled"
+        color="lightgray"
       />
     </div>
-    <Icon
-      icon="iconamoon:arrow-up-6-circle-light"
-      width="45"
-      class="cursor-pointer justify-self-end m-10 hover:scale-150 transition-transform duration-300"
-      id="canceled"
-      color="lightgray"
-    />
   </section>
+  <!-- -------------------------------------- -->
+
   <section
     class="w-full h-[692px] p-5 flex items-center justify-center flex-col"
   >
@@ -290,6 +300,8 @@ jQuery(document).ready(function ($) {
 @import url("https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap");
 
+
+
 .poppins-medium {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -303,8 +315,8 @@ jQuery(document).ready(function ($) {
 }
 
 .doodleImg {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   margin: 20px;
   border-radius: 3px;
   overflow: hidden;
