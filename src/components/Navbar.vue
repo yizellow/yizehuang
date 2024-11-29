@@ -11,8 +11,8 @@ import { RouterLink } from "vue-router";
       <RouterLink to="/"><div class="navtext">Home</div></RouterLink>
       <RouterLink to="/Project"><div class="navtext">Project</div></RouterLink>
       <RouterLink to="/AboutMe"><div class="navtext">About Me</div></RouterLink>
-      <RouterLink to="/Contact"><div class="navtext">Contact</div></RouterLink>
-      <div class="navtext">Member</div>
+      <!-- <RouterLink to="/Contact"><div class="navtext">Contact</div></RouterLink> -->
+      <!-- <div class="navtext">Member</div> -->
     </nav>
   </div>
 </template>

@@ -9,24 +9,25 @@ jQuery(document).ready(function ($) {
 });
 </script>
 
-<template >
+<template>
   <section
     id="intro"
     class="w-full h-[692px] flex p-10 justify-end items-center bg-gray-200"
   >
     <div class="w-3/4 h-1/2">
       <h1 class="poppins-medium text-gray-800 text-center text-2xl">
-        3D Modeling, Experiment, Material and Light
+        ＃Yizellow
       </h1>
       <p class="markazi-text text-gray-900 my-5 text-2xl">
-        Russia has steadily been making gains in the eastern Donbas region,
-        which Russia’s President Vladimir Putin aims to capture in full.
-        Reuters, citing open source data, reported that Russia has been
-        advancing at its fastest pace in at least a year. Ukraine’s
-        Commander-in-Chief Oleksandr Syrskyi said the situation on the front
-        line “remains difficult” and certain areas “require constant renewal of
-        resources of Ukrainian units” in a statement on Telegram Saturday
-        morning.
+        The name "Yizellow" combines my first name, Yize, and my last name
+        "Huang" (which means yellow in Chinese). This is a creative project with
+        the theme of "basic forms." Every artist has their own style, and
+        finding that style requires deep exploration. During my time at art
+        school, I found that my creativity often had a purpose behind it, which
+        made me feel restricted and unable to express myself freely. So, I
+        decided to create in a more relaxed way, experimenting with casual
+        doodles and sketches, as well as some oil paintings. In the end, these
+        works came together for my first solo exhibition, "Myself" in 2019.
       </p>
     </div>
   </section>
@@ -122,13 +123,13 @@ jQuery(document).ready(function ($) {
     id="Doodle"
     class="bg-white w-full h-auto flex items-center justify-center flex-col"
   >
-  <h1 class="cinzel  mt-5	 justify-self-start ">Doodle</h1>
+    <h1 class="cinzel mt-5 justify-self-start">Doodle</h1>
 
     <div
-      class="drop-shadow-xl rounded-lg w-11/12 h-11/12  m-5 py-10 items-center justify-center flex-col bg-white"
+      class="drop-shadow-xl rounded-lg w-11/12 h-11/12 m-5 py-10 items-center justify-center flex-col bg-white"
     >
       <div
-        class=" flex-wrap  w-full h-full bg-lightgray-100 flex items-centers justify-center flex-row"
+        class="flex-wrap w-full h-full bg-lightgray-100 flex items-centers justify-center flex-row"
       >
         <img
           class="doodleImg drop-shadow"
@@ -299,8 +300,6 @@ jQuery(document).ready(function ($) {
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap");
-
-
 
 .poppins-medium {
   font-family: "Poppins", sans-serif;

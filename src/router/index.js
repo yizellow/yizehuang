@@ -6,6 +6,7 @@ import ContactView from "@/views/Contact.vue";
 import dddView from "@/views/Projects/dddView.vue";
 import ChipsView from "@/views/Projects/ChipsView.vue";
 import YizellowView from "@/views/Projects/YizellowView.vue";
+import FilmCameraView from "@/views/Projects/FilmCameraView.vue";
 
 // import LoadingPage from "@/views/LoadingPage.vue";
 
@@ -46,6 +47,11 @@ const router = createRouter({
       path: "/Project/Yizellow",
       name: "Yizellow",
       component: YizellowView,
+    },
+    {
+      path: "/Project/FilmCamera",
+      name: "FilmCamera",
+      component: FilmCameraView,
     },
   ],
 });

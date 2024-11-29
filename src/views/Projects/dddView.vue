@@ -22,7 +22,7 @@ const openIntro = () => {
         class="w-full h-full object-cover cursor-pointer"
         src="https://cdnb.artstation.com/p/assets/images/images/052/116/789/large/yize-huang-plastic-wrap-protection-laocoon-and-his-sons.jpg?1658985491"
       />
-      <infoTag />
+      <infoTag title="Plastic wrap protection" subtle="Laocoon and his sons" />
     </section>
     <section
       id="2"
@@ -42,7 +42,11 @@ const openIntro = () => {
         src="https://cdna.artstation.com/p/assets/images/images/052/282/402/large/yize-huang-new-whole.jpg?1659416565"
         class="cursor-pointer w-1/4 drop-shadow-md opacity-90 hover:opacity-50 hover:scale-110 transition-transform duration-300"
       />
-      <infoTag />
+      <infoTag
+        title="Republic China and Its Dick"
+        subtle="David"
+        content="I attempted to use this project to convey political satire about Taiwan."
+      />
     </section>
     <section
       id="3"
@@ -57,7 +61,7 @@ const openIntro = () => {
         loop
         muted
       ></video>
-      <infoTag />
+      <infoTag title="How to face my shadows?" subtle="The Crouching Boy" />
     </section>
 
     <section
@@ -70,7 +74,7 @@ const openIntro = () => {
         <img src="@/assets/img/3Droom.png" class="w-[100%] max-w-none h-auto" />
       </div>
 
-      <infoTag />
+      <infoTag title="How to face my shadows?" />
     </section>
   </div>
 
@@ -93,13 +97,27 @@ const openIntro = () => {
       3D Modeling, Experiment, Material and Light
     </h1>
     <p class="markazi-text text-gray-900 my-5 text-2xl">
-      Russia has steadily been making gains in the eastern Donbas region, which
-      Russia’s President Vladimir Putin aims to capture in full. Reuters, citing
-      open source data, reported that Russia has been advancing at its fastest
-      pace in at least a year. Ukraine’s Commander-in-Chief Oleksandr Syrskyi
-      said the situation on the front line “remains difficult” and certain areas
-      “require constant renewal of resources of Ukrainian units” in a statement
-      on Telegram Saturday morning.
+      &nbsp; &nbsp; This is an experimental project created with Blender, aimed
+      at exploring the interplay between materials, light, and shadow in 3D
+      modeling. I am particularly captivated by the subtle interactions between
+      light transmission, refraction, and material textures. These subtle
+      changes show the unique charm of digital media.
+      <br />
+      <br />
+      &nbsp; &nbsp; During the creation process, I observed that objects made
+      through 3D modeling often display a quality of "excessive perfection."
+      This is evident in their highly precise details, flawless surfaces, and
+      meticulously calculated lighting effects. While these features appear
+      realistic, they simultaneously surpass the imperfections and randomness
+      present in naturally occurring objects.
+
+      <br />
+      <br />
+      &nbsp; &nbsp;This not only gives the works a refined and surreal quality
+      but also reminds me of the idealized characteristics found in classical
+      realist sculptures. Combining this quality with classical aesthetics
+      introduces a playful dimension to modern digital creations, further
+      opening up new possibilities for artistic exploration.
     </p>
   </div>
   <div

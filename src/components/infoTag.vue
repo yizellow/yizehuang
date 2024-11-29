@@ -1,6 +1,17 @@
 <script setup>
 import { ref } from "vue";
 import { Icon } from "@iconify/vue";
+defineProps({
+  title: String,
+  subtle: String,
+  content: String
+})
+// const title = "#Plastic wrap protection";
+// const subtle = "Laocoon and his sons";
+// const content = `Ukraine’s Commander-in-Chief Oleksandr Syrskyi said the situation on the
+//       front line “remains difficult” and certain areas “require constant renewal
+//       of resources of Ukrainian units” in a statement on Telegram Saturday
+//       morning.`;
 
 const showInfo = ref(false);
 const canceledInfo = () => {
@@ -28,20 +39,18 @@ const openInfo = () => {
     />
 
     <h1 class="poppins-medium text-gray-700 text-center text-base">
-      #Plastic wrap protection<br />Laocoon and his sons
+      {{ title }}<br>
+      {{ subtle }}
     </h1>
     <p class="markazi-text text-purple-900 my-3 text-2xl text-left ml-3">
-      Ukraine’s Commander-in-Chief Oleksandr Syrskyi said the situation on the
-      front line “remains difficult” and certain areas “require constant renewal
-      of resources of Ukrainian units” in a statement on Telegram Saturday
-      morning.
+      {{ content }}
     </p>
   </div>
   <!--            tags              -->
 
   <div
     id="tag"
-    class=" hover:opacity-35 backdrop-blur-sm h-10 p-1 flex row items-center absolute top-3/4 right-8 -translate-y-1/2 z-10 cursor-pointer bg-white/5"
+    class="hover:opacity-35 backdrop-blur-sm h-10 p-1 flex row items-center absolute top-3/4 right-8 -translate-y-1/2 z-10 cursor-pointer bg-white/5"
     v-if="showInfoTag"
     @click="openInfo"
   >
