@@ -4,6 +4,11 @@ import gsap from "gsap";
 
 export default {
   setup() {
+
+
+    
+
+
     // 點擊事件，觸發動畫並刪除圖片
     const clickElement = (event) => {
       const target = event.target; // 取得被點擊的元素
@@ -44,17 +49,23 @@ export default {
       });
     };
 
+    function createNewImg() {
+      
+      
+    }
+
     return {
       clickElement,
       hoverElement,
       hoverOutElement,
+      createNewImg
     };
   },
 };
 </script>
 
 <template>
-  <section class="w-full h-[90%] flex items-end fixed z-1">
+  <section class="w-full h-[90%] flex items-end fixed z-1" id="container">
     <img
       src="https://cdna.artstation.com/p/assets/images/images/082/332/324/large/yize-huang-img-0911.jpg?1732700747"
       class="w-1/3 h-auto trigger mr-10 cursor-pointer"
