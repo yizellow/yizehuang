@@ -6,7 +6,7 @@
   >
     <video
       class="w-full h-full bg-neutral-900 absolute z-1"
-      src="@/assets/img/ChipsImg/classic_tv_fin_1.mp4"
+      src="@/assets/img/ChipsImg/test55_fin.mp4"
       autoplay
       loop
       muted
@@ -30,7 +30,7 @@
   </section>
   <section class="w-full h-[692px] bg-neutral-900 flex">
     <img
-      class="w-3/5 auto  bg-center overflow-hidden"
+      class="w-3/5 auto bg-center overflow-hidden"
       src="@/assets/img/ChipsImg/cursor.png "
     />
   </section>
