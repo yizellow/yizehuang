@@ -4,13 +4,7 @@
   <section
     class="relative w-full h-[692px] flex justify-center items-center z-0"
   >
-    <video
-      class="w-full h-full bg-neutral-900 absolute z-1"
-      src="@/assets/img/ChipsImg/test55_fin.mp4"
-      autoplay
-      loop
-      muted
-    ></video>
+
     <div id="tag" class="p-5 w-3/5 h-2/5 tagg absolute z-2">
       <h1 class="text-gray-200">Chips</h1>
       <p>
@@ -29,20 +23,11 @@
     </div>
   </section>
   <section class="w-full h-[692px] bg-neutral-900 flex">
-    <img
-      class="w-3/5 auto bg-center overflow-hidden"
-      src="@/assets/img/ChipsImg/cursor.png "
-    />
+
   </section>
 
   <section class="relative w-full h-[692px] bg-neutral-900 flex items-center">
-    <video
-      class="w-full h-[692px] bg-neutral-900 absolute z-1"
-      src="@/assets/img/ChipsImg/test55_fin.mp4"
-      autoplay
-      loop
-      muted
-    ></video>
+
   </section>
   <section class="w-full h-[692px] bg-neutral-900"></section>
 
