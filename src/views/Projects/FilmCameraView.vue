@@ -5,10 +5,18 @@ import gsap from "gsap";
 export default {
   setup() {
     const images = [
-      "https://picsum.photos/id/1018/800/600",
-      "https://picsum.photos/id/1015/800/600",
-      "https://picsum.photos/id/1019/800/600",
-      "https://picsum.photos/id/1020/800/600",
+      "https://cdnb.artstation.com/p/assets/images/images/082/332/459/large/yize-huang-2024-11-27-5-48-34.jpg?1732701036",
+      "https://cdna.artstation.com/p/assets/images/images/082/332/324/large/yize-huang-img-0911.jpg?1732700747",
+      "https://cdnb.artstation.com/p/assets/images/images/082/332/431/large/yize-huang-img-0910.jpg?1732700973",
+      "https://cdnb.artstation.com/p/assets/images/images/082/332/475/large/yize-huang-2024-11-27-5-47-42.jpg?1732701073",
+      "https://cdnb.artstation.com/p/assets/images/images/082/332/479/large/yize-huang-2024-11-27-5-47-26.jpg?1732701086",
+      "https://cdna.artstation.com/p/assets/images/images/082/332/482/large/yize-huang-2024-11-27-5-46-27.jpg?1732701097",
+      "https://cdna.artstation.com/p/assets/images/images/082/332/488/large/yize-huang-2024-11-27-5-46-41.jpg?1732701109",
+      "https://cdna.artstation.com/p/assets/images/images/082/332/492/large/yize-huang-2024-11-27-5-46-59.jpg?1732701122",
+      "https://cdnb.artstation.com/p/assets/images/images/082/332/429/large/yize-huang-img-0912.jpg?1732700966",
+      "https://cdnb.artstation.com/p/assets/images/images/082/332/463/large/yize-huang-2024-11-27-5-48-13.jpg?1732701047",
+      "https://cdna.artstation.com/p/assets/images/images/082/332/470/large/yize-huang-2024-11-27-5-48-00.jpg?1732701058",
+      "https://cdna.artstation.com/p/assets/images/images/082/332/328/large/yize-huang-img-0937.jpg?1732700755",
     ];
     let index = 0;
 
@@ -32,22 +40,20 @@ export default {
         transformOrigin: "50% 100%",
         onComplete: () => {
           target.remove();
-          // 後面圖片的滑動動畫，當前圖片移除後，調整位置
-          gsap.fromTo(
-            images,
-            { x: 0 },
-            {
-              x: `-=${target.offsetWidth + 40}`, // 移動寬度加上 margin
-              duration: 0.6,
-              ease: "power2.out",
-            }
-          );
+          newPosition();
+          createNewImg();
         },
       });
-
-      // 創建新圖片
-      createNewImg();
     };
+
+    function newPosition() {
+      const images = document.querySelectorAll(".iimg");
+      images.forEach((image) => {
+        const rect = image.getBoundingClientRect();
+        gsap.fromTo(".iimg", { x: rect.x }, { x: 1, duration: 0.8 });
+        console.log(rect.x);
+      });
+    }
 
     // hover 事件，當游標懸停時觸發動畫
     const hoverElement = (event) => {
@@ -87,7 +93,8 @@ export default {
         "h-auto",
         "trigger",
         "mr-10",
-        "cursor-pointer"
+        "cursor-pointer",
+        "iimg"
       );
 
       // 為新圖片添加事件監聽器
@@ -95,28 +102,15 @@ export default {
       newPhoto.addEventListener("mouseover", hoverElement);
       newPhoto.addEventListener("mouseleave", hoverOutElement);
 
-      // 初始位置設置在螢幕右側外
-      gsap.set(newPhoto, {
-        x: window.innerWidth, // 設置初始位置在螢幕右側外
-        opacity: 0,
-      });
-
-      // 將新圖片添加到容器中
       container.appendChild(newPhoto);
-
-      // 使用 GSAP 動畫讓圖片從右側滑入
-      gsap.to(newPhoto, {
-        x: 0, // 移動到原本的位置
-        opacity: 1,
-        duration: 0.8, // 動畫持續時間
-        ease: "power2.out", // 緩動效果
-      });
-
-      // 增加 index，確保下一次使用下一張圖片
+      gsap.fromTo(
+        newPhoto,
+        { x: 500 },
+        { x: 0, ease: "power2.in", duration: 1 }
+      );
       index++;
     }
 
-    // 在元件掛載後自動創建三張圖片
     onMounted(() => {
       createNewImg();
       createNewImg();
@@ -134,11 +128,11 @@ export default {
 </script>
 
 <template>
-  <section
-    class="w-full h-[90%] flex items-end fixed z-1"
-    id="container"
-  ></section>
-  <section class="w-full h-full flex items-baseline bg-black"></section>
+  <section class="w-full h-[90%] flex items-end fixed z-1" id="container">
+    <div class="iimg"></div>
+    <div class="iimg"></div>
+    <div class="iimg"></div>
+  </section>
 </template>
 
 <style scoped>
