@@ -128,7 +128,11 @@ export default {
 </script>
 
 <template>
-  <section class="w-full h-[90%] flex items-end fixed z-1" id="container">
+  <section class="w-full h-[90%] fixed z-0 inset-0">
+    <h1 class="text-[200px]">＃Travel and my film camera</h1>
+  </section>
+
+  <section class="w-full h-[100%] flex items-end z-2" id="container">
     <div class="iimg"></div>
     <div class="iimg"></div>
     <div class="iimg"></div>
