@@ -3,18 +3,12 @@
     <canvas ref="particleCanvas"></canvas>
     <div class="fog-layer" ref="fog"></div>
     <div class="content">
-      <div
-        class="w-[280px] h-[320px] flex-col flex items-center justify-center bg-white/15"
-      >
-        <img
-          class="w-[180px] h-[180px]"
-          src="https://cdnb.artstation.com/p/assets/images/images/081/756/471/large/yize-huang-2-3chips2.jpg?1731128477"
-        />
-        <br />
-        <RouterLink to="/Project/Chips"
-          ><p class="text-4xl">Chips</p></RouterLink
-        >
-      </div>
+      <RouterLink to="/Project/Chips">
+        <div class="tag">
+          <img class="tagPic" />
+          <p class="titile"></p>
+        </div>
+      </RouterLink>
     </div>
   </div>
 </template>
@@ -133,6 +127,20 @@ export default {
 </script>
 
 <style scoped>
+.tag {
+  display: grid;
+  width: 230px;
+  height: 280px;
+  background-color: aliceblue;
+  grid-template-columns: 10px, 200px, 10px;
+  grid-template-rows: 10px, 200px, 10px, 50px;
+}
+.tagPic {
+  grid-column: span2;
+  grid-column: span2;
+
+  background-color: aqua;
+}
 .background {
   position: relative;
   width: 100vw;
