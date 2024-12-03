@@ -1,189 +1,243 @@
 <template>
-  <div class="background" @mousemove="handleMouseMove" ref="background">
-    <canvas ref="particleCanvas"></canvas>
-    <div class="fog-layer" ref="fog"></div>
-    <div class="content">
-      <RouterLink to="/Project/Chips">
-        <div class="tag">
-          <img class="tagPic" />
-          <p class="titile"></p>
+  <main class="mainbox">
+    <section>
+      <div id="overlay-light" class="overlay"></div>
+
+      <div id="overlay-dark" class="overlay"></div>
+      <div class="content">
+        <div class="nav row">
+          <div class="col">(refix studio)</div>
+          <div class="col">(contact)</div>
+          <div class="col">(services)</div>
+          <div class="col">(selected clients)</div>
+          <div class="col">(members)</div>
         </div>
-      </RouterLink>
-    </div>
-  </div>
+        <div class="divider nav-divider"></div>
+        <div class="row">
+          <div class="col">A collective of creative thinkers making things</div>
+          <div class="col">+212 457 3035</div>
+          <div class="col">Art Direction</div>
+          <div class="col">NBC Sports</div>
+          <div class="col">Alejandro Torres Viera</div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col">smarter, newer, and more memorable.</div>
+          <div class="col"></div>
+          <div class="col">Brand Positioning</div>
+          <div class="col">Dona Chai</div>
+          <div class="col">Annie Panousopoulos</div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">USA</div>
+          <div class="col">Brand & Identity Design</div>
+          <div class="col">Equinox</div>
+          <div class="col">Konstantinos Riginos</div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col">We believe that function is the substance of</div>
+          <div class="col">214 Sullivan St #3B</div>
+          <div class="col">Creative Direction</div>
+          <div class="col">Giant</div>
+          <div class="col">Ryan Levitan</div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col">
+            aesthetic experience. This principle guides clearer
+          </div>
+          <div class="col">New York, NY 10012</div>
+          <div class="col">Design Direction</div>
+          <div class="col">KPRS</div>
+          <div class="col">Tucker Shanley</div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col">user interfaces, stronger branding devices and</div>
+          <div class="col"></div>
+          <div class="col">Packaging</div>
+          <div class="col">microDrive</div>
+          <div class="col">Zachary Ruden</div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col">more cohesive design systems. Whether</div>
+          <div class="col">For Job, Press and</div>
+          <div class="col">Motion</div>
+          <div class="col">Union</div>
+          <div class="col"></div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col">
+            designing multi-platform experiences or building
+          </div>
+          <div class="col">General inquiries:</div>
+          <div class="col">Prototyping</div>
+          <div class="col">Univision</div>
+          <div class="col"></div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col">
+            enterprise applications, we make things to solve
+          </div>
+          <div class="col"></div>
+          <div class="col">Product Strategy</div>
+          <div class="col">ProVen</div>
+          <div class="col"></div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col">problems.</div>
+          <div class="col">hello@fix.studio</div>
+          <div class="col">Testing & Research</div>
+          <div class="col">Social Studies</div>
+          <div class="col"></div>
+        </div>
+        <div class="divider"></div>
+      </div>
+    </section>
+
+    <section class="banBox">
+      <div class="divider h-7"></div>
+      <div class="divider h-7"></div>
+      <div class="divider h-7"></div>
+      <div class="divider h-7"></div>
+      <div class="divider"></div>
+      <div class="divider"></div>
+      <div class="divider"></div>
+      <div class="divider"></div>
+      <div class="divider"></div>
+
+      <!-- <p class="ban">YIZE HUANG</p> -->
+      <!-- <img class="banPic" src="../assets/img/yize.gif" /> -->
+    </section>
+  </main>
 </template>
 
-<script>
+<script setup>
 import { gsap } from "gsap";
-
-export default {
-  name: "BlackWhiteParticlesWithFog",
-  data() {
-    return {
-      mouseX: 0,
-      mouseY: 0,
-      particleArray: [],
-      particleCount: 100, // 粒子數量
-    };
-  },
-  mounted() {
-    this.initParticles();
-    this.animateFog();
-    window.addEventListener("resize", this.resizeCanvas);
-  },
-  beforeUnmount() {
-    window.removeEventListener("resize", this.resizeCanvas);
-  },
-  methods: {
-    handleMouseMove(event) {
-      const { clientX, clientY } = event;
-      const { innerWidth, innerHeight } = window;
-
-      this.mouseX = clientX / innerWidth;
-      this.mouseY = clientY / innerHeight;
-
-      this.updateGradient();
+import { onMounted } from "vue";
+onMounted(() => {
+  gsap.to("#overlay-dark", {
+    duration: 2,
+    top: "-100%",
+    ease: "power3.inOut",
+    delay: 4,
+  });
+  gsap.from(".divider", {
+    duration: 3,
+    scaleX: 0,
+    ease: "power3.inOut",
+    delay: 1,
+    stagger: {
+      amount: 1,
     },
-    updateGradient() {
-      const lightness1 = Math.round(this.mouseX * 50 + 25); // 根據滑鼠位置調整亮度
-      const lightness2 = Math.round(this.mouseY * 50 + 25);
+  });
 
-      const gradient = `linear-gradient(135deg, hsl(0, 0%, ${lightness1}%), hsl(0, 0%, ${lightness2}%))`;
-
-      gsap.to(this.$refs.background, {
-        duration: 0.5,
-        background: gradient,
-      });
+  gsap.from(".row > .col", {
+    duration: 2,
+    opacity: 0,
+    y: 40,
+    ease: "power3.inOut",
+    delay: 2,
+    stagger: {
+      amount: 1.5,
     },
-    initParticles() {
-      const canvas = this.$refs.particleCanvas;
-      const ctx = canvas.getContext("2d");
-
-      this.resizeCanvas();
-      for (let i = 0; i < this.particleCount; i++) {
-        this.particleArray.push(this.createParticle());
-      }
-
-      const animateParticles = () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        this.particleArray.forEach((particle) => {
-          this.drawParticle(ctx, particle);
-          this.updateParticle(particle);
-        });
-        requestAnimationFrame(animateParticles);
-      };
-
-      animateParticles();
-    },
-    resizeCanvas() {
-      const canvas = this.$refs.particleCanvas;
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    },
-    createParticle() {
-      return {
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        size: Math.random() * 3 + 1, // 粒子大小
-        speedX: (Math.random() - 0.5) * 2,
-        speedY: (Math.random() - 0.5) * 2,
-        color: `hsl(0, 0%, ${Math.random() * 60 + 20}%)`, // 黑白灰色
-      };
-    },
-    drawParticle(ctx, particle) {
-      ctx.beginPath();
-      ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-      ctx.fillStyle = particle.color;
-      ctx.fill();
-    },
-    updateParticle(particle) {
-      particle.x += particle.speedX;
-      particle.y += particle.speedY;
-
-      // 粒子邊界檢查
-      if (particle.x < 0 || particle.x > window.innerWidth) {
-        particle.speedX *= -1;
-      }
-      if (particle.y < 0 || particle.y > window.innerHeight) {
-        particle.speedY *= -1;
-      }
-    },
-    animateFog() {
-      const fogLayer = this.$refs.fog;
-
-      const loopFogAnimation = () => {
-        gsap.to(fogLayer, {
-          backgroundPosition: `${Math.random() * 100}% ${Math.random() * 100}%`,
-          duration: 10,
-          ease: "power2.inOut",
-          onComplete: loopFogAnimation,
-        });
-      };
-
-      loopFogAnimation();
-    },
-  },
-};
+  });
+});
 </script>
-
 <style scoped>
-.tag {
-  display: grid;
-  width: 230px;
-  height: 280px;
-  background-color: aliceblue;
-  grid-template-columns: 10px, 200px, 10px;
-  grid-template-rows: 10px, 200px, 10px, 50px;
+.banBox {
+  width: 100%;
+  height: 40%;
+  background-color: aquamarine;
 }
-.tagPic {
-  grid-column: span2;
-  grid-column: span2;
+.ban {
+  font-size: 4rem;
+  font-family: "Neue Montreal";
+  font-weight: 400;
+  letter-spacing: -10px;
+  color: #000;
+  mix-blend-mode: normal !important;
+}
 
-  background-color: aqua;
+.banPic {
+  width: 40%;
 }
-.background {
-  position: relative;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainbox {
+  font-family: "Neue Montreal", sans-serif;
+  display: block;
+}
+
+#overlay-light {
+  position: absolute;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, hsl(0, 0%, 40%), hsl(0, 0%, 60%));
-}
-
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* 不影響滑鼠操作 */
-}
-
-.fog-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(0, 0, 0, 0.05) 70%,
-    rgba(0, 0, 0, 0.15) 100%
-  );
-  background-size: 200% 200%;
-  pointer-events: none;
+  height: 50vh;
+  background: white;
   z-index: 1;
-  mix-blend-mode: overlay;
+}
+
+#overlay-dark {
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  background: rgb(0, 223, 0);
+  z-index: 2;
 }
 
 .content {
-  z-index: 2;
-  color: white;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  font-size: 2rem;
-  text-align: center;
+  width: 100%;
+  height: 50vh;
+  padding: 1em 0;
+}
+
+.content > * {
+  position: relative;
+  z-index: 3;
+  mix-blend-mode: difference;
+  color: #fff;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  margin: 0.2em 0;
+}
+
+.nav {
+  text-transform: uppercase;
+}
+
+.nav-divider {
+  margin-top: 1em;
+}
+
+.row {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  padding: 0 2em;
+}
+
+.row > .col {
+  position: relative;
+  flex: 1;
+}
+
+.row > .col:first-child {
+  flex: 2;
 }
 </style>
