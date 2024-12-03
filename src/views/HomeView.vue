@@ -103,18 +103,14 @@
     </section>
 
     <section class="banBox">
-      <div class="divider h-7"></div>
-      <div class="divider h-7"></div>
-      <div class="divider h-7"></div>
-      <div class="divider h-7"></div>
-      <div class="divider"></div>
-      <div class="divider"></div>
-      <div class="divider"></div>
-      <div class="divider"></div>
-      <div class="divider"></div>
-
-      <!-- <p class="ban">YIZE HUANG</p> -->
-      <!-- <img class="banPic" src="../assets/img/yize.gif" /> -->
+      <video
+        class="w-auto h-full mix-blend-luminosity"
+        src="@/assets/img/loadingLogo.mp4"
+        autoplay
+        loop
+        muted
+      ></video>
+      <p class="ban">RANDOM AND EVALUATION</p>
     </section>
   </main>
 </template>
@@ -124,23 +120,23 @@ import { gsap } from "gsap";
 import { onMounted } from "vue";
 onMounted(() => {
   gsap.to("#overlay-dark", {
-    duration: 2,
+    duration: 1.5,
     top: "-100%",
     ease: "power3.inOut",
     delay: 4,
   });
   gsap.from(".divider", {
-    duration: 3,
+    duration: 1,
     scaleX: 0,
     ease: "power3.inOut",
-    delay: 1,
+    delay: 0.5,
     stagger: {
       amount: 1,
     },
   });
 
   gsap.from(".row > .col", {
-    duration: 2,
+    duration: 1,
     opacity: 0,
     y: 40,
     ease: "power3.inOut",
@@ -154,16 +150,31 @@ onMounted(() => {
 <style scoped>
 .banBox {
   width: 100%;
-  height: 40%;
-  background-color: aquamarine;
+  overflow: hidden;
+  height: calc(50vh - 56px);
+  background-color: blueviolet;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  animation: marquee-animation 40s linear infinite;
+}
+@keyframes marquee-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 }
 .ban {
-  font-size: 4rem;
+  padding: 10px;
+  font-size: 8rem;
   font-family: "Neue Montreal";
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: -10px;
   color: #000;
   mix-blend-mode: normal !important;
+  color: rgb(0, 223, 0);
 }
 
 .banPic {
