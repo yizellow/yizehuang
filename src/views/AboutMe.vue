@@ -54,9 +54,8 @@ export default {
       </div>
       <a href="#" class="aboutme"
         >I am from Hualien, Taiwan, a place often struck by natural disasters. I
-        love poetry and traveling the world and have a deep fear of boredom. I
-        majored in Art History and Art Theory.</a
-      >
+        love poetry and traveling the world.And,I have a deep fear of boredom.
+      </a>
     </div>
   </div>
 </template>
@@ -124,7 +123,7 @@ img {
 }
 
 a.contact-link {
-  color: black;
+  color: rgb(0, 223, 0);
   letter-spacing: -3px;
   font-family: "Rocinante Titling", Arial, Helvetica, sans-serif;
   font-size: 24px;

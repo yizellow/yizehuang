@@ -6,96 +6,96 @@
       <div id="overlay-dark" class="overlay"></div>
       <div class="content">
         <div class="nav row">
-          <div class="col">(refix studio)</div>
+          <div class="col">(study background)</div>
           <div class="col">(contact)</div>
-          <div class="col">(services)</div>
-          <div class="col">(selected clients)</div>
-          <div class="col">(members)</div>
+          <div class="col">(I like ..)</div>
+          <div class="col">(skills)</div>
+          <div class="col">(Project)</div>
         </div>
         <div class="divider nav-divider"></div>
         <div class="row">
-          <div class="col">A collective of creative thinkers making things</div>
-          <div class="col">+212 457 3035</div>
+          <div class="col">Taipei National University of the Arts</div>
+          <div class="col">whatsApp:</div>
           <div class="col">Art History</div>
           <div class="col">Front-End</div>
-          <div class="col">Alejandro Torres Viera</div>
+          <div class="col">Chips</div>
         </div>
         <div class="divider"></div>
         <div class="row">
-          <div class="col">smarter, newer, and more memorable.</div>
-          <div class="col"></div>
+          <div class="col"> Fine Art Dept. </div>
+          <div class="col">+886 981488850</div>
           <div class="col">Art Theory</div>
           <div class="col">Vue</div>
-          <div class="col">Annie Panousopoulos</div>
+          <div class="col">Yizellow</div>
         </div>
         <div class="divider"></div>
         <div class="row">
+          <div class="col">Major in Art History and Visual Culture</div>
           <div class="col"></div>
-          <div class="col">USA</div>
-          <div class="col"></div>
+          <div class="col">Curating</div>
           <div class="col">Blender</div>
-          <div class="col">Konstantinos Riginos</div>
+          <div class="col">DDD</div>
         </div>
         <div class="divider"></div>
         <div class="row">
-          <div class="col">We believe that function is the substance of</div>
-          <div class="col">214 Sullivan St #3B</div>
-          <div class="col">Creative Direction</div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
           <div class="col">Unity</div>
-          <div class="col">Ryan Levitan</div>
+          <div class="col">Travel and my film camera</div>
         </div>
         <div class="divider"></div>
         <div class="row">
           <div class="col">
-            aesthetic experience. This principle guides clearer
+         
           </div>
-          <div class="col">New York, NY 10012</div>
-          <div class="col">Design Direction</div>
+          <div class="col">Email:</div>
+          <div class="col">3D Modeling</div>
           <div class="col"></div>
-          <div class="col">Tucker Shanley</div>
+          <div class="col">Upcoming...</div>
         </div>
         <div class="divider"></div>
         <div class="row">
-          <div class="col">user interfaces, stronger branding devices and</div>
           <div class="col"></div>
+          <div class="col">yize0926@gmail.com</div>
           <div class="col"> </div>
           <div class="col">HTML CSS JS</div>
-          <div class="col">Zachary Ruden</div>
+          <div class="col"></div>
         </div>
         <div class="divider"></div>
         <div class="row">
-          <div class="col">more cohesive design systems. Whether</div>
-          <div class="col">For Job, Press and</div>
-          <div class="col">Motion</div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col">Ｗriting</div>
           <div class="col">PS AE AI Pr</div>
           <div class="col"></div>
         </div>
         <div class="divider"></div>
         <div class="row">
           <div class="col">
-            designing multi-platform experiences or building
+            Hualien Senior High School, Taiwan
           </div>
-          <div class="col">General inquiries:</div>
-          <div class="col">Prototyping</div>
-          <div class="col">Univision</div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
           <div class="col"></div>
         </div>
         <div class="divider"></div>
         <div class="row">
           <div class="col">
-            enterprise applications, we make things to solve
+            Science track
           </div>
           <div class="col"></div>
-          <div class="col">Product Strategy</div>
-          <div class="col">ProVen</div>
+          <div class="col">Literature</div>
+          <div class="col"></div>
           <div class="col"></div>
         </div>
         <div class="divider"></div>
         <div class="row">
-          <div class="col">problems.</div>
-          <div class="col">hello@fix.studio</div>
-          <div class="col">Testing & Research</div>
-          <div class="col">Social Studies</div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col">Philosophy</div>
+          <div class="col"></div>
           <div class="col"></div>
         </div>
         <div class="divider"></div>

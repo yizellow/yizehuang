@@ -1,17 +1,31 @@
 <template>
-  <main class="w-full h-full bg-fuchsia-200">
+  <main>
     <p>Sorry, this Page does not exist!</p>
+    <br />
     <RouterLink to="/"><div class="navtext">Back to Home</div></RouterLink>
   </main>
 </template>
 <script setup></script>
 <style scoped>
+main {
+  width: 100vw;
+  height: calc(100vh - 56px);
+  background-color: rgb(0, 223, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 p {
-  font-size: 8 rem;
+  font-size: 56px;
   text-align: center;
   color: black;
 }
+.navtext {
+  color: blueviolet;
+  font-size: 36px;
+}
 .navtext:hover {
-  color: rgb(0, 223, 0);
+  color: white;
 }
 </style>
