@@ -16,24 +16,24 @@
         <div class="row">
           <div class="col">A collective of creative thinkers making things</div>
           <div class="col">+212 457 3035</div>
-          <div class="col">Art Direction</div>
-          <div class="col">NBC Sports</div>
+          <div class="col">Art History</div>
+          <div class="col">Front-End</div>
           <div class="col">Alejandro Torres Viera</div>
         </div>
         <div class="divider"></div>
         <div class="row">
           <div class="col">smarter, newer, and more memorable.</div>
           <div class="col"></div>
-          <div class="col">Brand Positioning</div>
-          <div class="col">Dona Chai</div>
+          <div class="col">Art Theory</div>
+          <div class="col">Vue</div>
           <div class="col">Annie Panousopoulos</div>
         </div>
         <div class="divider"></div>
         <div class="row">
           <div class="col"></div>
           <div class="col">USA</div>
-          <div class="col">Brand & Identity Design</div>
-          <div class="col">Equinox</div>
+          <div class="col"></div>
+          <div class="col">Blender</div>
           <div class="col">Konstantinos Riginos</div>
         </div>
         <div class="divider"></div>
@@ -41,7 +41,7 @@
           <div class="col">We believe that function is the substance of</div>
           <div class="col">214 Sullivan St #3B</div>
           <div class="col">Creative Direction</div>
-          <div class="col">Giant</div>
+          <div class="col">Unity</div>
           <div class="col">Ryan Levitan</div>
         </div>
         <div class="divider"></div>
@@ -51,15 +51,15 @@
           </div>
           <div class="col">New York, NY 10012</div>
           <div class="col">Design Direction</div>
-          <div class="col">KPRS</div>
+          <div class="col"></div>
           <div class="col">Tucker Shanley</div>
         </div>
         <div class="divider"></div>
         <div class="row">
           <div class="col">user interfaces, stronger branding devices and</div>
           <div class="col"></div>
-          <div class="col">Packaging</div>
-          <div class="col">microDrive</div>
+          <div class="col"> </div>
+          <div class="col">HTML CSS JS</div>
           <div class="col">Zachary Ruden</div>
         </div>
         <div class="divider"></div>
@@ -67,7 +67,7 @@
           <div class="col">more cohesive design systems. Whether</div>
           <div class="col">For Job, Press and</div>
           <div class="col">Motion</div>
-          <div class="col">Union</div>
+          <div class="col">PS AE AI Pr</div>
           <div class="col"></div>
         </div>
         <div class="divider"></div>
