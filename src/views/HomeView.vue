@@ -167,8 +167,9 @@ onMounted(() => {
   }
 }
 .ban {
-  padding: 10px;
-  font-size: 8rem;
+  text-align: center;
+  padding: 5px;
+  font-size: 5rem;
   font-family: "Neue Montreal";
   font-weight: 800;
   letter-spacing: -10px;
