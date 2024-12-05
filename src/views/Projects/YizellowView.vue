@@ -1,13 +1,4 @@
-<script setup>
-import { Icon } from "@iconify/vue";
-
-jQuery(document).ready(function ($) {
-  $(".slider-img").on("click", function () {
-    $(".slider-img").removeClass("active");
-    $(this).addClass("active");
-  });
-});
-</script>
+<script setup></script>
 
 <template>
   <section
@@ -33,87 +24,22 @@ jQuery(document).ready(function ($) {
   </section>
   <!-- -------------------------------------- -->
 
-  <section class="w-full h-[692px] flex items-center justify-center flex-col">
-    <h1 class="text-2xl mt-5">OIL PAINTING</h1>
-    <div class="w-full h-[302px] slider-container p-10">
-      <div class="slider-images">
-        <div class="slider-img">
-          <img
-            src="https://cdna.artstation.com/p/assets/images/images/081/847/988/large/yize-huang-2024-11-12-5-50-16.jpg?1731405393"
-            alt="1"
-          />
-          <h1>Mike</h1>
-          <div class="details">
-            <h2>Mike</h2>
-            <p>web3 Developer</p>
-          </div>
-        </div>
-        <div class="slider-img">
-          <img
-            src="https://cdna.artstation.com/p/assets/images/images/081/847/996/large/yize-huang-2024-11-12-5-49-57.jpg?1731405423"
-            alt="2"
-          />
-          <h1>samite</h1>
-          <div class="details">
-            <h2>samite</h2>
-            <p>wordpress Developer</p>
-          </div>
-        </div>
-        <div class="slider-img">
-          <img
-            src="https://cdnb.artstation.com/p/assets/images/images/081/847/979/large/yize-huang-2024-11-12-5-53-21.jpg?1731405363"
-            alt="3"
-          />
-          <h1>hashi</h1>
-          <div class="details">
-            <h2>hashi</h2>
-            <p>java Developer</p>
-          </div>
-        </div>
-        <div class="slider-img active">
-          <img
-            src="https://cdna.artstation.com/p/assets/images/images/081/847/970/large/yize-huang-2024-11-12-5-53-40.jpg?1731405349"
-            alt="4"
-          />
-          <h1>kaity</h1>
-          <div class="details">
-            <h2>kaity</h2>
-            <p>web Developer</p>
-          </div>
-        </div>
-        <div class="slider-img">
-          <img
-            src="https://cdnb.artstation.com/p/assets/images/images/081/847/983/large/yize-huang-2024-11-12-5-50-41.jpg?1731405378"
-            alt="5"
-          />
-          <h1>lauren</h1>
-          <div class="details">
-            <h2>lauren</h2>
-            <p>php Developer</p>
-          </div>
-        </div>
-        <div class="slider-img">
-          <img
-            src="https://cdna.artstation.com/p/assets/images/images/081/848/000/large/yize-huang-2024-11-12-5-49-49.jpg?1731405438"
-            alt="6"
-          />
-          <h1>ryan</h1>
-          <div class="details">
-            <h2>ryan</h2>
-            <p>seo Developer</p>
-          </div>
-        </div>
-        <div class="slider-img">
-          <img
-            src="https://cdna.artstation.com/p/assets/images/images/081/859/350/large/yize-huang-2024-11-12-11-49-09.jpg?1731426583"
-            alt="7"
-          />
-          <h1>dakes</h1>
-          <div class="details">
-            <h2>dakes</h2>
-            <p>sql Developer</p>
-          </div>
-        </div>
+  <section class="w-full h-[692px] imaga">
+    <div class="container">
+      <div class="block block-1">
+        <h1>asterisks.</h1>
+      </div>
+      <div class="block block-2">
+        <h1>unlocked.</h1>
+      </div>
+      <div class="block block-3">
+        <h1>offbeat.</h1>
+      </div>
+      <div class="block block-4">
+        <h1>brutal.</h1>
+      </div>
+      <div class="block block-5">
+        <h1>mouthwash.</h1>
       </div>
     </div>
   </section>
@@ -121,15 +47,22 @@ jQuery(document).ready(function ($) {
 
   <section
     id="Doodle"
-    class="bg-white w-full h-auto flex items-center justify-center flex-col"
+    class="bg-white w-full h-auto flex items-center justify-center flex-col p-20"
   >
-    <h1 class="cinzel mt-5 justify-self-start text-2xl self-start ml-20">
-      Doodle
-    </h1>
-
     <div
-      class="drop-shadow-xl rounded-lg w-11/12 h-11/12 m-5 py-10 items-center justify-center flex-col bg-white"
+      class="drop-shadow-xl py-10 items-center justify-center flex-col bg-white"
     >
+      <div class="w-full h-[300px] p-20">
+        <p class="my-5 self-start text-2xl poppins-medium">About Tattoos</p>
+        <p class="markazi-text text-2xl">
+          Many friends like these doodles, so I started using them in tattooing.
+          At first, I just played around with my friends, but as more people
+          liked them, I decided to make the skill more professional and
+          apprenticed at a studio in Sydney, Australia. However, after a lot of
+          practice, I realized that tattooing was not the right path for me, so
+          I decided to give it up.
+        </p>
+      </div>
       <div
         class="flex-wrap w-full h-full bg-lightgray-100 flex items-centers justify-center flex-row"
       >
@@ -270,11 +203,12 @@ jQuery(document).ready(function ($) {
     >
       <p class="my-5 self-start poppins-medium">About Tattoos</p>
       <p class="markazi-text">
-        Many friends like these doodles, so I started using them in tattooing. At first, I just played around with my friends,
-        but as more people liked them, I decided to make the skill more
-        professional and apprenticed at a studio in Sydney, Australia. However,
-        after a lot of practice, I realized that tattooing was not the right
-        path for me, so I decided to give it up.
+        Many friends like these doodles, so I started using them in tattooing.
+        At first, I just played around with my friends, but as more people liked
+        them, I decided to make the skill more professional and apprenticed at a
+        studio in Sydney, Australia. However, after a lot of practice, I
+        realized that tattooing was not the right path for me, so I decided to
+        give it up.
       </p>
     </div>
   </section>
@@ -306,6 +240,72 @@ jQuery(document).ready(function ($) {
   object-fit: cover;
 }
 /* ******************************** */
+
+.imaga {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: #161616;
+  overflow: hidden;
+}
+
+.block {
+  position: relative;
+  width: 580px;
+  height: 460px;
+  margin: 10px 300px 20px 80px;
+}
+
+.imaga h1 {
+  position: absolute;
+  font-family: "Monument Extended";
+  font-weight: lighter;
+  font-size: 64px;
+}
+
+.block-1 {
+  background: url(img-one.jpeg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.block-2 {
+  background: url(img-two.jpeg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.block-3 {
+  background: url(img-three.jpeg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.block-4 {
+  background: url(img-four.jpeg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.block-5 {
+  background: url(img-five.jpeg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.container {
+  margin-top: 200px;
+  margin-left: 200px;
+}
+
+.block-1 h1,
+.block-3 h1,
+.block-5 h1 {
+  bottom: 0;
+  right: -60px;
+}
+
+.block-2 h1,
+.block-4 h1 {
+  right: -60px;
+}
 
 /* ******************************** */
 .slider-container {
