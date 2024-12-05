@@ -1,5 +1,10 @@
 <template>
   <main class="mainbox">
+    <section class="note flex items-center justify-center">
+      <p>
+        The layout for tablets and mobile devices is currently being updated.
+      </p>
+    </section>
     <section>
       <div id="overlay-light" class="overlay"></div>
 
@@ -22,7 +27,7 @@
         </div>
         <div class="divider"></div>
         <div class="row">
-          <div class="col"> Fine Art Dept. </div>
+          <div class="col">Fine Art Dept.</div>
           <div class="col">+886 981488850</div>
           <div class="col">Art Theory</div>
           <div class="col">Vue</div>
@@ -46,9 +51,7 @@
         </div>
         <div class="divider"></div>
         <div class="row">
-          <div class="col">
-         
-          </div>
+          <div class="col"></div>
           <div class="col">Email:</div>
           <div class="col">3D Modeling</div>
           <div class="col"></div>
@@ -58,7 +61,7 @@
         <div class="row">
           <div class="col"></div>
           <div class="col">yize0926@gmail.com</div>
-          <div class="col"> </div>
+          <div class="col"></div>
           <div class="col">HTML CSS JS</div>
           <div class="col"></div>
         </div>
@@ -72,9 +75,7 @@
         </div>
         <div class="divider"></div>
         <div class="row">
-          <div class="col">
-            Hualien Senior High School, Taiwan
-          </div>
+          <div class="col">Hualien Senior High School, Taiwan</div>
           <div class="col"></div>
           <div class="col"></div>
           <div class="col"></div>
@@ -82,9 +83,7 @@
         </div>
         <div class="divider"></div>
         <div class="row">
-          <div class="col">
-            Science track
-          </div>
+          <div class="col">Science track</div>
           <div class="col"></div>
           <div class="col">Literature</div>
           <div class="col"></div>
@@ -101,16 +100,27 @@
         <div class="divider"></div>
       </div>
     </section>
-
-    <section class="banBox">
-      <video
-        class="w-auto h-full mix-blend-luminosity"
-        src="@/assets/img/loadingLogo.mp4"
-        autoplay
-        loop
-        muted
-      ></video>
-      <p class="ban">RANDOM AND EVALUATION</p>
+    <section class="banBox opacity-">
+      <div class="part1">
+        <video
+          class="w-auto h-full grayscale contrast-200"
+          src="@/assets/img/loadingLogo.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+        <p class="ban">RANDOM</p>
+      </div>
+      <div class="part2">
+        <video
+          class="w-auto h-full grayscale contrast-200"
+          src="@/assets/img/loadingLogo.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+        <p class="ban">EVALUATION</p>
+      </div>
     </section>
   </main>
 </template>
@@ -148,38 +158,65 @@ onMounted(() => {
 });
 </script>
 <style scoped>
+.note {
+  width: 100vw;
+  height: 5vh;
+  background-color: red;
+  color: white;
+}
+
 .banBox {
   width: 100%;
   overflow: hidden;
-  height: calc(50vh - 56px);
-  background-color: blueviolet;
+  height: calc(45vh - 56px);
+  display: flex;
+  position: relative;
+  filter: invert(100%);
+}
+
+.part1,
+.part2 {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  animation: marquee-animation 40s linear infinite;
-}
-@keyframes marquee-animation {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-100%, 0);
-  }
-}
-.ban {
-  text-align: center;
-  padding: 5px;
-  font-size: 5rem;
-  font-family: "Neue Montreal";
-  font-weight: 800;
-  letter-spacing: -10px;
-  color: #000;
-  mix-blend-mode: normal !important;
-  color: rgb(0, 223, 0);
+  justify-content: center;
+  position: absolute;
 }
 
-.banPic {
-  width: 40%;
+.part1 {
+  background-color: black;
+  animation: marquee-animation 30s linear infinite;
+  animation-delay: -15s; /* 延遲啟動 */
+}
+
+.part2 {
+  background-color: black;
+  animation: marquee-animation 30s linear infinite;
+}
+
+@keyframes marquee-animation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.ban {
+  text-align: center;
+  margin-left: 140px;
+  font-size: 6rem;
+  font-family: "Neue Montreal";
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 6px;
+  color: black;
+  opacity: 0.8;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
 }
 
 * {
