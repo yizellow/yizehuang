@@ -123,7 +123,9 @@ jQuery(document).ready(function ($) {
     id="Doodle"
     class="bg-white w-full h-auto flex items-center justify-center flex-col"
   >
-    <h1 class="cinzel mt-5 justify-self-start">Doodle</h1>
+    <h1 class="cinzel mt-5 justify-self-start text-2xl self-start ml-20">
+      Doodle
+    </h1>
 
     <div
       class="drop-shadow-xl rounded-lg w-11/12 h-11/12 m-5 py-10 items-center justify-center flex-col bg-white"
@@ -244,55 +246,36 @@ jQuery(document).ready(function ($) {
           src="https://cdna.artstation.com/p/assets/images/images/081/860/708/large/yize-huang-2024-11-13-12-21-14.jpg?1731428504"
         />
       </div>
-      <Icon
+      <!-- <Icon
         icon="iconamoon:arrow-up-6-circle-light"
         width="45"
         class="cursor-pointer justify-self-end m-10 hover:scale-150 transition-transform duration-300"
         id="canceled"
         color="lightgray"
-      />
+      /> -->
     </div>
   </section>
   <!-- -------------------------------------- -->
 
   <section
-    class="w-full h-[692px] p-5 flex items-center justify-center flex-col"
+    class="w-full h-[692px] p-20 flex items-center justify-starts flex-row"
   >
-    <p class="text-2xl mb-5">Tattoo</p>
+    <img
+      class="w-[33%] h-full object-cover object-center"
+      src="@/assets/img/ChipsImg/tattoo.gif"
+    />
+
     <div
-      id="gridBox"
-      class="w-full h-full grid grid-cols-5 grid-rows-3 gap-6 p-3"
+      class="w-[66%] h-full p-20 text-2xl border-2 flex flex-col items-center justify-center"
     >
-      <div
-        class="col-span-1 row-span-2 gridImg bg-[url('https://cdna.artstation.com/p/assets/images/images/081/883/882/large/yize-huang-2024-11-13-5-25-22.jpg?1731489978')]"
-      ></div>
-      <div
-        class="row-span-1 col-span-1 gridImg bg-[url('https://cdna.artstation.com/p/assets/images/images/081/883/884/large/yize-huang-2024-11-13-5-24-19.jpg?1731489983')]"
-      ></div>
-      <div
-        class="col-span-1 row-span-2 gridImg bg-[url('https://cdna.artstation.com/p/assets/images/images/081/883/890/large/yize-huang-2024-11-13-5-23-43.jpg?1731490003')]"
-      ></div>
-      <div
-        class="row-span-1 col-span-1 gridImg bg-[url('https://cdnb.artstation.com/p/assets/images/images/081/883/885/large/yize-huang-2024-11-13-5-24-11.jpg?1731489989')]"
-      ></div>
-      <div
-        class="col-span-1 row-span-1 gridImg bg-[url('https://cdnb.artstation.com/p/assets/images/images/081/883/887/large/yize-huang-2024-11-13-5-24-00.jpg?1731489996')]"
-      ></div>
-      <div
-        class="col-span-1 row-span-2 gridImg bg-[url('https://cdnb.artstation.com/p/assets/images/images/081/883/895/large/yize-huang-2024-11-13-5-23-32.jpg?1731490008')]"
-      ></div>
-      <div
-        class="col-span-1 row-span-2 gridImg bg-[url('https://cdna.artstation.com/p/assets/images/images/081/883/898/large/yize-huang-2024-11-13-5-24-53.jpg?1731490026')]"
-      ></div>
-      <div
-        class="col-span-1 row-span-2 gridImg bg-[url('https://cdnb.artstation.com/p/assets/images/images/081/883/897/large/yize-huang-2024-11-13-5-24-39.jpg?1731490018')]"
-      ></div>
-      <div
-        class="col-span-1 row-span-1 gridImg bg-[url('https://cdna.artstation.com/p/assets/images/images/081/883/896/large/yize-huang-2024-11-13-5-24-27.jpg?1731490014')]"
-      ></div>
-      <div
-        class="col-span-1 row-span-1 gridImg bg-[url('https://cdnb.artstation.com/p/assets/images/images/081/896/775/large/yize-huang-2024-11-14-12-09-44.jpg?1731514213')]"
-      ></div>
+      <p class="my-5 self-start poppins-medium">About Tattoos</p>
+      <p class="markazi-text">
+        Many friends like these doodles, so I started using them in tattooing. At first, I just played around with my friends,
+        but as more people liked them, I decided to make the skill more
+        professional and apprenticed at a studio in Sydney, Australia. However,
+        after a lot of practice, I realized that tattooing was not the right
+        path for me, so I decided to give it up.
+      </p>
     </div>
   </section>
 </template>
@@ -323,17 +306,6 @@ jQuery(document).ready(function ($) {
   object-fit: cover;
 }
 /* ******************************** */
-.gridImg {
-  border-radius: 5px;
-  background-color: aqua;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.gridImg:hover {
-  filter: blur(1px);
-  opacity: 0.8;
-}
 
 /* ******************************** */
 .slider-container {
