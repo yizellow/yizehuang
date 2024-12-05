@@ -1,4 +1,24 @@
-<script setup></script>
+<script setup>
+import { Icon } from "@iconify/vue";
+import { ref } from "vue"; // 引入 ref
+
+const image = [
+  "https://cdnb.artstation.com/p/assets/images/images/052/116/789/large/yize-huang-plastic-wrap-protection-laocoon-and-his-sons.jpg?1658985491",
+  "https://cdna.artstation.com/p/assets/images/images/081/847/988/large/yize-huang-2024-11-12-5-50-16.jpg?1731405393",
+  "https://cdna.artstation.com/p/assets/images/images/081/847/996/large/yize-huang-2024-11-12-5-49-57.jpg?1731405423",
+  "https://cdnb.artstation.com/p/assets/images/images/082/342/611/large/yize-huang-pp3.jpg?1732718344",
+];
+let currentIndex = ref(0);
+
+function lastImg() {
+  currentIndex.value = (currentIndex.value - 1 + image.length) % image.length;
+  console.log(currentIndex);
+}
+function nextImg() {
+  currentIndex.value = (currentIndex.value + 1) % image.length;
+  console.log(currentIndex);
+}
+</script>
 
 <template>
   <section
@@ -24,24 +44,27 @@
   </section>
   <!-- -------------------------------------- -->
 
-  <section class="w-full h-[692px] imaga">
-    <div class="container">
-      <div class="block block-1">
-        <h1>asterisks.</h1>
-      </div>
-      <div class="block block-2">
-        <h1>unlocked.</h1>
-      </div>
-      <div class="block block-3">
-        <h1>offbeat.</h1>
-      </div>
-      <div class="block block-4">
-        <h1>brutal.</h1>
-      </div>
-      <div class="block block-5">
-        <h1>mouthwash.</h1>
-      </div>
-    </div>
+  <section
+    class="w-full h-[692px] bg-white p-20 flex items-center justify-center"
+  >
+    <Icon
+      icon="material-symbols:arrow-back-2"
+      width="45"
+      class="cursor-pointer justify-self-end m-5 hover:scale-150 transition-transform duration-300"
+      @click="lastImg"
+      color="black"
+    ></Icon>
+    <img
+      class="w-[692px] h-full m-20 object-contain"
+      v-bind:src="image[currentIndex]"
+    />
+    <Icon
+      icon="material-symbols:arrow-back-2"
+      width="45"
+      class="cursor-pointer justify-self-end rotate-180 m-5 hover:scale-150 transition-transform duration-300"
+      @click="nextImg"
+      color="black"
+    ></Icon>
   </section>
   <!-- -------------------------------------- -->
 
@@ -266,27 +289,27 @@
 }
 
 .block-1 {
-  background: url(img-one.jpeg) no-repeat 50% 50%;
+  background: url("@") no-repeat 50% 50%;
   background-size: cover;
 }
 
 .block-2 {
-  background: url(img-two.jpeg) no-repeat 50% 50%;
+  background: url("@/assets/img/loadingBg.png") no-repeat 50% 50%;
   background-size: cover;
 }
 
 .block-3 {
-  background: url(img-three.jpeg) no-repeat 50% 50%;
+  background: url("@/assets/img/loadingBg.png") no-repeat 50% 50%;
   background-size: cover;
 }
 
 .block-4 {
-  background: url(img-four.jpeg) no-repeat 50% 50%;
+  background: url("@/assets/img/loadingBg.png") no-repeat 50% 50%;
   background-size: cover;
 }
 
 .block-5 {
-  background: url(img-five.jpeg) no-repeat 50% 50%;
+  background: url("@/assets/img/loadingBg.png") no-repeat 50% 50%;
   background-size: cover;
 }
 
