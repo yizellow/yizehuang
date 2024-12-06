@@ -10,14 +10,14 @@ const image = [
 ];
 let currentIndex = ref(0);
 
-function lastImg() {
+const lastImg = () => {
   currentIndex.value = (currentIndex.value - 1 + image.length) % image.length;
   console.log(currentIndex);
-}
-function nextImg() {
+};
+const nextImg = () => {
   currentIndex.value = (currentIndex.value + 1) % image.length;
   console.log(currentIndex);
-}
+};
 </script>
 
 <template>
@@ -66,6 +66,7 @@ function nextImg() {
       color="black"
     ></Icon>
   </section>
+
   <!-- -------------------------------------- -->
 
   <section
@@ -202,15 +203,9 @@ function nextImg() {
           src="https://cdna.artstation.com/p/assets/images/images/081/860/708/large/yize-huang-2024-11-13-12-21-14.jpg?1731428504"
         />
       </div>
-      <!-- <Icon
-        icon="iconamoon:arrow-up-6-circle-light"
-        width="45"
-        class="cursor-pointer justify-self-end m-10 hover:scale-150 transition-transform duration-300"
-        id="canceled"
-        color="lightgray"
-      /> -->
     </div>
   </section>
+
   <!-- -------------------------------------- -->
 
   <section
@@ -237,7 +232,6 @@ function nextImg() {
   </section>
 </template>
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap");
 
@@ -263,167 +257,4 @@ function nextImg() {
   object-fit: cover;
 }
 /* ******************************** */
-
-.imaga {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  background: #161616;
-  overflow: hidden;
-}
-
-.block {
-  position: relative;
-  width: 580px;
-  height: 460px;
-  margin: 10px 300px 20px 80px;
-}
-
-.imaga h1 {
-  position: absolute;
-  font-family: "Monument Extended";
-  font-weight: lighter;
-  font-size: 64px;
-}
-
-.block-1 {
-  background: url("@") no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.block-2 {
-  background: url("@/assets/img/loadingBg.png") no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.block-3 {
-  background: url("@/assets/img/loadingBg.png") no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.block-4 {
-  background: url("@/assets/img/loadingBg.png") no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.block-5 {
-  background: url("@/assets/img/loadingBg.png") no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.container {
-  margin-top: 200px;
-  margin-left: 200px;
-}
-
-.block-1 h1,
-.block-3 h1,
-.block-5 h1 {
-  bottom: 0;
-  right: -60px;
-}
-
-.block-2 h1,
-.block-4 h1 {
-  right: -60px;
-}
-
-/* ******************************** */
-.slider-container {
-  width: 100%;
-  height: 90%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-}
-.slider-images {
-  display: flex;
-  align-items: center;
-  gap: 21px;
-}
-.slider-images img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 6px;
-}
-.slider-img {
-  width: 110px;
-  border-radius: 6px;
-  cursor: pointer;
-  position: relative;
-  transition: 0.7s ease;
-}
-.slider-images .slider-img:first-child,
-.slider-images .slider-img:last-child {
-  height: 300px;
-}
-.slider-images .slider-img:nth-child(2),
-.slider-images .slider-img:nth-child(6) {
-  height: 430px;
-}
-.slider-images .slider-img:nth-child(3),
-.slider-images .slider-img:nth-child(4),
-.slider-images .slider-img:nth-child(5) {
-  height: 500px;
-}
-.slider-container h1 {
-  font-family: "Jost", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  text-align: left;
-  text-transform: uppercase;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: -10%;
-  transform: rotate(270deg);
-  transition: 0.7s ease;
-}
-.details {
-  position: absolute;
-  bottom: 43px;
-  left: 43px;
-}
-.details h2 {
-  font-family: "Jost", sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  text-align: left;
-  line-height: 44px;
-  text-align: left;
-  color: #fff;
-  text-transform: uppercase;
-  transition: 0.7s ease;
-  display: none;
-}
-.details p {
-  font-family: "Jost", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  text-align: left;
-  line-height: 33px;
-  text-align: left;
-  color: #fff;
-  text-transform: uppercase;
-  transition: 0.7s ease;
-  display: none;
-}
-.slider-img.active {
-  width: 450px !important;
-  height: 550px !important;
-}
-.slider-img.active h1 {
-  display: none;
-}
-.slider-img.active .details p,
-.slider-img.active .details h2 {
-  display: block;
-}
 </style>
