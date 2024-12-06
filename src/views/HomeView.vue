@@ -70,7 +70,7 @@
           <div class="col"></div>
           <div class="col"></div>
           <div class="col">Ｗriting</div>
-          <div class="col">PS AE AI Pr</div>
+          <div class="col">PS AE AI PR</div>
           <div class="col"></div>
         </div>
         <div class="divider"></div>
