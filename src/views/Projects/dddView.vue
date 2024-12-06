@@ -16,7 +16,7 @@ const openIntro = () => {
 </script>
 
 <template>
-  <div class="-mt-14 snap-y">
+  <div>
     <section id="1" class="relative snap-center">
       <img
         class="w-full h-full object-cover cursor-pointer"

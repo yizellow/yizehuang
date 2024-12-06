@@ -228,6 +228,7 @@ onMounted(() => {
 .mainbox {
   font-family: "Neue Montreal", sans-serif;
   display: block;
+  margin-top: 56px;
 }
 
 #overlay-light {
