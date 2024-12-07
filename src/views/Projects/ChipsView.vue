@@ -1,5 +1,29 @@
-<script setup></script>
-<script setup></script>
+<script setup>
+import { Icon } from "@iconify/vue";
+import { ref } from "vue"; // 引入 ref
+
+const image = [
+  "https://cdna.artstation.com/p/assets/images/images/081/914/924/large/yize-huang-2024-11-11-8-47-48.jpg?1731558884",
+  "https://cdnb.artstation.com/p/assets/images/images/081/759/583/large/yize-huang-1.jpg?1731143083",
+  "https://cdnb.artstation.com/p/assets/images/images/081/756/461/large/yize-huang-1.jpg?1731128459",
+  "https://cdnb.artstation.com/p/assets/images/images/081/756/469/large/yize-huang-.jpg?1731128470",
+  "https://cdna.artstation.com/p/assets/images/images/081/756/438/large/yize-huang-.jpg?1731128376",
+  "https://cdnb.artstation.com/p/assets/images/images/081/756/441/large/yize-huang-.jpg?1731128424",
+  "https://cdna.artstation.com/p/assets/images/images/081/756/450/large/yize-huang-.jpg?1731128444",
+  "https://cdnb.artstation.com/p/assets/images/images/081/759/565/large/yize-huang-maze.jpg?1731143047",
+  "https://cdnb.artstation.com/p/assets/images/images/081/756/435/large/yize-huang-.jpg?1731128356",
+];
+let currentIndex = ref(0);
+
+const lastImg = () => {
+  currentIndex.value = (currentIndex.value - 1 + image.length) % image.length;
+  console.log(currentIndex);
+};
+const nextImg = () => {
+  currentIndex.value = (currentIndex.value + 1) % image.length;
+  console.log(currentIndex);
+};
+</script>
 <template>
   <section
     class="relative w-full h-[100vh] flex justify-center items-center z-0"
@@ -67,14 +91,90 @@
       />
     </div>
   </section>
+  <section
+    class="w-full h-[calc(100vh-56px)] p-20 flex items-start justify-start"
+  >
+    <div class="h-full w-full grid grid-cols-3 grid-rows-3">
+      <div class="col-span-2 row-span-3">
+        <img
+          class="w-full h-full object-contain"
+          v-bind:src="image[currentIndex]"
+        />
+      </div>
+      <div
+        class="ml-20 col-span-1 row-span-2 px-10 flex items-center justify-center flex-col"
+      >
+        <p class="my-5 text-gray-900 text-2xl poppins-medium">My Role</p>
 
+        <p class="markazi-text text-gray-900 text-2xl">
+          Main producer, responsible for scriptwriting, animation, visual
+          design, game design, and administration.
+        </p>
+      </div>
+      <div
+        class="col-span-1 row-span-1 flex flex-row justify-center items-start pl-20"
+      >
+        <Icon
+          icon="material-symbols:arrow-back-2"
+          width="55"
+          class="cursor-pointer justify-self-end m-10 hover:scale-150 transition-transform duration-300"
+          @click="lastImg"
+          color="blue"
+        ></Icon>
+        <Icon
+          icon="material-symbols:arrow-back-2"
+          width="55"
+          class="cursor-pointer justify-self-end rotate-180 m-10 hover:scale-150 transition-transform duration-300"
+          @click="nextImg"
+          color="blue"
+        ></Icon>
+      </div>
+    </div>
+  </section>
   <section
     class="relative w-full h-[692px] bg-neutral-200 flex items-center"
   ></section>
 
+  <section class="w-full h-[692px] bg-neutral-300 flex">
+    <div
+      class="px-20 py-40 left-0 w-2/3 h-full col-span-1 bg-neutral-900 flex flex-col items-start justify-center"
+    >
+      <p class="text-white text-2xl ml-10 mb-5 poppins-medium">About Chips</p>
+      <div
+        class="w-full h-full bg-[#3f4f9a]/50 p-10 flex items-start justify-center"
+      >
+        <p class="text-white text-2xl markazi-text">
+          "Chips" is a game centered on dance, combining animation, drama, and
+          music, inspired by Greek tragedy. The protagonist is in his mental
+          world, searching for an imaginary figure while dealing with inner
+          trauma. The game starts with animations and psychological tests to
+          select a character, then shifts to an RPG mode. In a Möbius-strip-like
+          playground, players advance the story through character dialogues,
+          exploring memories, navigating mazes, and playing various mini-games.
+          Every choice leads to a different ending.
+        </p>
+      </div>
+    </div>
+    <div
+      class="p-10 right-0 w-1/3 h-full col-span-1 flex flex-col bg-neutral-900"
+    >
+      <img
+        class="w-full h-1/3 object-cover object-center"
+        src="https://cdna.artstation.com/p/assets/images/images/082/656/926/large/yize-huang-ae-a-2024-11-26-a-a-6-09-01.jpg?1733561492"
+      />
+      <img
+        class="w-full h-1/3 object-cover object-center"
+        src="https://cdnb.artstation.com/p/assets/images/images/082/656/925/large/yize-huang-ae-a-2024-11-26-a-a-6-09-22.jpg?1733561481"
+      />
+      <img
+        class="w-full h-1/3 object-fill object-right"
+        src="https://cdnb.artstation.com/p/assets/images/images/082/657/009/large/yize-huang-2024-12-07-4-58-21.jpg?1733561974"
+      />
+    </div>
+  </section>
   <!-- ------------------------------- -->
 
-  <section class="w-full h-[692px] bg-neutral-900 z-0 relative golden">
+  <section class="w-full h-[692px] bg-neutral-900 z-0 relative">
     <div
       class="right-0 w-1/2 h-full absolute flex justify-center items-center z-2"
     >
