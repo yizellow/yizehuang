@@ -190,15 +190,69 @@ const nextImg = () => {
   ></section>
 
   <section class="relative w-full h-auto bg-neutral-900 flex items-center">
-    <div class="bg-red-500 w-full h-full">
-      <div class="w-[200px] h-[160px]">
+    <div
+      class="w-full h-full neutral-900 m-5 flex items-start justify-start flex-wrap"
+    >
+      <div class="w-1/3 h-full p-3">
         <iframe
-          class="w-full h-full object-cover z-1 inset-0"
-          src="https://www.youtube.com/embed/4x2mtLzcmhE?autoplay=1&loop=1&mute=1&playlist=4x2mtLzcmhE"
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/sQpa6tkxzg8"
+          title="Psychological Test V"
           frameborder="0"
-          allow="autoplay; encrypted-media"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
+          loading="lazy"
         ></iframe>
+        <p class="text-neutral-400 mt-5 text-2xl text-center poppins-medium">
+          Psychological Test V
+        </p>
+      </div>
+
+      <div class="w-1/3 h-full p-3">
+        <iframe
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/Ze51L77-feU"
+          frameborder="0"
+          title="Psychological Test IV"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+        <p class="text-neutral-400 mt-5 text-2xl text-center poppins-medium">
+          Psychological Test IV
+        </p>
+      </div>
+      <div class="w-1/3 h-full p-3">
+        <iframe
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/gmkw-ZdAMAQ"
+          frameborder="0"
+          title="Psychological Test III"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+        <p class="text-neutral-400 mt-5 text-2xl text-center poppins-medium">
+          Psychological Test III
+        </p>
+      </div>
+      <div class="w-1/3 h-full p-3 mt-10">
+        <iframe
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/gmkw-ZdAMAQ"
+          frameborder="0"
+          title="Psychological Test III"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+        <p class="text-neutral-400 mt-5 text-2xl text-center poppins-medium">
+          Psychological Test III
+        </p>
       </div>
     </div>
   </section>
