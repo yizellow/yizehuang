@@ -12,6 +12,7 @@ const image = [
   "https://cdna.artstation.com/p/assets/images/images/081/756/450/large/yize-huang-.jpg?1731128444",
   "https://cdnb.artstation.com/p/assets/images/images/081/759/565/large/yize-huang-maze.jpg?1731143047",
   "https://cdnb.artstation.com/p/assets/images/images/081/756/435/large/yize-huang-.jpg?1731128356",
+  "https://cdnb.artstation.com/p/assets/images/images/082/660/331/large/yize-huang-ae-a-2024-11-26-a-a-6-09-53.jpg?1733574260",
 ];
 let currentIndex = ref(0);
 
@@ -91,6 +92,7 @@ const nextImg = () => {
       />
     </div>
   </section>
+
   <section
     class="w-full h-[calc(100vh-56px)] p-20 flex items-start justify-start"
   >
@@ -131,47 +133,76 @@ const nextImg = () => {
       </div>
     </div>
   </section>
+  <section class="w-full h-[692px] bg-neutral-900 flex">
+    <div
+      class="ml-20 p-10 left-0 w-1/3 h-full flex items-center justify-center bg-neutral-900"
+    >
+      <img
+        src="@/assets/img/ChipsImg/mmm.png"
+        class="object-cover w-full h-full"
+      />
+    </div>
+
+    <div
+      class="p-40 right-0 w-2/3 h-full bg-neutral-900 flex flex-col items-start justify-center"
+    >
+      <p class="text-blue-700 text-2xl mr-10 mb-5 poppins-medium">Process</p>
+
+      <p class="text-white text-2xl markazi-text">
+        During university, I was eager to collaborate with students from other
+        departments, believing that interdisciplinary projects with the Dance
+        Department would be the most challenging. At the same time, I wanted to
+        fulfill my dream of creating a game, which led to the creation of Chips.
+        This project took a year and a half to complete and was successfully
+        selected for the 2021 GenieLab Hybrid Cup.
+        <br />
+        <br />
+        Originally, the game was planned to go beyond online activities. We
+        envisioned transforming campus vending machines into game-themed
+        installations and setting up a stage around them to reinterpret the work
+        through dance and performance art while promoting the game. However, due
+        to the pandemic, it was ultimately showcased through an online curation
+        format, where it received analysis and feedback from many players and
+        art critics.
+      </p>
+      <div
+        class="w-full p-2 h-auto mt-5 poppins-medium bg-[blue]/40 flex items-start justify-start"
+      >
+        <a href="https://reurl.cc/qn5ZLg"
+          ><p class="ml-2 text-xl text-red-500 cursor-pointer hover:text-white">
+            ＊ Online GenieLab Hybrid Cup Curation Introduction => click
+          </p></a
+        >
+      </div>
+      <div
+        class="w-full p-2 h-auto poppins-medium bg-[blue]/40 flex items-start justify-start"
+      >
+        <a href="https://reurl.cc/d12eDM">
+          <p class="ml-2 text-xl text-red-500 cursor-pointer hover:text-white">
+            ＊ Art criticism (Chinese Only) => click
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
   <section
     class="relative w-full h-[692px] bg-neutral-200 flex items-center"
   ></section>
 
-  <section class="w-full h-[692px] bg-neutral-300 flex">
-    <div
-      class="px-20 py-40 left-0 w-2/3 h-full col-span-1 bg-neutral-900 flex flex-col items-start justify-center"
-    >
-      <p class="text-white text-2xl ml-10 mb-5 poppins-medium">About Chips</p>
-      <div
-        class="w-full h-full bg-[#3f4f9a]/50 p-10 flex items-start justify-center"
-      >
-        <p class="text-white text-2xl markazi-text">
-          "Chips" is a game centered on dance, combining animation, drama, and
-          music, inspired by Greek tragedy. The protagonist is in his mental
-          world, searching for an imaginary figure while dealing with inner
-          trauma. The game starts with animations and psychological tests to
-          select a character, then shifts to an RPG mode. In a Möbius-strip-like
-          playground, players advance the story through character dialogues,
-          exploring memories, navigating mazes, and playing various mini-games.
-          Every choice leads to a different ending.
-        </p>
+  <section class="relative w-full h-auto bg-neutral-900 flex items-center">
+    <div class="bg-red-500 w-full h-full">
+      <div class="w-[200px] h-[160px]">
+        <iframe
+          class="w-full h-full object-cover z-1 inset-0"
+          src="https://www.youtube.com/embed/4x2mtLzcmhE?autoplay=1&loop=1&mute=1&playlist=4x2mtLzcmhE"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
-    <div
-      class="p-10 right-0 w-1/3 h-full col-span-1 flex flex-col bg-neutral-900"
-    >
-      <img
-        class="w-full h-1/3 object-cover object-center"
-        src="https://cdna.artstation.com/p/assets/images/images/082/656/926/large/yize-huang-ae-a-2024-11-26-a-a-6-09-01.jpg?1733561492"
-      />
-      <img
-        class="w-full h-1/3 object-cover object-center"
-        src="https://cdnb.artstation.com/p/assets/images/images/082/656/925/large/yize-huang-ae-a-2024-11-26-a-a-6-09-22.jpg?1733561481"
-      />
-      <img
-        class="w-full h-1/3 object-fill object-right"
-        src="https://cdnb.artstation.com/p/assets/images/images/082/657/009/large/yize-huang-2024-12-07-4-58-21.jpg?1733561974"
-      />
-    </div>
   </section>
+
   <!-- ------------------------------- -->
 
   <section class="w-full h-[692px] bg-neutral-900 z-0 relative">
