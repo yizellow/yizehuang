@@ -7,7 +7,6 @@
     <video
       class="w-full h-full object-cover z-1 inset-0"
       src="@/assets/img/ChipsImg/chipHero.mp4"
-      controls
       autoplay
       loop
       muted
@@ -20,7 +19,7 @@
       </p>
     </div>
   </section>
-  <section class="w-full h-[100vh] bg-red-900 flex z-0 relative">
+  <section class="w-full h-[100vh] bg-neutral-900 flex z-0 relative">
     <img
       class="absolute z-2 object-cover left-0 right-0 w-1/2 h-full"
       src="https://cdna.artstation.com/p/assets/images/images/082/633/124/large/yize-huang-2024-12-06-9-01-23.jpg?1733490357"
@@ -31,12 +30,47 @@
     />
   </section>
 
+  <section class="w-full h-[692px] bg-neutral-300 flex">
+    <div
+      class="px-20 py-40 right-0 w-2/3 h-full col-span-1 bg-neutral-900 flex flex-col items-start justify-center"
+    >
+      <p class="text-white text-2xl ml-10 mb-5 poppins-medium">About Chips</p>
+      <div
+        class="w-full h-full bg-[#3f4f9a]/50 p-10 flex items-start justify-center"
+      >
+        <p class="text-white text-2xl markazi-text">
+          "Chips" is a game centered on dance, combining animation, drama, and
+          music, inspired by Greek tragedy. The protagonist is in his mental
+          world, searching for an imaginary figure while dealing with inner
+          trauma. The game starts with animations and psychological tests to
+          select a character, then shifts to an RPG mode. In a Möbius-strip-like
+          playground, players advance the story through character dialogues,
+          exploring memories, navigating mazes, and playing various mini-games.
+          Every choice leads to a different ending.
+        </p>
+      </div>
+    </div>
+    <div
+      class="p-10 left-0 w-1/3 h-full col-span-1 flex flex-col bg-neutral-900"
+    >
+      <img
+        class="w-full h-1/3 object-cover object-center"
+        src="https://cdna.artstation.com/p/assets/images/images/082/656/926/large/yize-huang-ae-a-2024-11-26-a-a-6-09-01.jpg?1733561492"
+      />
+      <img
+        class="w-full h-1/3 object-cover object-center"
+        src="https://cdnb.artstation.com/p/assets/images/images/082/656/925/large/yize-huang-ae-a-2024-11-26-a-a-6-09-22.jpg?1733561481"
+      />
+      <img
+        class="w-full h-1/3 object-fill object-right"
+        src="https://cdnb.artstation.com/p/assets/images/images/082/657/009/large/yize-huang-2024-12-07-4-58-21.jpg?1733561974"
+      />
+    </div>
+  </section>
+
   <section
     class="relative w-full h-[692px] bg-neutral-200 flex items-center"
   ></section>
-  <section class="w-full h-[692px] bg-neutral-300 grid">
-    <div class="right-0 h-full col-span-1 bg-blue-400"></div>
-  </section>
 
   <!-- ------------------------------- -->
 

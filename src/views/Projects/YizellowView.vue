@@ -285,7 +285,7 @@ const nextImg = () => {
     <!-- -------------------------------------- -->
 
     <section
-      class="w-full h-[calc(100vh-56px)] p-20 flex items-center justify-starts flex-row"
+      class="w-full h-[692px] p-20 flex items-center justify-starts flex-row"
     >
       <img
         class="w-[33%] h-full object-cover object-center"
