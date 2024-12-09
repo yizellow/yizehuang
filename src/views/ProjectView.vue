@@ -175,7 +175,7 @@ export default {
           <div class="slider-item">
             <figure>
               <img
-                src="https://cdna.artstation.com/p/assets/images/images/082/336/000/large/yize-huang-2023-07-07-2-05-58.jpg?1732707397"
+                src="https://cdna.artstation.com/p/assets/images/images/082/626/578/large/yize-huang-jj6.jpg?1733473089"
                 alt=""
               />
             </figure>

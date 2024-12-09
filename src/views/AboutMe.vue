@@ -9,55 +9,63 @@ export default {
 </script>
 
 <template>
-  <div class="wrapper">
-    <div class="about">
-      <p>
-        EXHIBITION:<br />
-        12.2023 Painting Comfort Zone, North and South Gallery <br />04-05.2023
-        If the World Had No Maps, Underground Experimental Field <br />08.2021
-        2021GenieLab TNUA, online exhibition. (Third Place) <br />12.2020
-        Picking up Color Project: Pocket book for Autumn, North and South
-        Gallery <br />07.2020 ALIA (workshop), KdMoFA <br />12.2019 Myself, 8
-        and one-half Gallery
-      </p>
-    </div>
+  <Suspense>
+    <template #default>
+      <div class="wrapper">
+        <div class="about">
+          <p>
+            EXHIBITION:<br />
+            12.2023 Painting Comfort Zone, North and South Gallery
+            <br />04-05.2023 If the World Had No Maps, Underground Experimental
+            Field <br />08.2021 2021GenieLab TNUA, online exhibition. (Third
+            Place) <br />12.2020 Picking up Color Project: Pocket book for
+            Autumn, North and South Gallery <br />07.2020 ALIA (workshop),
+            KdMoFA <br />12.2019 Myself, 8 and one-half Gallery
+          </p>
+        </div>
 
-    <div class="wrapper-img">
-      <div class="box"></div>
-      <div>
-        <img
-          class="image"
-          src="https://cdna.artstation.com/p/assets/images/images/082/490/490/small/yize-huang-about-pic.jpg?1733143558"
-        />
+        <div class="wrapper-img">
+          <div class="box"></div>
+          <div>
+            <img
+              class="image"
+              src="https://cdna.artstation.com/p/assets/images/images/082/490/490/small/yize-huang-about-pic.jpg?1733143558"
+            />
+          </div>
+        </div>
+        <div class="sub-header">
+          <RouterLink to="/Project">
+            <a href="#" class="contact-link">&#8618; Project</a>
+          </RouterLink>
+
+          <a href="#" class="work-link">yize0926@gmail.com</a>
+          <div href="#" class="work-link flex flex-row">
+            <a href="https://www.artstation.com/yizehuang">
+              <img
+                class="iconTag"
+                src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/27_Artstation_logo_logos-512.png"
+              />
+            </a>
+
+            <a href="https://www.instagram.com/yizellow/">
+              <img
+                class="iconTag"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+              />
+            </a>
+          </div>
+          <a href="#" class="aboutme"
+            >I am from Hualien, Taiwan, a place often struck by natural
+            disasters. I love poetry and traveling the world.And,I have a deep
+            fear of boredom.
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="sub-header">
-      <RouterLink to="/Project">
-        <a href="#" class="contact-link">&#8618; Project</a>
-      </RouterLink>
-
-      <a href="#" class="work-link">yize0926@gmail.com</a>
-      <div href="#" class="work-link flex flex-row">
-        <a href="https://www.artstation.com/yizehuang">
-          <img
-            class="iconTag"
-            src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/27_Artstation_logo_logos-512.png"
-          />
-        </a>
-
-        <a href="https://www.instagram.com/yizellow/">
-          <img
-            class="iconTag"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-          />
-        </a>
-      </div>
-      <a href="#" class="aboutme"
-        >I am from Hualien, Taiwan, a place often struck by natural disasters. I
-        love poetry and traveling the world.And,I have a deep fear of boredom.
-      </a>
-    </div>
-  </div>
+    </template>
+    <template #fallback>
+      <p>loading</p>
+    </template>
+  </Suspense>
 </template>
 <style>
 * {

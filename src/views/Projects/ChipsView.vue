@@ -189,9 +189,15 @@ const nextImg = () => {
     class="relative w-full h-[692px] bg-neutral-200 flex items-center"
   ></section>
 
-  <section class="relative w-full h-auto bg-neutral-900 flex items-center">
+  <section class="relative w-full h-auto bg-neutral-900 flex flex-col">
+    <p
+      class="text-3xl mt-10 ml-20 mb-2 items-self-start poppins-medium text-white"
+    >
+      Video
+    </p>
+
     <div
-      class="w-full h-full neutral-900 m-5 flex items-start justify-start flex-wrap"
+      class="w-full h-full neutral-900 mb-40 mt-5 flex items-start justify-start flex-wrap"
     >
       <div class="w-1/3 h-full p-3">
         <iframe
@@ -242,16 +248,90 @@ const nextImg = () => {
       <div class="w-1/3 h-full p-3 mt-10">
         <iframe
           class="w-full aspect-video"
-          src="https://www.youtube.com/embed/gmkw-ZdAMAQ"
-          frameborder="0"
-          title="Psychological Test III"
+          src="https://www.youtube.com/embed/QYmHc7AvEUE"
+          title="Happy Story"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
           loading="lazy"
         ></iframe>
         <p class="text-neutral-400 mt-5 text-2xl text-center poppins-medium">
-          Psychological Test III
+          Happy Story
+        </p>
+      </div>
+
+      <div class="w-1/3 h-full p-3 mt-10">
+        <iframe
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/PgUw_T_wPaw"
+          title="Vintage Dance"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+        <p class="text-neutral-400 mt-5 text-2xl text-center poppins-medium">
+          Vintage Dance
+        </p>
+      </div>
+
+      <div class="w-1/3 h-full p-3 mt-10">
+        <iframe
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/F-uBIMrh78g"
+          title="Her Phone"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+        <p class="text-neutral-400 mt-5 text-2xl text-center poppins-medium">
+          Her Phone
+        </p>
+      </div>
+
+      <div class="w-1/3 h-full p-3 mt-10">
+        <iframe
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/zM7SZZLGifM"
+          title="His Phone"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+        <p class="text-neutral-400 mt-5 text-2xl text-center poppins-medium">
+          Her Phone
+        </p>
+      </div>
+
+      <div class="w-1/3 h-full p-3 mt-10">
+        <iframe
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/HiRsTjugXlk"
+          title="Imagined Daily Life"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+        <p class="text-neutral-400 mt-5 text-2xl text-center poppins-medium">
+          Imagined Daily Life
+        </p>
+      </div>
+
+      <div class="w-1/3 h-full p-3 mt-10">
+        <iframe
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/N0B_bga1va8"
+          title="Version of Sadness"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+        <p class="text-neutral-400 mt-5 text-2xl text-center poppins-medium">
+          Version of Sadness
         </p>
       </div>
     </div>
@@ -266,7 +346,7 @@ const nextImg = () => {
       <div
         class="w-[calc(100%/1.414)] h-[calc(100%/1.414)] flex justify-center flex-col p-10"
       >
-        <p class="text-2xl text-white poppins-medium">團隊名單 Credit</p>
+        <p class="text-xl text-white poppins-medium">團隊名單 Credit</p>
         <p class="text-2xl mt-10 text-white markazi-text">
           美術系 黃亦澤 HUANG Yi-Ze<br />
           美術系 張瑜晴 CHANG Yu-Ching<br />
