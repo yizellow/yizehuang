@@ -2,10 +2,11 @@
   <div
     class="w-[100vw] h-[100vh] fixed loadingbg justify-center items-center pl-10 bg-white"
   >
+    <p class="poppins-medium text-2xl animate-bounce">Loading ...</p>
     <!-- Box 容器 -->
   </div>
-  <div
-    class="loading bg-purple-500 w-[50vw] h-[50vh] fixed z-10 flex flex-col justify-center items-center overflow-hidden"
+  <!-- <div
+    class="loading bg-purple-00 w-[50vw] h-[50vh] fixed z-10 flex flex-col justify-center items-center overflow-hidden"
   >
     <img
       src="@/assets/img/yizellow.gif"
@@ -14,7 +15,7 @@
     <p class="text-[7rem] animate-bounce poppins-medium text-green-500">
       loading
     </p>
-  </div>
+  </div> -->
 </template>
 
 <script setup>
@@ -39,9 +40,9 @@ onMounted(async () => {
   }
 
   // 生成多個 Box
-  for (let i = 0; i < 100; i++) {
-    createBox();
-  }
+  // for (let i = 0; i < 100; i++) {
+  //   createBox();
+  // }
 });
 </script>
 
