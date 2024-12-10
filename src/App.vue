@@ -19,6 +19,7 @@ router.afterEach(() => {
   setTimeout(() => {
     isLoading.value = false; // 結束後停用 Loading
   }, 1000); // 可調整延遲時間
+  
 });
 </script>
 
