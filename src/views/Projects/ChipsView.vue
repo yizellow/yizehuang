@@ -185,9 +185,18 @@ const nextImg = () => {
       </div>
     </div>
   </section>
-  <section
-    class="relative w-full h-[692px] bg-neutral-200 flex items-center"
-  ></section>
+  <section class="relative w-full h-[692px] bg-neutral-200 flex items-center">
+    <div class="wrapper">
+      <div class="item">box1</div>
+      <div class="item">box2</div>
+
+      <div class="item">box3</div>
+
+      <div class="item">box4</div>
+
+      <div class="item">box5</div>
+    </div>
+  </section>
 
   <section class="relative w-full h-auto bg-neutral-900 flex flex-col">
     <p
@@ -392,6 +401,21 @@ const nextImg = () => {
 .golden {
   display: grid;
   grid-template-columns: 1.618fr 1;
+}
+
+.wrapper {
+  max-height: 500px;
+  border: 1px solid red;
+  display: flex;
+  overflow: auto;
+}
+
+.wrapper .item {
+  min-width: 810px;
+  height: 400px;
+  line-height: 50px;
+  text-align: center;
+  background-color: aliceblue;
 }
 
 /* .tagg {

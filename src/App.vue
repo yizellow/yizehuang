@@ -18,7 +18,7 @@ router.beforeEach(() => {
 router.afterEach(() => {
   setTimeout(() => {
     isLoading.value = false; // 結束後停用 Loading
-  }, 800); // 可調整延遲時間
+  }, 1800); // 可調整延遲時間
 });
 </script>
 
