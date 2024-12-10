@@ -185,16 +185,106 @@ const nextImg = () => {
       </div>
     </div>
   </section>
-  <section class="relative w-full h-[692px] bg-neutral-200 flex items-center">
-    <div class="wrapper">
-      <div class="item">box1</div>
-      <div class="item">box2</div>
+  <section class="w-full h-[692px] bg-white flex items-start justify-start">
+    <p class="my-3 ml-10 text-blue-500 text-2xl poppins-medium">
+      What happened in this game?
+    </p>
+    <div class="wrapper bg-white">
+      <div class="item text-2xl bg-white">
+        <div
+          class="w-1/2 h-full flex flex-col items-start justify-center p-20 bg-neutral-900"
+        >
+          <p class="poppins-medium">1. Personality Test</p>
+          <br />
+          <p class="markazi-text text-2xl text-left">
+            There are five surreal questions with animations to match the player
+            to the right character.
+          </p>
+        </div>
+        <div
+          class="w-1/2 h-full bg-neutral-900 flex items-center justify-center pr-5"
+        >
+          <img class="w-4/5 h-auto" src="@/assets/img/ChipsImg/1.gif" />
+        </div>
+      </div>
+      <div class="item text-2xl bg-white">
+        <div
+          class="w-1/2 h-full flex flex-col items-start justify-center pl-10 bg-neutral-900"
+        >
+          <p class="poppins-medium">2. Character Selection Result</p>
+          <br />
+          <p class=""></p>
+        </div>
+        <div
+          class="w-1/2 h-full bg-neutral-900 flex items-center justify-center pr-5"
+        >
+          <img class="w-4/5 h-auto" src="@/assets/img/ChipsImg/2.gif" />
+        </div>
+      </div>
 
-      <div class="item">box3</div>
+      <div class="item text-2xl bg-white">
+        <div
+          class="w-1/2 h-full flex flex-col items-start justify-center p-20 bg-neutral-900"
+        >
+          <p class="poppins-medium">3. In the Mobius Strip playground</p>
+          <br />
+          <p class="markazi-text text-2xl text-left">
+            This playground is the main place of the game, with two versions
+            that change based on the player's choices. Here, players will talk
+            to other characters and trigger various games.
+          </p>
+        </div>
+        <div
+          class="w-1/2 h-full bg-neutral-900 flex items-center justify-center pr-5"
+        >
+          <img class="w-4/5 h-auto" src="@/assets/img/ChipsImg/3.gif" />
+        </div>
+      </div>
 
-      <div class="item">box4</div>
+      <div class="item text-2xl bg-white">
+        <div
+          class="w-1/2 h-full flex flex-col items-start justify-center p-20 bg-neutral-900"
+        >
+          <p class="poppins-medium">4. Labyrinth</p>
+          <br />
+          <p class="markazi-text text-2xl text-left">
+            The player will control two very similar Labyrinths at the same
+            time, with the directions switched. Pressing the "right" key might
+            move the character up. The story is told through music, and there
+            are fewer traps in the labyrinth, allowing players to enjoy the
+            music that describes the story.
+          </p>
+        </div>
+        <div
+          class="w-1/2 h-full bg-neutral-900 flex items-center justify-center pr-5"
+        >
+          <img
+            class="w-4/5 h-auto"
+            src="https://cdnb.artstation.com/p/assets/images/images/081/759/565/large/yize-huang-maze.jpg?1731143047"
+          />
+        </div>
+      </div>
 
-      <div class="item">box5</div>
+      <div class="item text-2xl bg-white">
+        <div
+          class="w-1/2 h-full flex flex-col items-start justify-center p-20 bg-neutral-900"
+        >
+          <p class="poppins-medium">5. Endings</p>
+          <br />
+          <p class="markazi-text text-2xl text-left">
+            a. Do not face the reality .
+            <br />
+            b. reconciliation with yourself.
+            <br />
+            c. New possibilities.
+          </p>
+        </div>
+        <div
+          class="w-1/2 h-full bg-neutral-900 flex items-center justify-center pr-5"
+        >
+          <img class="w-4/5 h-auto" src="@/assets/img/ChipsImg/4.gif" />
+        </div>
+      </div>
     </div>
   </section>
 
@@ -404,18 +494,25 @@ const nextImg = () => {
 }
 
 .wrapper {
-  max-height: 500px;
-  border: 1px solid red;
+  max-height: 80%;
   display: flex;
-  overflow: auto;
+  overflow-x: auto;
+}
+
+.wrapper::-webkit-scrollbar {
+  width: 0;
 }
 
 .wrapper .item {
-  min-width: 810px;
-  height: 400px;
-  line-height: 50px;
+  min-width: calc(100vw * 2 / 3);
+  height: 100%;
   text-align: center;
-  background-color: aliceblue;
+  background-color: rgb(27, 69, 106);
+  margin-right: 56px;
+  color: aliceblue;
+  font-size: text-2xl;
+  display: flex;
+  justify-content: start;
 }
 
 /* .tagg {
