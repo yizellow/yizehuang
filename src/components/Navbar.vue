@@ -38,7 +38,8 @@ img {
   margin-right: 100px; /* 相当于 mr-6 的间距 */
 }
 nav {
-  background-color: rgba(255, 255, 255, 0.8);
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  background-color: blue;
 }
 
 @media (max-width: 480px) {
