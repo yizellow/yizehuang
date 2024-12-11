@@ -94,18 +94,22 @@ const openInfo = () => {
   }
   .tp {
     font-weight: 500;
-    margin-left: 1rem;
+    margin-left: 0.8rem;
     padding: 0;
     text-align: left;
     font-family: "roboto-light";
   }
   .box {
+    position: absolute;
     width: 50%;
-    padding-left: 0.3rem;
+    /* height: 10px; */
     top: 70%;
-    padding: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+
     display: flex;
     flex-direction: column;
+    z-index: 50;
     /* flex-wrap: wrap; */
   }
   .xx {

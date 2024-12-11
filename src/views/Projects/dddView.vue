@@ -46,11 +46,7 @@ const openIntro = () => {
           src="https://cdna.artstation.com/p/assets/images/images/052/282/402/large/yize-huang-new-whole.jpg?1659416565"
           class="cursor-pointer w-1/4 drop-shadow-md opacity-90 hover:opacity-50 hover:scale-110 transition-transform duration-300"
         />
-        <infoTag
-          title="Republic China and Its Dick"
-          subtle="David"
-          content="I attempted to use this project to convey political satire about Taiwan."
-        />
+        <infoTag title="Republic China and Its Dick_David" class="David" />
       </section>
       <section
         id="3"
@@ -173,13 +169,12 @@ const openIntro = () => {
   }
   .ct {
     font-size: 1rem;
-    line-height: 10rem;
+    line-height: 1.1rem;
     margin: auto 3px;
   }
   .tt {
     width: full;
     font-size: 0.8rem;
-
     line-height: 1rem;
     margin: auto 5px;
     text-align: left;
@@ -193,7 +188,7 @@ const openIntro = () => {
     top: 90%;
   }
   .section2 {
-    height: autovh;
+    height: auto;
   }
   .section3 {
     height: 35vh;
@@ -201,6 +196,10 @@ const openIntro = () => {
   }
   .section4 {
     height: 50vh;
+  }
+  .David {
+    width: 100%;
+    z-index: 200;
   }
 }
 </style>
