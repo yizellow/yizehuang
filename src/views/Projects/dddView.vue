@@ -158,17 +158,18 @@ const openIntro = () => {
   }
   .ct {
     font-size: 1rem;
-    line-height: 1.5rem;
-    margin: auto 5px;
+    line-height: 1.2rem;
+    margin: auto 3px;
   }
   .tt {
     width: full;
-    font-size: 1rem;
+    font-size: 0.8rem;
 
     line-height: 1rem;
     margin: auto 5px;
-    text-align: center;
-    padding-left: 2rem;
+    text-align: left;
+    padding-left: 0rem;
+    margin-bottom: 1rem;
   }
   .intro {
     font-size: 1rem;
