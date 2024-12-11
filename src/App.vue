@@ -1,24 +1,17 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import Loading from "@/components/Loading.vue";
 import Navbar from "@/components/Navbar.vue";
 import { RouterView } from "vue-router";
 
 // 定義 Loading 狀態
-const isLoading = ref(false);
+const isLoading = ref(true);
 
-// 取得路由實例
-const router = useRouter();
-
-// 監聽路由切換事件
-router.beforeEach(() => {
-  isLoading.value = true; // 切換前啟用 Loading
-});
-router.afterEach(() => {
-  setTimeout(() => {
-    isLoading.value = false; // 結束後停用 Loading
-  }, 1800); // 可調整延遲時間
+onMounted(() => {
+  window.addEventListener("load", () => {
+    isLoading.value = false; // 當頁面加載完成時，關閉 Loading 畫面
+  });
 });
 </script>
 
@@ -26,7 +19,8 @@ router.afterEach(() => {
   <!-- Loading 組件 -->
   <div
     v-if="isLoading"
-    class="loadingContainer fixed top-0 left-0 w-screen h-screen z-50 flex items-center justify-center bg-white"
+    class="fixed top-0 left-0 w-screen h-screen z-50 flex items-center justify-center bg-white opacity-100 transition-opacity duration-500"
+    id="preloader"
   >
     <Loading />
   </div>
@@ -41,5 +35,5 @@ router.afterEach(() => {
 </template>
 
 <style scoped>
-/* 可選：設置 Loading 樣式 */
+/* 可選：設置 Loading 的額外樣式 */
 </style>
