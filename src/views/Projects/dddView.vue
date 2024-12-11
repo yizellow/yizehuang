@@ -109,7 +109,6 @@ const openIntro = () => {
       meticulously calculated lighting effects. While these features appear
       realistic, they simultaneously surpass the imperfections and randomness
       present in naturally occurring objects.
-
       <br />
       <br />
       &nbsp; &nbsp;This not only gives the works a refined and surreal quality
@@ -153,8 +152,9 @@ const openIntro = () => {
 
 @media (max-width: 480px) {
   .st {
-    width: 90%;
-    padding: 1rem;
+    width: 95%;
+    margin: auto;
+    padding: 0.5rem;
   }
   .ct {
     font-size: 1rem;

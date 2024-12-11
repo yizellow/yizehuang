@@ -39,16 +39,19 @@ img {
 }
 nav {
   /* background-color: rgba(255, 255, 255, 0.8); */
-  background-color: blue;
+  background-color: yellow;
 }
 
 @media (max-width: 480px) {
   .navtext {
-    font-size: 1rem;
-    margin: auto 10px;
+    font-size: 0.9rem;
+    margin: auto 3px;
   }
   .logo {
     margin-right: 10px;
+  }
+  nav {
+    height: auto;
   }
 }
 </style>
