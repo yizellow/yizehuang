@@ -26,7 +26,7 @@ const openIntro = () => {
     </section>
     <section
       id="2"
-      class="snap-center pr-[100px] relative w-full h-[600px] overflow-hidden flex items-center justify-start bg-right bg-[#e5e4e1]"
+      class="section2 snap-center pr-[100px] relative w-full h-[600px] overflow-hidden flex items-center justify-start bg-right bg-[#e5e4e1]"
       style="
         background-image: url('https://cdna.artstation.com/p/assets/images/images/052/282/404/large/yize-huang-sde.jpg?1659416576');
         background-repeat: no-repeat;
@@ -50,7 +50,7 @@ const openIntro = () => {
     </section>
     <section
       id="3"
-      class="snap-center relative w-full h-screen"
+      class="section3 section2snap-center relative w-full h-screen"
       style="background-color: #010e68"
     >
       <video
@@ -66,7 +66,7 @@ const openIntro = () => {
 
     <section
       id="4"
-      class="snap-center relative flex justify-center items-center w-full h-screen bg-gradient-to-b from-[#010e68] to-[#4b14ff]"
+      class="section4 snap-center relative flex justify-center items-center w-full h-screen bg-gradient-to-b from-[#010e68] to-[#4b14ff]"
     >
       <div
         class="bg-#2c2726 cursor-pointer w-3/5 h-4/5 overflow-auto touch-auto drop-shadow-2xl"
@@ -83,20 +83,20 @@ const openIntro = () => {
   <!--         tags              -->
   <div
     v-if="showIntro"
-    class="backdrop-blur-sm fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2/4 h-auto bg-white/60 p-8 z-10"
+    class="st backdrop-blur-sm fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2/4 h-auto bg-white/60 p-8 z-10"
   >
     <Icon
       icon="material-symbols:close-rounded"
       width="23"
-      class="cursor-pointer justify-self-end m-0 hover:scale-150 transition-transform duration-300"
+      class="xx cursor-pointer justify-self-end m-0 hover:scale-150 transition-transform duration-300"
       id="canceled"
       @click="canceledIntro"
     />
 
-    <h1 class="poppins-medium text-gray-800 text-center text-2xl">
+    <h1 class="tt poppins-medium text-gray-800 text-center text-2xl">
       3D Modeling, Experiment, Material and Light
     </h1>
-    <p class="markazi-text text-gray-900 my-5 text-2xl">
+    <p class="ct markazi-text text-gray-900 my-5 text-2xl">
       &nbsp; &nbsp; This is an experimental project created with Blender, aimed
       at exploring the interplay between materials, light, and shadow in 3D
       modeling. I am particularly captivated by the subtle interactions between
@@ -123,16 +123,16 @@ const openIntro = () => {
   <div
     v-if="showIntroTag"
     id="introTag"
-    class="p-3 flex row items-center fixed top-1/4 right-5 -translate-y-1/2 z-10 hover:animate-bounce cursor-pointer"
+    class="showIntro p-3 flex row items-center fixed top-1/4 right-5 -translate-y-1/2 z-10 hover:animate-bounce cursor-pointer"
     @click="openIntro"
   >
     <Icon
       icon="bitcoin-icons:plus-outline"
       width="13"
       color="white"
-      class="mr-2 backdrop-invert opacity-70 cursor-pointer"
+      class="icon mr-2 backdrop-invert opacity-70 cursor-pointer"
     />
-    <div class="text-white opacity-70 text-xl">INTRO</div>
+    <div class="intro text-white opacity-70 text-xl">INTRO</div>
   </div>
 </template>
 
@@ -150,5 +150,41 @@ const openIntro = () => {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+@media (max-width: 480px) {
+  .st {
+    width: 90%;
+    padding: 1rem;
+  }
+  .ct {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: auto 5px;
+  }
+  .tt {
+    width: full;
+    font-size: 1rem;
+
+    line-height: 1rem;
+    margin: auto 5px;
+    text-align: center;
+    padding-left: 2rem;
+  }
+  .intro {
+    font-size: 1rem;
+  }
+  .showIntro {
+    top: 90%;
+  }
+  .section2 {
+    height: 50vh;
+  }
+  .section3 {
+    height: 50vh;
+  }
+  .section4 {
+    height: 50vh;
+  }
 }
 </style>

@@ -40,4 +40,14 @@ img {
 nav {
   background-color: rgba(255, 255, 255, 0.8);
 }
+
+@media (max-width: 480px) {
+  .navtext {
+    font-size: 1.2rem;
+    margin: auto 15px;
+  }
+  .logo {
+    margin-right: 10px;
+  }
+}
 </style>

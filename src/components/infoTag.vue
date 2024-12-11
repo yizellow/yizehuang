@@ -4,8 +4,8 @@ import { Icon } from "@iconify/vue";
 defineProps({
   title: String,
   subtle: String,
-  content: String
-})
+  content: String,
+});
 // const title = "#Plastic wrap protection";
 // const subtle = "Laocoon and his sons";
 // const content = `Ukraine’s Commander-in-Chief Oleksandr Syrskyi said the situation on the
@@ -29,20 +29,20 @@ const openInfo = () => {
 
   <div
     v-if="showInfo"
-    class="rounded backdrop-blur-sm absolute top-1/2 right-1 -translate-y-1/2 -translate-x-1/4 w-1/4 h-auto bg-green-400/60 p-4 z-10"
+    class="box rounded backdrop-blur-sm absolute top-1/2 right-1 -translate-y-1/2 -translate-x-1/4 w-1/4 h-auto bg-green-400/60 p-4 z-10"
   >
     <Icon
       icon="material-symbols:close-rounded"
       width="23"
-      class="cursor-pointer justify-self-end m-0 hover:scale-150 transition-transform duration-300"
+      class="xx cursor-pointer justify-self-end m-0 hover:scale-150 transition-transform duration-300"
       @click="canceledInfo"
     />
 
-    <h1 class="poppins-medium text-gray-700 text-center text-base">
-      {{ title }}<br>
+    <h1 class="poppins-medium text-gray-700 text-center text-base tp">
+      {{ title }}<br />
       {{ subtle }}
     </h1>
-    <p class="markazi-text text-purple-900 my-3 text-2xl text-left ml-3">
+    <p class="markazi-text text-purple-900 my-3 text-2xl text-left ml-3 pp">
       {{ content }}
     </p>
   </div>
@@ -58,9 +58,9 @@ const openInfo = () => {
       icon="material-symbols:arrow-circle-left-rounded"
       width="23"
       color="white"
-      class="mr-2 opacity-70 cursor-pointer"
+      class="icon mr-2 opacity-70 cursor-pointer icon"
     />
-    <div class="text-green-400 opacity-80 text-2xl m-1">Info</div>
+    <div class="text-green-400 opacity-80 text-2xl m-1 info">Info</div>
   </div>
 </template>
 <style scoped>
@@ -77,5 +77,40 @@ const openInfo = () => {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+@media (max-width: 480px) {
+  .info {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .icon {
+    width: 20px;
+  }
+  .pp {
+    font-size: 1.2rem;
+  }
+  .tp {
+    font-weight: 500;
+    margin-left: 1rem;
+    padding: 0;
+    text-align: left;
+    font-family: "roboto-light";
+  }
+  .box {
+    width: 50%;
+    padding-left: 0.3rem;
+    top: 70%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+  }
+  .xx {
+    width: 20px;
+    margin: 0.5rem;
+  }
 }
 </style>

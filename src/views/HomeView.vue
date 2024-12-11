@@ -123,6 +123,7 @@
       </div>
     </section>
   </main>
+  
 </template>
 
 <script setup>
