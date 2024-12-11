@@ -167,13 +167,13 @@ const openIntro = () => {
     height: -webkit-fill-available;
   }
   .st {
-    width: 95%;
+    width: 98%;
     margin: auto;
-    padding: 0.5rem;
+    padding: 0.4rem;
   }
   .ct {
     font-size: 1rem;
-    line-height: 1.2rem;
+    line-height: 10rem;
     margin: auto 3px;
   }
   .tt {
@@ -193,10 +193,10 @@ const openIntro = () => {
     top: 90%;
   }
   .section2 {
-    height: 40vh;
+    height: autovh;
   }
   .section3 {
-    height: auto;
+    height: 35vh;
     background-color: gray;
   }
   .section4 {
