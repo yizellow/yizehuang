@@ -2,7 +2,7 @@
 import { RouterLink } from "vue-router";
 </script>
 <template>
-  <div>
+  <div >
     <nav
       class="z-40 fixed top-0 left-0 right-0 flex flex-row w-full items-center justify-center h-14 drop-shadow-lg"
     >
