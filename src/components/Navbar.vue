@@ -43,8 +43,8 @@ nav {
 
 @media (max-width: 480px) {
   .navtext {
-    font-size: 1.2rem;
-    margin: auto 15px;
+    font-size: 1rem;
+    margin: auto 10px;
   }
   .logo {
     margin-right: 10px;

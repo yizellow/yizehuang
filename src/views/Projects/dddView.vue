@@ -50,8 +50,7 @@ const openIntro = () => {
     </section>
     <section
       id="3"
-      class="section3 section2snap-center relative w-full h-screen"
-      style="background-color: #010e68"
+      class="section3 section2snap-center relative w-full h-screen bg-[#010e68]"
     >
       <video
         class="w-full h-auto"
@@ -178,10 +177,11 @@ const openIntro = () => {
     top: 90%;
   }
   .section2 {
-    height: 50vh;
+    height: 40vh;
   }
   .section3 {
-    height: 50vh;
+    height: auto;
+    background-color: gray;
   }
   .section4 {
     height: 50vh;
