@@ -35,5 +35,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
-/* 可選：設置 Loading 的額外樣式 */
+p {
+  user-select: text;
+}
 </style>

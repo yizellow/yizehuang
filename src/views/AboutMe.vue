@@ -55,9 +55,11 @@ export default {
             </a>
           </div>
           <a href="#" class="aboutme"
-            >I am from Hualien, Taiwan, a place often struck by natural
-            disasters. I love poetry and traveling the world.And,I have a deep
-            fear of boredom.
+            >Hi, my name is Yize Huang. I am from Hualien, Taiwan. I enjoy
+            poetry and traveling the world, i believe engaging in different
+            cultures gives a different perspective of the world and its people.
+            Fun fact about myself is that I have a deep fear of boredom, thus
+            the reason why I like to stay engaged in fun stuff.
           </a>
         </div>
       </div>

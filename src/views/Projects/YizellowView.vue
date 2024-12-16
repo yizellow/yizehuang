@@ -42,15 +42,15 @@ const nextImg = () => {
         class="group absolute top-0 left-0 w-1/2 h-full z-10 flex items-center justify-center p-20 hover:bg-white/70"
       >
         <p class="markazi-text text-white my-5 text-2xl group-hover:text-black">
-          The name "Yizellow" combines my first name, Yize, and my last name
-          "Huang" (which means yellow in Chinese). This is a creative project
-          with the theme of "basic forms." Every artist has their own style, and
-          finding that style requires deep exploration. During my time at art
-          school, I found that my creativity often had a purpose behind it,
-          which made me feel restricted and unable to express myself freely. So,
-          I decided to create in a more relaxed way, experimenting with casual
-          doodles and sketches, as well as some oil paintings. In the end, these
-          works came together for my first solo exhibition, "Myself" in 2019.
+          Yizellow is a project based on the theme of “The Basics of Styling”.
+          Every artist has their own style, and the process of finding that
+          style requires deep exploration. During my studies at art school, I
+          realized that my motivation to create was often too purposeful, which
+          made me feel constrained and unable to express myself freely. So I
+          decided to take a more relaxed approach, experimenting with random
+          doodles and sketches, including some oil paintings. Eventually, these
+          works were assembled into my first solo exhibition: 《Yizellow》
+          (《Myself》)in 2019.
         </p>
       </div>
       <div
@@ -77,10 +77,11 @@ const nextImg = () => {
           <p class="my-5 text-gray-900 text-2xl poppins-medium">A FEEDBACK</p>
 
           <p class="markazi-text text-gray-900 text-2xl">
-            After the exhibition, an elderly man told me that many artists
-            create what they lack, and in my work, he saw "pure happiness,
-            childlike fun, and innocence." Indeed, what he said is part of what
-            I seek in my creations, and it made me rethink my approach to art.
+            After the exhibition, an elder man told me that many artists create
+            what they lack, but he saw “pure happiness, childishness and
+            innocence” in my work. Indeed, what he said was exactly what I was
+            looking for in my work, and this has become my rethinking of my
+            creation.
           </p>
         </div>
         <div
@@ -297,12 +298,14 @@ const nextImg = () => {
       >
         <p class="my-5 self-start poppins-medium">About Tattoos</p>
         <p class="markazi-text">
-          Many friends like these doodles, so I started using them in tattooing.
-          At first, I just played around with my friends, but as more people
-          liked them, I decided to make the skill more professional and
-          apprenticed at a studio in Sydney, Australia. However, after a lot of
-          practice, I realized that tattooing was not the right path for me, so
-          I decided to give it up.
+          The doodles of this project were favored by many people, and they even
+          wanted to make these pictures into tattoos, so I started working as a
+          tattooist. But as more and more people liked it, I gradually
+          professionalized the technique and even apprenticed at a studio in
+          Sydney, Australia. However, with a lot of practice, I came to realize
+          that tattooing was not the right direction for me, and I felt a lack
+          of freedom in it, so I decided to give it up, even though being a
+          tattooist could be very lucrative.
         </p>
       </div>
     </section>

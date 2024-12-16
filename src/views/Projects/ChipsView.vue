@@ -70,8 +70,8 @@ const nextImg = () => {
           trauma. The game starts with animations and psychological tests to
           select a character, then shifts to an RPG mode. In a Möbius-strip-like
           playground, players advance the story through character dialogues,
-          exploring memories, navigating mazes, and playing various mini-games.
-          Every choice leads to a different ending.
+          exploring memories, navigating labyrinths, and playing various
+          mini-games. Every choice leads to a different ending.
         </p>
       </div>
     </div>
@@ -150,11 +150,11 @@ const nextImg = () => {
 
       <p class="text-white text-2xl markazi-text">
         During university, I was eager to collaborate with students from other
-        departments, believing that interdisciplinary projects with the Dance
-        Department would be the most challenging. At the same time, I wanted to
-        fulfill my dream of creating a game, which led to the creation of Chips.
-        This project took a year and a half to complete and was successfully
-        selected for the 2021 GenieLab Hybrid Cup.
+        departments, believing that interdisciplinary projects would challenge
+        me. Collaborating with the dance department did just that. At the same
+        time, I wanted to fulfill my dream of creating a game, which led to the
+        creation of Chips. This project took a year and a half to complete and
+        was successfully selected for the 2021 GenieLab Hybrid Cup.
         <br />
         <br />
         Originally, the game was planned to go beyond online activities. We
@@ -162,8 +162,8 @@ const nextImg = () => {
         installations and setting up a stage around them to reinterpret the work
         through dance and performance art while promoting the game. However, due
         to the pandemic, it was ultimately showcased through an online curation
-        format, where it received analysis and feedback from many players and
-        art critics.
+        format, where it received analysis and feedback from many players as
+        well as art critics from professionals.
       </p>
       <div
         class="w-full p-2 h-auto mt-5 poppins-medium bg-[blue]/40 flex items-start justify-start"
@@ -187,14 +187,14 @@ const nextImg = () => {
   </section>
   <section class="w-full h-[692px] bg-white flex items-start justify-start">
     <p class="my-3 ml-10 text-blue-500 text-2xl poppins-medium">
-      What happened in this game?
+      Game Walkthrough
     </p>
     <div class="wrapper bg-white">
       <div class="item text-2xl bg-white">
         <div
           class="w-1/2 h-full flex flex-col items-start justify-center p-20 bg-neutral-900"
         >
-          <p class="poppins-medium">1. Personality Test</p>
+          <p class="poppins-medium">1. Psychological Test</p>
           <br />
           <p class="markazi-text text-2xl text-left">
             There are five surreal questions with animations to match the player
@@ -213,7 +213,11 @@ const nextImg = () => {
         >
           <p class="poppins-medium">2. Character Selection Result</p>
           <br />
-          <p class=""></p>
+          <p class="markazi-text text-2xl text-left">
+            Based on the results of the psychological test, a role that suits
+            you will be assigned, which will also influence the progression of
+            the story.
+          </p>
         </div>
         <div
           class="w-1/2 h-full bg-neutral-900 flex items-center justify-center pr-5"
@@ -292,7 +296,7 @@ const nextImg = () => {
     <p
       class="text-3xl mt-10 ml-20 mb-2 items-self-start poppins-medium text-white"
     >
-      Video
+      Videos
     </p>
 
     <div
@@ -487,7 +491,9 @@ const nextImg = () => {
   font-weight: 400;
   font-style: normal;
 }
-
+p {
+  user-select: text;
+}
 .golden {
   display: grid;
   grid-template-columns: 1.618fr 1;

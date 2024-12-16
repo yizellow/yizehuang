@@ -11,11 +11,11 @@
       <div id="overlay-dark" class="overlay"></div>
       <div class="content">
         <div class="nav row">
-          <div class="col">(study background)</div>
+          <div class="col">(background)</div>
           <div class="col">(contact)</div>
-          <div class="col">(I like ..)</div>
+          <div class="col">(My Passion)</div>
           <div class="col">(skills)</div>
-          <div class="col">(Project)</div>
+          <div class="col">(Projects)</div>
         </div>
         <div class="divider nav-divider"></div>
         <div class="row">
@@ -123,7 +123,6 @@
       </div>
     </section>
   </main>
-  
 </template>
 
 <script setup>
