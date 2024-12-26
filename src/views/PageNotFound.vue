@@ -9,7 +9,7 @@
 <style scoped>
 main {
   width: 100vw;
-  height: calc(100vh - 56px);
+  height: 100vh;
   background-color: rgb(0, 223, 0);
   display: flex;
   flex-direction: column;

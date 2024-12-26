@@ -506,7 +506,7 @@ p {
 }
 
 .wrapper::-webkit-scrollbar {
-  width: 0;
+  width: 1;
 }
 
 .wrapper .item {

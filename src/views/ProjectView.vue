@@ -2,12 +2,7 @@
 import { RouterLink } from "vue-router";
 
 export default {
-  props: {
-    items: {
-      type: Array,
-      required: true,
-    },
-  },
+  props: {},
   mounted() {
     // 引入 DragScroll 並初始化
     const lerp = (f0, f1, t) => (1 - t) * f0 + t * f1;
