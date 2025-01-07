@@ -1,4 +1,5 @@
 <template>
+
   <main class="mainbox">
     <section class="note flex items-center justify-center">
       <p>
@@ -168,33 +169,6 @@ onMounted(() => {
 <style scoped>
 .phonelayout {
   display: none;
-}
-@media (max-width: 480px) {
-  @media (max-width: 480px) {
-    .mainbox {
-      display: none; /* 隱藏原本的桌面版本 */
-    }
-
-    .phonelayout {
-      display: block; /* 顯示手機版佈局 */
-      width: 100%;
-    }
-
-    .note {
-      width: 100vw;
-      height: 5vh;
-      background-color: green; /* 將背景色改為綠色 */
-      color: white;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .note p {
-      font-size: 14px; /* 調整文字大小 */
-    }
-  }
 }
 
 .note {

@@ -1,9 +1,12 @@
 <script>
 import { ref, onMounted } from "vue";
 import gsap from "gsap";
+import { useMediaQuery } from "@vueuse/core";
 
 export default {
   setup() {
+    const isComputer = useMediaQuery("(min-width: 481px)");
+    const isMobile = useMediaQuery("(max-width: 480px)");
     const images = [
       "https://cdnb.artstation.com/p/assets/images/images/082/332/459/large/yize-huang-2024-11-27-5-48-34.jpg?1732701036",
       "https://cdna.artstation.com/p/assets/images/images/082/332/324/large/yize-huang-img-0911.jpg?1732700747",
@@ -18,130 +21,153 @@ export default {
       "https://cdna.artstation.com/p/assets/images/images/082/332/470/large/yize-huang-2024-11-27-5-48-00.jpg?1732701058",
       "https://cdna.artstation.com/p/assets/images/images/082/332/328/large/yize-huang-img-0937.jpg?1732700755",
     ];
-    let index = 0;
 
     // 點擊事件，觸發動畫並刪除圖片
-    const clickElement = (event) => {
-      const container = document.getElementById("container");
-      const target = event.target; // 取得被點擊的元素
-      const images = container.getElementsByClassName("trigger");
-
-      // 找出被點擊圖片的索引
-      const clickedIndex = Array.from(images).indexOf(target);
-
-      // 點擊圖片的銷毀動畫
-      gsap.to(target, {
-        rotateX: 90,
-        skewX: 24,
-        skewY: "random(-80, 80)",
-        opacity: 0,
-        duration: "random(0.6, 0.9)",
-        ease: "power1.in",
-        transformOrigin: "50% 100%",
-        onComplete: () => {
-          target.remove();
-          newPosition();
-          createNewImg();
-        },
-      });
-    };
-
-    function newPosition() {
-      const images = document.querySelectorAll(".iimg");
-      images.forEach((image) => {
-        const rect = image.getBoundingClientRect();
-        gsap.fromTo(".iimg", { x: rect.x }, { x: 1, duration: 0.8 });
-        console.log(rect.x);
-      });
-    }
 
     // hover 事件，當游標懸停時觸發動畫
-    const hoverElement = (event) => {
-      const target = event.target;
-      gsap.to(target, {
-        duration: 0.2,
-        y: "-50px",
-        ease: "power1.out",
-      });
-    };
 
     // 滑鼠移出事件，恢復原始狀態
-    const hoverOutElement = (event) => {
-      const target = event.target;
-      gsap.to(target, {
-        duration: 0.2,
-        y: "0",
-        ease: "power1.out",
-      });
-    };
-
-    function createNewImg() {
-      const container = document.getElementById("container");
-      let newPhoto = document.createElement("img");
-
-      // 如果 index 超過圖片陣列長度，重置 index 為 0
-      if (index >= images.length) {
-        index = 0;
-      }
-
-      // 設定新圖片的 src 屬性
-      newPhoto.src = images[index];
-
-      // 為新圖片添加樣式
-      newPhoto.classList.add(
-        "w-1/3",
-        "h-auto",
-        "trigger",
-        "mr-10",
-        "cursor-pointer",
-        "iimg"
-      );
-
-      // 為新圖片添加事件監聽器
-      newPhoto.addEventListener("click", clickElement);
-      newPhoto.addEventListener("mouseover", hoverElement);
-      newPhoto.addEventListener("mouseleave", hoverOutElement);
-
-      container.appendChild(newPhoto);
-      gsap.fromTo(
-        newPhoto,
-        { x: 500 },
-        { x: 0, ease: "power2.in", duration: 1 }
-      );
-      index++;
-    }
-
-    onMounted(() => {
-      createNewImg();
-      createNewImg();
-      createNewImg();
-    });
 
     return {
-      clickElement,
-      hoverElement,
-      hoverOutElement,
-      createNewImg,
+      isComputer,
+      isMobile,
+      images,
     };
   },
 };
 </script>
 
 <template>
-  <section class="w-full h-[90%] fixed z-0 inset-0">
-    <h1 class="text-[200px]">＃Travel and my film camera</h1>
-  </section>
-
-  <section class="w-full h-[100%] flex items-end z-2" id="container">
-    <div class="iimg"></div>
-    <div class="iimg"></div>
-    <div class="iimg"></div>
-  </section>
+  <div v-if="isComputer">
+    <main>
+      <div class="bg">
+        <p>&#35; Travel and my film camera</p>
+      </div>
+      <div class="picsLayer">
+        <img :src="images[1]" class="p2" />
+        <img :src="images[2]" class="p2" />
+        <img :src="images[0]" class="p1" />
+        <img :src="images[3]" class="p1" />
+        <img :src="images[4]" class="p1" />
+        <img :src="images[5]" class="p1" />
+        <img :src="images[6]" class="p1" />
+        <img :src="images[7]" class="p1" />
+        <img :src="images[8]" class="p1" />
+        <img :src="images[9]" class="p1" />
+        <img :src="images[10]" class="p1" />
+        <img :src="images[11]" class="p1" />
+      </div>
+    </main>
+  </div>
+  <div v-if="isMobile">
+    <main>
+      <div class="bg">
+        <p>&#35; Travel and my film camera</p>
+      </div>
+      <div class="picsLayer">
+        <img :src="images[1]" class="p2" />
+        <img :src="images[2]" class="p2" />
+        <img :src="images[0]" class="p1" />
+        <img :src="images[3]" class="p1" />
+        <img :src="images[4]" class="p1" />
+        <img :src="images[5]" class="p1" />
+        <img :src="images[6]" class="p1" />
+        <img :src="images[7]" class="p1" />
+        <img :src="images[8]" class="p1" />
+        <img :src="images[9]" class="p1" />
+        <img :src="images[10]" class="p1" />
+        <img :src="images[11]" class="p1" />
+      </div>
+    </main>
+  </div>
 </template>
 
 <style scoped>
-.cursor-pointer {
-  cursor: pointer;
-  transition: transform 0.2s ease;
+@media (min-width: 481px) {
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 0;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .picsLayer {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  .bg p {
+    word-wrap: break-word;
+    color: black;
+    font-size: 6rem;
+  }
+  .box {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+  img {
+    width: 65%;
+    height: auto;
+    padding: 10vh;
+    align-self: self-start;
+  }
+}
+@media (max-width: 480px) {
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 0;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .picsLayer {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  .bg p {
+    word-wrap: break-word;
+    color: white;
+    font-size: 6rem;
+    -webkit-text-stroke: 1.5px rgb(159, 159, 159);
+  }
+  .box {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  img {
+    margin: 20px;
+    margin-bottom: 80px;
+    width: 80%;
+    height: auto;
+    align-self: center;
+  }
 }
 </style>

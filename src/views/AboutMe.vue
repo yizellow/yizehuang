@@ -1,6 +1,7 @@
 <script>
 import { gsap } from "gsap";
 import { useMediaQuery } from "@vueuse/core";
+import { Icon } from "@iconify/vue";
 
 export default {
   setup() {
@@ -99,7 +100,7 @@ export default {
         </div>
         <div class="sub-header">
           <RouterLink to="/Project">
-            <a href="#" class="contact-link">&#8618; Project</a>
+            <a href="#" class="contact-link"> > Project</a>
           </RouterLink>
           <br />
           <div class="work-link">
@@ -245,7 +246,7 @@ export default {
   .sub-header a {
     text-decoration: none;
     font-family: Helvetica, sans-serif;
-    font-weight: 300;
+    font-weight: 200;
     color: black;
   }
 
@@ -257,7 +258,8 @@ export default {
     margin-left: 1em;
   }
   .iconTag {
-    max-width: 40px;
+    max-width: 30px;
+    margin-left: 10px;
     cursor: pointer;
   }
   .work-link {
