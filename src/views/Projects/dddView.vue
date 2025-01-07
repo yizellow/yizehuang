@@ -155,8 +155,8 @@ p {
   font-weight: 400;
   font-style: normal;
 }
-
 @media (max-width: 480px) {
+
   html {
     height: -webkit-fill-available;
   }

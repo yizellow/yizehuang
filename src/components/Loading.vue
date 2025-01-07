@@ -5,17 +5,7 @@
     <p class="poppins-medium text-2xl animate-bounce">Loading ...</p>
     <!-- Box 容器 -->
   </div>
-  <!-- <div
-    class="loading bg-purple-00 w-[50vw] h-[50vh] fixed z-10 flex flex-col justify-center items-center overflow-hidden"
-  >
-    <img
-      src="@/assets/img/yizellow.gif"
-      class="w-[400px] h-[400px] mix-blend-hue"
-    />
-    <p class="text-[7rem] animate-bounce poppins-medium text-green-500">
-      loading
-    </p>
-  </div> -->
+
 </template>
 
 <script setup>
