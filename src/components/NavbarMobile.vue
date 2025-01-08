@@ -1,7 +1,7 @@
 <script setup>
-import { RouterLink } from "vue-router";
+import { RouterLink, useRouter } from "vue-router";
 import { Icon } from "@iconify/vue";
-import { ref } from "vue";
+import { ref, watch } from "vue";
 
 const cross = ref(false);
 const menusign = ref(true);
@@ -17,6 +17,13 @@ const open = () => {
   menusign.value = false;
   cross.value = true;
 };
+const router = useRouter();
+watch(
+  () => router.currentRoute.value,
+  () => {
+    close();
+  }
+);
 </script>
 <template>
   <main>
