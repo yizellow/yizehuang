@@ -108,8 +108,9 @@ export default {
   }
   .bg p {
     word-wrap: break-word;
-    color: black;
+    color: white;
     font-size: 6rem;
+    -webkit-text-stroke: 1.5px rgb(159, 159, 159);
   }
   .box {
     max-width: 100%;

@@ -7,7 +7,6 @@ import { RouterLink } from "vue-router";
       class="z-40 fixed top-0 left-0 right-0 flex flex-row w-full items-center justify-center h-14 drop-shadow-lg"
     >
       <RouterLink to="/"><img src="../assets/img/logo.png" /></RouterLink>
-
       <RouterLink to="/"><div class="navtext">Home</div></RouterLink>
       <RouterLink to="/Project"><div class="navtext">Project</div></RouterLink>
       <RouterLink to="/AboutMe"><div class="navtext">About Me</div></RouterLink>
