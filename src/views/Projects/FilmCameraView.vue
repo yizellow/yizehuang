@@ -128,6 +128,9 @@ export default {
   }
 }
 @media (max-width: 480px) {
+  main {
+    margin-top: 6vh;
+  }
   .bg {
     width: 100vw;
     height: 100vh;
