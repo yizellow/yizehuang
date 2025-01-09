@@ -150,22 +150,23 @@ export default {
   .scrollbar {
     overflow-x: scroll; /* 確保元素能水平滾動 */
     height: calc(100vh - 100px); /* 確保有高度來顯示滾動條 */
+
   }
   .scrollbar::-webkit-scrollbar {
-    height: 10px;
+    height: 6px;
   }
 
   .scrollbar::-webkit-scrollbar-track {
     border-radius: 0px;
-    border: 1px solid black;
+    border: 0.5px solid rgba(104, 104, 104, 0.572);
     margin: 20px 130px;
   }
 
   .scrollbar::-webkit-scrollbar-thumb {
-    background-color: rgb(0, 223, 0);
+    background-color: #020d01b8;
+    cursor: pointer;
 
   }
-
   .projectsection {
     display: flex;
     flex-direction: row;
@@ -186,7 +187,6 @@ export default {
   .container {
     width: 100%;
     height: 80%;
-    background-color: aquamarine;
   }
   .container img {
     width: 100%;

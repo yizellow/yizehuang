@@ -8,7 +8,7 @@ import { RouterLink } from "vue-router";
     >
       <RouterLink to="/"><img src="../assets/img/logo.png" /></RouterLink>
       <RouterLink to="/"><div class="navtext">Home</div></RouterLink>
-      <RouterLink to="/Project"><div class="navtext">Project</div></RouterLink>
+      <RouterLink to="/Project"><div class="navtext">Projects</div></RouterLink>
       <RouterLink to="/AboutMe"><div class="navtext">About Me</div></RouterLink>
       <!-- <RouterLink to="/Contact"><div class="navtext">Contact</div></RouterLink> -->
       <!-- <div class="navtext">Member</div> -->
