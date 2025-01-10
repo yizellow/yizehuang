@@ -497,6 +497,7 @@ const nextImg = () => {
           autoplay
           loop
           muted
+          controls
         ></video>
         <div class="w-full h-full absolute z-2 flex items-start justify-center">
           <p
@@ -506,8 +507,50 @@ const nextImg = () => {
           </p>
         </div>
       </section>
-
-      
+      <section class="w-full h-[35vh] bg-neutral-900 flex z-0 relative">
+        <img
+          class="absolute z-2 object-cover left-0 right-0 w-1/2 h-full"
+          src="https://cdna.artstation.com/p/assets/images/images/082/633/124/large/yize-huang-2024-12-06-9-01-23.jpg?1733490357"
+        />
+        <img
+          class="absolute z-2 object-cover top-0 right-0 w-1/2 h-full object-center"
+          src="https://cdna.artstation.com/p/assets/images/images/082/633/132/large/yize-huang-2024-12-06-9-03-18.jpg?1733490373"
+        />
+      </section>
+      <section class="w-full h-auto bg-blue-300 flex flex-col">
+        <div class="w-full bg-neutral-900 flex flex-col">
+          <p class="text-red-500 text-2xl text-center p-[3vh] poppins-medium">
+            #About Chips
+          </p>
+          <div class="w-full h-auto bg-[#3f4f9a]/50 p-[3vh]">
+            <p class="text-white text-xl markazi-text">
+              &nbsp; &nbsp;"Chips" is a game centered on dance, combining
+              animation, drama, and music, inspired by Greek tragedy. The
+              protagonist is in his mental world, searching for an imaginary
+              figure while dealing with inner trauma. The game starts with
+              animations and psychological tests to select a character, then
+              shifts to an RPG mode. In a Möbius-strip-like playground, players
+              advance the story through character dialogues, exploring memories,
+              navigating labyrinths, and playing various mini-games. Every
+              choice leads to a different ending.
+            </p>
+          </div>
+        </div>
+        <div class="w-full h-auto flex flex-row bg-neutral-900">
+          <img
+            class="w-1/3 h-auto object-cover object-center"
+            src="https://cdna.artstation.com/p/assets/images/images/082/656/926/large/yize-huang-ae-a-2024-11-26-a-a-6-09-01.jpg?1733561492"
+          />
+          <img
+            class="w-1/3 h-auto object-cover object-center"
+            src="https://cdnb.artstation.com/p/assets/images/images/082/656/925/large/yize-huang-ae-a-2024-11-26-a-a-6-09-22.jpg?1733561481"
+          />
+          <img
+            class="w-1/3 h-auto object-fill object-right"
+            src="https://cdnb.artstation.com/p/assets/images/images/082/657/009/large/yize-huang-2024-12-07-4-58-21.jpg?1733561974"
+          />
+        </div>
+      </section>
     </main>
   </div>
 </template>

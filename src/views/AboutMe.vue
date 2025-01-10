@@ -100,7 +100,7 @@ export default {
         </div>
         <div class="sub-header">
           <RouterLink to="/Project">
-            <a href="#" class="contact-link"> > Project</a>
+            <a href="#" class="contact-link"> > Projects</a>
           </RouterLink>
           <br />
           <div class="work-link">
