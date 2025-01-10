@@ -489,8 +489,13 @@ const nextImg = () => {
   <div v-if="isMobile">
     <main>
       <section
-        class="relative w-full h-auto flex justify-center items-center z-0"
+        class="relative w-full h-auto flex flex-col justify-center items-center z-0"
       >
+        <p
+          class="text-[4rem] font-bold tracking-[1rem] mix-blend-screen text-red-500 top-[10vh]"
+        >
+          CHIPS
+        </p>
         <video
           class="w-full h-full object-cover z-1 inset-0"
           src="@/assets/img/ChipsImg/chipHero.mp4"
@@ -499,14 +504,11 @@ const nextImg = () => {
           muted
           controls
         ></video>
-        <div class="w-full h-full absolute z-2 flex items-start justify-center">
-          <p
-            class="relative text-[2rem] font-bold tracking-[1rem] mix-blend-screen text-red-500 top-[10vh]"
-          >
-            CHIPS
-          </p>
-        </div>
+        <div
+          class="w-full h-full absolute z-2 flex items-start justify-center"
+        ></div>
       </section>
+
       <section class="w-full h-[35vh] bg-neutral-900 flex z-0 relative">
         <img
           class="absolute z-2 object-cover left-0 right-0 w-1/2 h-full"
@@ -517,6 +519,7 @@ const nextImg = () => {
           src="https://cdna.artstation.com/p/assets/images/images/082/633/132/large/yize-huang-2024-12-06-9-03-18.jpg?1733490373"
         />
       </section>
+
       <section class="w-full h-auto bg-blue-300 flex flex-col">
         <div class="w-full bg-neutral-900 flex flex-col">
           <p class="text-red-500 text-2xl text-center p-[3vh] poppins-medium">
@@ -551,6 +554,207 @@ const nextImg = () => {
           />
         </div>
       </section>
+
+      <section
+        class="w-full h-[38vh] flex relative flex-col items-start justify-start"
+      >
+        <div class="w-full h-auto absolute z-1">
+          <img
+            class="w-full h-full object-contain p-[3vh]"
+            v-bind:src="image[currentIndex]"
+          />
+        </div>
+        <div class="w-full top-1/2 flex flex-row justify-between absolute z-2">
+          <Icon
+            icon="material-symbols:arrow-back-2"
+            width="45"
+            class="cursor-pointer justify-self-end hover:scale-150 transition-transform duration-300"
+            @click="lastImg"
+            color="blue"
+          ></Icon>
+          <Icon
+            icon="material-symbols:arrow-back-2"
+            width="45"
+            class="cursor-pointer justify-self-end rotate-180 hover:scale-150 transition-transform duration-300"
+            @click="nextImg"
+            color="blue"
+          ></Icon>
+        </div>
+      </section>
+
+      <section>
+        <div
+          class="flex items-center justify-center flex-col m-[3vh] p-[1vh] border border-black"
+        >
+          <p class="my-[1vh] text-gray-900 text-2xl poppins-medium">My Role</p>
+
+          <p class="markazi-text text-gray-900 text-xl text-center">
+            Main producer, responsible for scriptwriting, animation, visual
+            design, game design, and administration.
+          </p>
+        </div>
+      </section>
+
+      <section class="w-full h-auto bg-neutral-900 flex flex-col">
+        <div
+          class="w-full h-full flex items-center justify-center bg-neutral-900 p-[3vh]"
+        >
+          <img
+            src="@/assets/img/ChipsImg/mmm.png"
+            class="object-cover w-full h-full"
+          />
+        </div>
+        <div
+          class="w-full h-full bg-neutral-900 flex flex-col items-start justify-center p-[3vh]"
+        >
+          <p class="text-blue-700 text-2xl mb-[3vh] poppins-medium">Process</p>
+
+          <p class="text-white text-xl markazi-text">
+            &nbsp; &nbsp; During university, I was eager to collaborate with
+            students from other departments, believing that interdisciplinary
+            projects would challenge me. Collaborating with the dance department
+            did just that. At the same time, I wanted to fulfill my dream of
+            creating a game, which led to the creation of Chips. This project
+            took a year and a half to complete and was successfully selected for
+            the 2021 GenieLab Hybrid Cup.
+            <br />
+            <br />
+            &nbsp; &nbsp; Originally, the game was planned to go beyond online
+            activities. We envisioned transforming campus vending machines into
+            game-themed installations and setting up a stage around them to
+            reinterpret the work through dance and performance art while
+            promoting the game. However, due to the pandemic, it was ultimately
+            showcased through an online curation format, where it received
+            analysis and feedback from many players as well as art critics from
+            professionals.
+          </p>
+          <div
+            class="w-full p-[1vh] h-auto mt-[3vh] poppins-medium bg-[blue]/40 flex items-start justify-start"
+          >
+            <a href="https://reurl.cc/qn5ZLg"
+              ><p class="text-l text-red-500 cursor-pointer hover:text-white">
+                ＊ Online GenieLab Hybrid Cup Curation Introduction => click
+              </p></a
+            >
+          </div>
+          <div
+            class="w-full p-2 h-auto poppins-medium bg-[blue]/40 flex items-start justify-start"
+          >
+            <a href="https://reurl.cc/d12eDM">
+              <p class="text-l text-red-500 cursor-pointer hover:text-white">
+                ＊ Art criticism (Chinese Only) => click
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="w-full h-auto bg-white flex items-start justify-start">
+        <p class=" text-blue-500 text-2xl poppins-medium">
+          Game Walkthrough
+        </p>
+        <div class="wrapper bg-white">
+          <div class="item text-2xl bg-white">
+            <div
+              class="w-1/2 h-full flex flex-col items-start justify-center p-20 bg-neutral-900"
+            >
+              <p class="poppins-medium">1. Psychological Test</p>
+              <br />
+              <p class="markazi-text text-2xl text-left">
+                There are five surreal questions with animations to match the
+                player to the right character.
+              </p>
+            </div>
+            <div
+              class="w-1/2 h-full bg-neutral-900 flex items-center justify-center pr-5"
+            >
+              <img class="w-4/5 h-auto" src="@/assets/img/ChipsImg/1.gif" />
+            </div>
+          </div>
+          <div class="item text-2xl bg-white">
+            <div
+              class="w-1/2 h-full flex flex-col items-start justify-center pl-10 bg-neutral-900"
+            >
+              <p class="poppins-medium">2. Character Selection Result</p>
+              <br />
+              <p class="markazi-text text-2xl text-left">
+                Based on the results of the psychological test, a role that
+                suits you will be assigned, which will also influence the
+                progression of the story.
+              </p>
+            </div>
+            <div
+              class="w-1/2 h-full bg-neutral-900 flex items-center justify-center pr-5"
+            >
+              <img class="w-4/5 h-auto" src="@/assets/img/ChipsImg/2.gif" />
+            </div>
+          </div>
+
+          <div class="item text-2xl bg-white">
+            <div
+              class="w-1/2 h-full flex flex-col items-start justify-center p-20 bg-neutral-900"
+            >
+              <p class="poppins-medium">3. In the Mobius Strip playground</p>
+              <br />
+              <p class="markazi-text text-2xl text-left">
+                This playground is the main place of the game, with two versions
+                that change based on the player's choices. Here, players will
+                talk to other characters and trigger various games.
+              </p>
+            </div>
+            <div
+              class="w-1/2 h-full bg-neutral-900 flex items-center justify-center pr-5"
+            >
+              <img class="w-4/5 h-auto" src="@/assets/img/ChipsImg/3.gif" />
+            </div>
+          </div>
+
+          <div class="item text-2xl bg-white">
+            <div
+              class="w-1/2 h-full flex flex-col items-start justify-center p-20 bg-neutral-900"
+            >
+              <p class="poppins-medium">4. Labyrinth</p>
+              <br />
+              <p class="markazi-text text-2xl text-left">
+                The player will control two very similar Labyrinths at the same
+                time, with the directions switched. Pressing the "right" key
+                might move the character up. The story is told through music,
+                and there are fewer traps in the labyrinth, allowing players to
+                enjoy the music that describes the story.
+              </p>
+            </div>
+            <div
+              class="w-1/2 h-full bg-neutral-900 flex items-center justify-center pr-5"
+            >
+              <img
+                class="w-4/5 h-auto"
+                src="https://cdnb.artstation.com/p/assets/images/images/081/759/565/large/yize-huang-maze.jpg?1731143047"
+              />
+            </div>
+          </div>
+
+          <div class="item text-2xl bg-white">
+            <div
+              class="w-1/2 h-full flex flex-col items-start justify-center p-20 bg-neutral-900"
+            >
+              <p class="poppins-medium">5. Endings</p>
+              <br />
+              <p class="markazi-text text-2xl text-left">
+                a. Do not face the reality .
+                <br />
+                b. reconciliation with yourself.
+                <br />
+                c. New possibilities.
+              </p>
+            </div>
+            <div
+              class="w-1/2 h-full bg-neutral-900 flex items-center justify-center pr-5"
+            >
+              <img class="w-4/5 h-auto" src="@/assets/img/ChipsImg/4.gif" />
+            </div>
+          </div>
+        </div>
+      </section> -->
     </main>
   </div>
 </template>
