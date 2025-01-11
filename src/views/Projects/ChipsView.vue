@@ -649,112 +649,16 @@ const nextImg = () => {
         </div>
       </section>
 
-      <!-- <section class="w-full h-auto bg-white flex items-start justify-start">
-        <p class=" text-blue-500 text-2xl poppins-medium">
+      <section
+        class="w-full h-auto flex flex-col bg-white items-start justify-start"
+      >
+        <p class="text-blue-500 w-ful h-[6vh] text-2xl poppins-medium">
           Game Walkthrough
         </p>
-        <div class="wrapper bg-white">
-          <div class="item text-2xl bg-white">
-            <div
-              class="w-1/2 h-full flex flex-col items-start justify-center p-20 bg-neutral-900"
-            >
-              <p class="poppins-medium">1. Psychological Test</p>
-              <br />
-              <p class="markazi-text text-2xl text-left">
-                There are five surreal questions with animations to match the
-                player to the right character.
-              </p>
-            </div>
-            <div
-              class="w-1/2 h-full bg-neutral-900 flex items-center justify-center pr-5"
-            >
-              <img class="w-4/5 h-auto" src="@/assets/img/ChipsImg/1.gif" />
-            </div>
-          </div>
-          <div class="item text-2xl bg-white">
-            <div
-              class="w-1/2 h-full flex flex-col items-start justify-center pl-10 bg-neutral-900"
-            >
-              <p class="poppins-medium">2. Character Selection Result</p>
-              <br />
-              <p class="markazi-text text-2xl text-left">
-                Based on the results of the psychological test, a role that
-                suits you will be assigned, which will also influence the
-                progression of the story.
-              </p>
-            </div>
-            <div
-              class="w-1/2 h-full bg-neutral-900 flex items-center justify-center pr-5"
-            >
-              <img class="w-4/5 h-auto" src="@/assets/img/ChipsImg/2.gif" />
-            </div>
-          </div>
-
-          <div class="item text-2xl bg-white">
-            <div
-              class="w-1/2 h-full flex flex-col items-start justify-center p-20 bg-neutral-900"
-            >
-              <p class="poppins-medium">3. In the Mobius Strip playground</p>
-              <br />
-              <p class="markazi-text text-2xl text-left">
-                This playground is the main place of the game, with two versions
-                that change based on the player's choices. Here, players will
-                talk to other characters and trigger various games.
-              </p>
-            </div>
-            <div
-              class="w-1/2 h-full bg-neutral-900 flex items-center justify-center pr-5"
-            >
-              <img class="w-4/5 h-auto" src="@/assets/img/ChipsImg/3.gif" />
-            </div>
-          </div>
-
-          <div class="item text-2xl bg-white">
-            <div
-              class="w-1/2 h-full flex flex-col items-start justify-center p-20 bg-neutral-900"
-            >
-              <p class="poppins-medium">4. Labyrinth</p>
-              <br />
-              <p class="markazi-text text-2xl text-left">
-                The player will control two very similar Labyrinths at the same
-                time, with the directions switched. Pressing the "right" key
-                might move the character up. The story is told through music,
-                and there are fewer traps in the labyrinth, allowing players to
-                enjoy the music that describes the story.
-              </p>
-            </div>
-            <div
-              class="w-1/2 h-full bg-neutral-900 flex items-center justify-center pr-5"
-            >
-              <img
-                class="w-4/5 h-auto"
-                src="https://cdnb.artstation.com/p/assets/images/images/081/759/565/large/yize-huang-maze.jpg?1731143047"
-              />
-            </div>
-          </div>
-
-          <div class="item text-2xl bg-white">
-            <div
-              class="w-1/2 h-full flex flex-col items-start justify-center p-20 bg-neutral-900"
-            >
-              <p class="poppins-medium">5. Endings</p>
-              <br />
-              <p class="markazi-text text-2xl text-left">
-                a. Do not face the reality .
-                <br />
-                b. reconciliation with yourself.
-                <br />
-                c. New possibilities.
-              </p>
-            </div>
-            <div
-              class="w-1/2 h-full bg-neutral-900 flex items-center justify-center pr-5"
-            >
-              <img class="w-4/5 h-auto" src="@/assets/img/ChipsImg/4.gif" />
-            </div>
-          </div>
+        <div class="w-full h-[88vh] bg-red-500 flex justify-center p-[3vh]">
+          <div class="h-full w-full bg-slate-300"></div>
         </div>
-      </section> -->
+      </section>
     </main>
   </div>
 </template>
