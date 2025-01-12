@@ -578,7 +578,7 @@ const nextImg = () => {
         <div
           class="flex items-center justify-center flex-col m-[3vh] p-[1vh] border border-black"
         >
-          <p class="my-[1vh] text-gray-900 text-2xl poppins-medium">My Role</p>
+          <p class="my-[1vh] text-gray-900 text-2xl poppins-medium">#My Role</p>
 
           <p class="markazi-text text-gray-900 text-xl text-center">
             Main producer, responsible for scriptwriting, animation, visual
@@ -599,7 +599,7 @@ const nextImg = () => {
         <div
           class="w-full h-full bg-neutral-900 flex flex-col items-start justify-center p-[3vh]"
         >
-          <p class="text-blue-700 text-2xl mb-[3vh] poppins-medium">Process</p>
+          <p class="text-blue-700 text-2xl mb-[3vh] poppins-medium">#Process</p>
 
           <p class="text-white text-xl markazi-text">
             &nbsp; &nbsp; During university, I was eager to collaborate with
@@ -647,7 +647,7 @@ const nextImg = () => {
         <p
           class="text-blue-500 margin-[0px auto] w-full h-[6vh] text-2xl justify-self-start-center poppins-medium bg-white"
         >
-          Game Walkthrough
+          #Game Walkthrough
         </p>
         <div
           class="w-[100vw] h-[88vh] bg-neutral-900 flex flex-row justify-start items-center overflow-x-scroll overflow-y-hidden"
@@ -656,11 +656,9 @@ const nextImg = () => {
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 flex justify-start items-center flex-col"
           >
             <div
-              class="w-full h-[40px] flex items-center justify-center overflow-hidden"
+              class="w-full h-[50px] flex items-center justify-center overflow-hidden"
             >
-              <p class="poppins-medium text-white m-[3vh] text-m">
-                1. Psychological Test
-              </p>
+              <p class="text-white m-[3vh] text-m">1. Psychological Test</p>
             </div>
 
             <img class="w-full h-1/3" src="@/assets/img/ChipsImg/1.gif" />
@@ -678,9 +676,9 @@ const nextImg = () => {
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
             <div
-              class="w-full h-[40px] flex items-center justify-center overflow-hidden"
+              class="w-full h-[50px] flex items-center justify-center overflow-hidden"
             >
-              <p class="poppins-medium text-white m-[3vh] text-s">
+              <p class="text-white m-[3vh] text-s">
                 2. Character Selection Result
               </p>
             </div>
@@ -701,9 +699,9 @@ const nextImg = () => {
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
             <div
-              class="w-full h-[40px] overflow-hidden flex items-center justify-center"
+              class="w-full h-[50px] overflow-hidden flex items-center justify-center"
             >
-              <p class="poppins-medium text-white m-[3vh] text-s">
+              <p class="text-white m-[3vh] text-s">
                 3. In the Mobius Strip playground
               </p>
             </div>
@@ -725,11 +723,9 @@ const nextImg = () => {
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
             <div
-              class="w-full h-[40px] overflow-hidden flex items-center justify-center"
+              class="w-full h-[50px] overflow-hidden flex items-center justify-center"
             >
-              <p class="poppins-medium text-white m-[3vh] text-m">
-                4. Labyrinth
-              </p>
+              <p class="text-white m-[3vh] text-m">4. Labyrinth</p>
             </div>
 
             <img
@@ -753,9 +749,9 @@ const nextImg = () => {
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
             <div
-              class="w-full h-[40px] overflow-hidden flex items-center justify-center"
+              class="w-full h-[50px] overflow-hidden flex items-center justify-center"
             >
-              <p class="poppins-medium text-white m-[3vh] text-m">5. Endings</p>
+              <p class="text-white m-[3vh] text-m">5. Endings</p>
             </div>
 
             <img class="w-full h-1/3" src="@/assets/img/ChipsImg/4.gif" />
@@ -777,8 +773,8 @@ const nextImg = () => {
       <section
         class="w-full h-auto bg-slate-900 flex flex-col items-ceter justify-start"
       >
-        <p class="text-3xl m-[2vh] items-self-start poppins-medium text-white">
-          Videos
+        <p class="text-2xl m-[2vh] items-self-start poppins-medium text-white">
+          #Videos
         </p>
         <div class="bg-neutral-900">
           <div class="w-full h-full p-3">
@@ -836,7 +832,7 @@ const nextImg = () => {
       <section class="w-full h-auto bg-neutral-900">
         <div class="w-full h-full flex flex-col justify-center items-center">
           <div class="w-full h-auto flex justify-center flex-col p-[3vh]">
-            <p class="text-xl text-white poppins-medium">團隊名單 Credit</p>
+            <p class="text-xl text-white poppins-medium">#團隊名單 Credit</p>
             <br />
             <p class="text-xl text-white markazi-text">
               美術系 黃亦澤 HUANG Yi-Ze<br />
