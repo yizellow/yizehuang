@@ -496,14 +496,6 @@ const nextImg = () => {
         >
           CHIPS
         </p>
-        <video
-          class="w-full h-full object-cover z-1 inset-0"
-          src="@/assets/img/ChipsImg/chipHero.mp4"
-          loop
-          muted
-          controls
-          playsinline
-        ></video>
         <div
           class="w-full h-full absolute z-2 flex items-start justify-center"
         ></div>
@@ -663,9 +655,12 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 flex justify-start items-center flex-col"
           >
-            <p class="poppins-medium text-white m-[3vh] text-m">
-              1. Psychological Test
-            </p>
+            <div class="w-full h-[40px] bg-red-400 overflow-hidden">
+              <p class="poppins-medium text-white m-[3vh] text-m">
+                1. Psychological Test
+              </p>
+            </div>
+
             <img class="w-full h-1/3" src="@/assets/img/ChipsImg/1.gif" />
             <div
               class="w-full h-1/2 border-white border-b-2 flex items-center justify-center"
@@ -680,9 +675,12 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
-            <p class="poppins-medium text-white m-[3vh] text-s">
-              2. Character Selection Result
-            </p>
+            <div class="w-full h-[40px] bg-red-400 overflow-hidden">
+              <p class="poppins-medium text-white m-[3vh] text-s">
+                2. Character Selection Result
+              </p>
+            </div>
+
             <img class="w-full h-1/3" src="@/assets/img/ChipsImg/2.gif" />
             <div
               class="w-full h-1/2 border-white border-b-2 flex items-center justify-center"
@@ -698,9 +696,12 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
-            <p class="poppins-medium text-white m-[3vh] text-s">
-              3. In the Mobius Strip playground
-            </p>
+            <div class="w-full h-[40px] bg-red-400 overflow-hidden">
+              <p class="poppins-medium text-white m-[3vh] text-s">
+                3. In the Mobius Strip playground
+              </p>
+            </div>
+
             <img class="w-full h-1/3" src="@/assets/img/ChipsImg/3.gif" />
 
             <div
@@ -717,7 +718,12 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
-            <p class="poppins-medium text-white m-[3vh] text-m">4. Labyrinth</p>
+            <div class="w-full h-[40px] bg-red-400 overflow-hidden">
+              <p class="poppins-medium text-white m-[3vh] text-m">
+                4. Labyrinth
+              </p>
+            </div>
+
             <img
               class="w-full h-1/3"
               src="https://cdnb.artstation.com/p/assets/images/images/081/759/565/large/yize-huang-maze.jpg?1731143047"
@@ -738,7 +744,10 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
-            <p class="poppins-medium text-white m-[3vh] text-m">5. Endings</p>
+            <div class="w-full h-[40px] bg-red-400 overflow-hidden">
+              <p class="poppins-medium text-white m-[3vh] text-m">5. Endings</p>
+            </div>
+
             <img class="w-full h-1/3" src="@/assets/img/ChipsImg/4.gif" />
             <div
               class="w-full h-1/2 border-white border-b-2 flex items-center justify-center"
