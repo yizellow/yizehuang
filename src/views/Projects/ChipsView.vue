@@ -649,7 +649,9 @@ const nextImg = () => {
         </div>
       </section>
 
-      <section class="w-full h-auto flex flex-col items-center justify-around">
+      <section
+        class="w-full h-auto flex flex-col items-center justify-around bg-white"
+      >
         <p
           class="text-blue-500 margin-[0px auto] w-full h-[6vh] text-2xl justify-self-start-center poppins-medium bg-white"
         >
@@ -659,77 +661,188 @@ const nextImg = () => {
           class="w-[100vw] h-[88vh] bg-neutral-900 flex flex-row justify-start items-center overflow-x-scroll overflow-y-hidden"
         >
           <div
-            class="w-[calc(100vw-10vh)] h-[68vh] ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
+            class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 flex justify-start items-center flex-col"
           >
             <p class="poppins-medium text-white m-[3vh]">
               1. Psychological Test
             </p>
-            <img class="w-full h-auto" src="@/assets/img/ChipsImg/1.gif" />
-
-            <p class="markazi-text text-2xl m-[3vh] text-white text-left">
-              There are five surreal questions with animations to match the
-              player to the right character.
-            </p>
+            <img class="w-full h-1/3" src="@/assets/img/ChipsImg/1.gif" />
+            <div
+              class="w-full h-1/2 border-white border-b-2 flex items-center justify-center"
+            >
+              <p class="markazi-text text-xl m-[3vh] text-white text-left">
+                There are five surreal questions with animations to match the
+                player to the right character.
+              </p>
+            </div>
           </div>
 
           <div
-            class="w-[calc(100vw-10vh)] h-[68vh] ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
+            class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
             <p class="poppins-medium text-white m-[3vh]">
               2. Character Selection Result
             </p>
-            <img class="w-full h-auto" src="@/assets/img/ChipsImg/2.gif" />
-
-            <p class="markazi-text text-2xl m-[3vh] text-white text-left">
-              Based on the results of the psychological test, a role that suits
-              you will be assigned, which will also influence the progression of
-              the story.
-            </p>
+            <img class="w-full h-1/3" src="@/assets/img/ChipsImg/2.gif" />
+            <div
+              class="w-full h-1/2 border-white border-b-2 flex items-center justify-center"
+            >
+              <p class="markazi-text text-xl m-[3vh] text-white text-left">
+                Based on the results of the psychological test, a role that
+                suits you will be assigned, which will also influence the
+                progression of the story.
+              </p>
+            </div>
           </div>
 
           <div
-            class="w-[calc(100vw-10vh)] h-[68vh] ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
+            class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
             <p class="poppins-medium text-white m-[3vh]">
               3. In the Mobius Strip playground
             </p>
-            <img class="w-full h-auto" src="@/assets/img/ChipsImg/3.gif" />
+            <img class="w-full h-1/3" src="@/assets/img/ChipsImg/3.gif" />
 
-            <p class="markazi-text text-2xl m-[3vh] text-white text-left">
-              This playground is the main place of the game, with two versions
-              that change based on the player's choices. Here, players will talk
-              to other characters and trigger various games.
-            </p>
+            <div
+              class="w-full h-1/2 border-white border-b-2 flex items-center justify-center"
+            >
+              <p class="markazi-text text-xl m-[3vh] text-white text-left">
+                This playground is the main place of the game, with two versions
+                that change based on the player's choices. Here, players will
+                talk to other characters and trigger various games.
+              </p>
+            </div>
           </div>
 
           <div
-            class="w-[calc(100vw-10vh)] h-[68vh] ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
+            class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
             <p class="poppins-medium text-white m-[3vh]">4. Labyrinth</p>
-            <img class="w-full h-auto" src="@/assets/img/ChipsImg/4.gif" />
-
-            <p class="markazi-text text-2xl m-[3vh] text-white text-left">
-              The player will control two very similar Labyrinths at the same
-              time, with the directions switched. Pressing the "right" key might
-              move the character up. The story is told through music, and there
-              are fewer traps in the labyrinth, allowing players to enjoy the
-              music that describes the story.
-            </p>
+            <img
+              class="w-full h-1/3"
+              src="https://cdnb.artstation.com/p/assets/images/images/081/759/565/large/yize-huang-maze.jpg?1731143047"
+            />
+            <div
+              class="w-full h-1/2 border-white border-b-2 flex items-center justify-center"
+            >
+              <p class="markazi-text text-xl text-left text-white">
+                a. Do not face the reality .
+                <br />
+                b. reconciliation with yourself.
+                <br />
+                c. New possibilities.
+              </p>
+            </div>
           </div>
 
           <div
-            class="w-[calc(100vw-10vh)] h-[68vh] ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
+            class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
             <p class="poppins-medium text-white m-[3vh]">5. Endings</p>
-            <img class="w-full h-auto" src="@/assets/img/ChipsImg/4.gif" />
+            <img class="w-full h-1/3" src="@/assets/img/ChipsImg/4.gif" />
+            <div
+              class="w-full h-1/2 border-white border-b-2 flex items-center justify-center"
+            >
+              <p class="markazi-text text-xl m-[3vh] text-white text-left">
+                The player will control two very similar Labyrinths at the same
+                time, with the directions switched. Pressing the "right" key
+                might move the character up. The story is told through music,
+                and there are fewer traps in the labyrinth, allowing players to
+                enjoy the music that describes the story.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <p class="markazi-text text-2xl m-[3vh] text-white text-left">
-              The player will control two very similar Labyrinths at the same
-              time, with the directions switched. Pressing the "right" key might
-              move the character up. The story is told through music, and there
-              are fewer traps in the labyrinth, allowing players to enjoy the
-              music that describes the story.
+      <section
+        class="w-full h-auto bg-slate-900 flex flex-col items-ceter justify-start"
+      >
+        <p class="text-3xl m-[2vh] items-self-start poppins-medium text-white">
+          Videos
+        </p>
+        <div class="bg-neutral-900">
+          <div class="w-full h-full p-3">
+            <iframe
+              class="w-full aspect-video"
+              src="https://www.youtube.com/embed/sQpa6tkxzg8"
+              title="Psychological Test V"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+            <p
+              class="text-neutral-400 mt-5 text-2xl text-center poppins-medium"
+            >
+              Psychological Test V
             </p>
+          </div>
+          <div class="w-full h-full p-3">
+            <iframe
+              class="w-full aspect-video"
+              src="https://www.youtube.com/embed/PgUw_T_wPaw"
+              title="Vintage Dance"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+            <p
+              class="text-neutral-400 mt-5 text-2xl text-center poppins-medium"
+            >
+              Vintage Dance
+            </p>
+          </div>
+
+          <div class="w-full h-full p-3">
+            <iframe
+              class="w-full aspect-video"
+              src="https://www.youtube.com/embed/QYmHc7AvEUE"
+              title="Happy Story"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+            <p
+              class="text-neutral-400 mt-5 text-2xl text-center poppins-medium"
+            >
+              Happy Story
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="w-full h-auto bg-slate-300">
+        <div
+          class="right-0 w-1/2 h-full absolute flex justify-center items-center z-2"
+        >
+          <div
+            class="w-full h-auto flex justify-center flex-col p-10"
+          >
+            <p class="text-xl text-white poppins-medium">團隊名單 Credit</p>
+            <p class="text-2xl mt-10 text-white markazi-text">
+              美術系 黃亦澤 HUANG Yi-Ze<br />
+              美術系 張瑜晴 CHANG Yu-Ching<br />
+              新媒系 劉張妙齊 LIU CHANG Miao-Chi<br />
+              舞蹈系 黃孝傑 HUANG Hsiao-Chieh<br />
+              舞蹈系 梁保昇 LEONG Pou-Seng <br />
+              舞蹈系 許雅昕 HSU Ya-Hsin<br />
+              舞蹈系 段予誠 TUAN Yu-Cheng <br />
+              劇設系 林子璇 LIN Tzu-Hsuan <br />
+              音樂系 余辰曜 YU Chen-Yao
+            </p>
+          </div>
+        </div>
+        <div
+          class="left-0 w-1/2 h-full absolute flex justify-center items-center z-2"
+        >
+          <div class="w-[calc(100%/1.414)] h-[calc(100%/1.414)]">
+            <img
+              class="w-full h-full object-contain"
+              src="https://cdnb.artstation.com/p/assets/images/images/081/756/471/large/yize-huang-2-3chips2.jpg?1731128477"
+            />
           </div>
         </div>
       </section>
@@ -757,21 +870,21 @@ const nextImg = () => {
     max-height: 80%;
     display: flex;
     overflow-x: auto;
+    background-color: black;
   }
 
   .wrapper::-webkit-scrollbar {
-    width: 1;
-    color: rgb(10, 141, 217);
+    width: auto;
+    background-color: rgb(18, 18, 18);
   }
 
   .wrapper::-webkit-scrollbar {
-    height: 6px;
+    height: auto;
   }
 
   .wrapper::-webkit-scrollbar-track {
-    border-radius: 0px;
-    border: 0.5px solid rgba(234, 234, 234, 0.572);
-    margin: 20px 130px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.572);
   }
 
   .wrapper::-webkit-scrollbar-thumb {
