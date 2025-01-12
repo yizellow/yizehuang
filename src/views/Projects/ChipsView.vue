@@ -649,14 +649,88 @@ const nextImg = () => {
         </div>
       </section>
 
-      <section
-        class="w-full h-auto flex flex-col bg-white items-start justify-start"
-      >
-        <p class="text-blue-500 w-ful h-[6vh] text-2xl poppins-medium">
+      <section class="w-full h-auto flex flex-col items-center justify-around">
+        <p
+          class="text-blue-500 margin-[0px auto] w-full h-[6vh] text-2xl justify-self-start-center poppins-medium bg-white"
+        >
           Game Walkthrough
         </p>
-        <div class="w-full h-[88vh] bg-red-500 flex justify-center p-[3vh]">
-          <div class="h-full w-full bg-slate-300"></div>
+        <div
+          class="w-[100vw] h-[88vh] bg-neutral-900 flex flex-row justify-start items-center overflow-x-scroll overflow-y-hidden"
+        >
+          <div
+            class="w-[calc(100vw-10vh)] h-[68vh] ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
+          >
+            <p class="poppins-medium text-white m-[3vh]">
+              1. Psychological Test
+            </p>
+            <img class="w-full h-auto" src="@/assets/img/ChipsImg/1.gif" />
+
+            <p class="markazi-text text-2xl m-[3vh] text-white text-left">
+              There are five surreal questions with animations to match the
+              player to the right character.
+            </p>
+          </div>
+
+          <div
+            class="w-[calc(100vw-10vh)] h-[68vh] ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
+          >
+            <p class="poppins-medium text-white m-[3vh]">
+              2. Character Selection Result
+            </p>
+            <img class="w-full h-auto" src="@/assets/img/ChipsImg/2.gif" />
+
+            <p class="markazi-text text-2xl m-[3vh] text-white text-left">
+              Based on the results of the psychological test, a role that suits
+              you will be assigned, which will also influence the progression of
+              the story.
+            </p>
+          </div>
+
+          <div
+            class="w-[calc(100vw-10vh)] h-[68vh] ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
+          >
+            <p class="poppins-medium text-white m-[3vh]">
+              3. In the Mobius Strip playground
+            </p>
+            <img class="w-full h-auto" src="@/assets/img/ChipsImg/3.gif" />
+
+            <p class="markazi-text text-2xl m-[3vh] text-white text-left">
+              This playground is the main place of the game, with two versions
+              that change based on the player's choices. Here, players will talk
+              to other characters and trigger various games.
+            </p>
+          </div>
+
+          <div
+            class="w-[calc(100vw-10vh)] h-[68vh] ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
+          >
+            <p class="poppins-medium text-white m-[3vh]">4. Labyrinth</p>
+            <img class="w-full h-auto" src="@/assets/img/ChipsImg/4.gif" />
+
+            <p class="markazi-text text-2xl m-[3vh] text-white text-left">
+              The player will control two very similar Labyrinths at the same
+              time, with the directions switched. Pressing the "right" key might
+              move the character up. The story is told through music, and there
+              are fewer traps in the labyrinth, allowing players to enjoy the
+              music that describes the story.
+            </p>
+          </div>
+
+          <div
+            class="w-[calc(100vw-10vh)] h-[68vh] ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
+          >
+            <p class="poppins-medium text-white m-[3vh]">5. Endings</p>
+            <img class="w-full h-auto" src="@/assets/img/ChipsImg/4.gif" />
+
+            <p class="markazi-text text-2xl m-[3vh] text-white text-left">
+              The player will control two very similar Labyrinths at the same
+              time, with the directions switched. Pressing the "right" key might
+              move the character up. The story is told through music, and there
+              are fewer traps in the labyrinth, allowing players to enjoy the
+              music that describes the story.
+            </p>
+          </div>
         </div>
       </section>
     </main>
@@ -723,6 +797,23 @@ const nextImg = () => {
     margin-top: 6vh;
     display: flex;
     flex-direction: column;
+  }
+
+  ::-webkit-scrollbar {
+    height: 8px; /* 水平滾動條的高度 */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 }
 </style>
