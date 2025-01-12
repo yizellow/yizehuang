@@ -489,10 +489,10 @@ const nextImg = () => {
   <div v-if="isMobile">
     <main>
       <section
-        class="relative w-full h-auto flex flex-col justify-center items-center z-0"
+        class="relative w-full h-auto flex flex-col justify-center items-center bg-[#f7d803] z-0"
       >
         <p
-          class="text-[4rem] font-bold tracking-[1rem] mix-blend-screen text-red-500 top-[10vh]"
+          class="text-[4rem] font-bold tracking-[1rem] text-red-500 top-[10vh]"
         >
           CHIPS
         </p>
@@ -503,6 +503,7 @@ const nextImg = () => {
           loop
           muted
           controls
+          playsinline
         ></video>
         <div
           class="w-full h-full absolute z-2 flex items-start justify-center"
@@ -663,7 +664,7 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 flex justify-start items-center flex-col"
           >
-            <p class="poppins-medium text-white m-[3vh]">
+            <p class="poppins-medium text-white m-[3vh] text-m">
               1. Psychological Test
             </p>
             <img class="w-full h-1/3" src="@/assets/img/ChipsImg/1.gif" />
@@ -680,7 +681,7 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
-            <p class="poppins-medium text-white m-[3vh]">
+            <p class="poppins-medium text-white m-[3vh] text-m">
               2. Character Selection Result
             </p>
             <img class="w-full h-1/3" src="@/assets/img/ChipsImg/2.gif" />
@@ -698,7 +699,7 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
-            <p class="poppins-medium text-white m-[3vh]">
+            <p class="poppins-medium text-white m-[3vh] text-m">
               3. In the Mobius Strip playground
             </p>
             <img class="w-full h-1/3" src="@/assets/img/ChipsImg/3.gif" />
@@ -717,7 +718,7 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
-            <p class="poppins-medium text-white m-[3vh]">4. Labyrinth</p>
+            <p class="poppins-medium text-white m-[3vh] text-m">4. Labyrinth</p>
             <img
               class="w-full h-1/3"
               src="https://cdnb.artstation.com/p/assets/images/images/081/759/565/large/yize-huang-maze.jpg?1731143047"
@@ -738,7 +739,7 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
-            <p class="poppins-medium text-white m-[3vh]">5. Endings</p>
+            <p class="poppins-medium text-white m-[3vh] text-m">5. Endings</p>
             <img class="w-full h-1/3" src="@/assets/img/ChipsImg/4.gif" />
             <div
               class="w-full h-1/2 border-white border-b-2 flex items-center justify-center"
@@ -814,15 +815,12 @@ const nextImg = () => {
           </div>
         </div>
       </section>
-      <!-- <section class="w-full h-auto bg-slate-300">
-        <div
-          class="right-0 w-1/2 h-full absolute flex justify-center items-center z-2"
-        >
-          <div
-            class="w-full h-auto flex justify-center flex-col p-10"
-          >
+      <section class="w-full h-auto bg-neutral-900">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+          <div class="w-full h-auto flex justify-center flex-col p-[3vh]">
             <p class="text-xl text-white poppins-medium">團隊名單 Credit</p>
-            <p class="text-2xl mt-10 text-white markazi-text">
+            <br />
+            <p class="text-xl text-white markazi-text">
               美術系 黃亦澤 HUANG Yi-Ze<br />
               美術系 張瑜晴 CHANG Yu-Ching<br />
               新媒系 劉張妙齊 LIU CHANG Miao-Chi<br />
@@ -835,17 +833,13 @@ const nextImg = () => {
             </p>
           </div>
         </div>
-        <div
-          class="left-0 w-1/2 h-full absolute flex justify-center items-center z-2"
-        >
-          <div class="w-[calc(100%/1.414)] h-[calc(100%/1.414)]">
-            <img
-              class="w-full h-full object-contain"
-              src="https://cdnb.artstation.com/p/assets/images/images/081/756/471/large/yize-huang-2-3chips2.jpg?1731128477"
-            />
-          </div>
+        <div class="w-full h-auto p-[3vh]">
+          <img
+            class="w-full h-full object-contain"
+            src="https://cdnb.artstation.com/p/assets/images/images/081/756/471/large/yize-huang-2-3chips2.jpg?1731128477"
+          />
         </div>
-      </section> -->
+      </section>
     </main>
   </div>
 </template>
