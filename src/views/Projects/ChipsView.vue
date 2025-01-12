@@ -499,7 +499,6 @@ const nextImg = () => {
         <video
           class="w-full h-full object-cover z-1 inset-0"
           src="@/assets/img/ChipsImg/chipHero.mp4"
-          autoplay
           loop
           muted
           controls
@@ -671,7 +670,7 @@ const nextImg = () => {
             <div
               class="w-full h-1/2 border-white border-b-2 flex items-center justify-center"
             >
-              <p class="markazi-text text-xl m-[3vh] text-white text-left">
+              <p class="markazi-text text-l m-[3vh] text-white text-left">
                 There are five surreal questions with animations to match the
                 player to the right character.
               </p>
@@ -681,14 +680,14 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
-            <p class="poppins-medium text-white m-[3vh] text-m">
+            <p class="poppins-medium text-white m-[3vh] text-s">
               2. Character Selection Result
             </p>
             <img class="w-full h-1/3" src="@/assets/img/ChipsImg/2.gif" />
             <div
               class="w-full h-1/2 border-white border-b-2 flex items-center justify-center"
             >
-              <p class="markazi-text text-xl m-[3vh] text-white text-left">
+              <p class="markazi-text text-l m-[3vh] text-white text-left">
                 Based on the results of the psychological test, a role that
                 suits you will be assigned, which will also influence the
                 progression of the story.
@@ -699,7 +698,7 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
-            <p class="poppins-medium text-white m-[3vh] text-m">
+            <p class="poppins-medium text-white m-[3vh] text-s">
               3. In the Mobius Strip playground
             </p>
             <img class="w-full h-1/3" src="@/assets/img/ChipsImg/3.gif" />
@@ -707,7 +706,7 @@ const nextImg = () => {
             <div
               class="w-full h-1/2 border-white border-b-2 flex items-center justify-center"
             >
-              <p class="markazi-text text-xl m-[3vh] text-white text-left">
+              <p class="markazi-text text-l m-[3vh] text-white text-left">
                 This playground is the main place of the game, with two versions
                 that change based on the player's choices. Here, players will
                 talk to other characters and trigger various games.
@@ -726,7 +725,7 @@ const nextImg = () => {
             <div
               class="w-full h-1/2 border-white border-b-2 flex items-center justify-center"
             >
-              <p class="markazi-text text-xl text-left text-white">
+              <p class="markazi-text text-l text-left text-white">
                 a. Do not face the reality .
                 <br />
                 b. reconciliation with yourself.
@@ -744,7 +743,7 @@ const nextImg = () => {
             <div
               class="w-full h-1/2 border-white border-b-2 flex items-center justify-center"
             >
-              <p class="markazi-text text-xl m-[3vh] text-white text-left">
+              <p class="markazi-text text-l m-[3vh] text-white text-left">
                 The player will control two very similar Labyrinths at the same
                 time, with the directions switched. Pressing the "right" key
                 might move the character up. The story is told through music,
@@ -921,6 +920,12 @@ const nextImg = () => {
 
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
+  }
+  video {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 10;
   }
 }
 </style>
