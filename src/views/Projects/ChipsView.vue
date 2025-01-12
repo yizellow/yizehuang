@@ -655,7 +655,9 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 flex justify-start items-center flex-col"
           >
-            <div class="w-full h-[40px] bg-red-400 overflow-hidden">
+            <div
+              class="w-full h-[40px] flex items-center justify-center overflow-hidden"
+            >
               <p class="poppins-medium text-white m-[3vh] text-m">
                 1. Psychological Test
               </p>
@@ -675,7 +677,9 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
-            <div class="w-full h-[40px] bg-red-400 overflow-hidden">
+            <div
+              class="w-full h-[40px] flex items-center justify-center overflow-hidden"
+            >
               <p class="poppins-medium text-white m-[3vh] text-s">
                 2. Character Selection Result
               </p>
@@ -696,7 +700,9 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
-            <div class="w-full h-[40px] bg-red-400 overflow-hidden">
+            <div
+              class="w-full h-[40px] overflow-hidden flex items-center justify-center"
+            >
               <p class="poppins-medium text-white m-[3vh] text-s">
                 3. In the Mobius Strip playground
               </p>
@@ -718,7 +724,9 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
-            <div class="w-full h-[40px] bg-red-400 overflow-hidden">
+            <div
+              class="w-full h-[40px] overflow-hidden flex items-center justify-center"
+            >
               <p class="poppins-medium text-white m-[3vh] text-m">
                 4. Labyrinth
               </p>
@@ -744,7 +752,9 @@ const nextImg = () => {
           <div
             class="w-[calc(100vw-10vh)] h-full ml-[3vh] flex-shrink-0 border-white border-b-2 flex justify-start items-center flex-col"
           >
-            <div class="w-full h-[40px] bg-red-400 overflow-hidden">
+            <div
+              class="w-full h-[40px] overflow-hidden flex items-center justify-center"
+            >
               <p class="poppins-medium text-white m-[3vh] text-m">5. Endings</p>
             </div>
 
