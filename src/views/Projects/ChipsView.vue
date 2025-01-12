@@ -814,7 +814,7 @@ const nextImg = () => {
           </div>
         </div>
       </section>
-      <section class="w-full h-auto bg-slate-300">
+      <!-- <section class="w-full h-auto bg-slate-300">
         <div
           class="right-0 w-1/2 h-full absolute flex justify-center items-center z-2"
         >
@@ -845,7 +845,7 @@ const nextImg = () => {
             />
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
   </div>
 </template>
