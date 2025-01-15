@@ -336,16 +336,106 @@ const nextImg = () => {
       </section>
       <section class="p-[3vh] bg-white">
         <p class="markazi-text text-l border-b-2 pb-[1vh] border-gray-600">
-          Yizellow is a project based on the theme of “The Basics of Styling”.
-          Every artist has their own style, and the process of finding that
-          style requires deep exploration. During my studies at art school, I
-          realized that my motivation to create was often too purposeful, which
-          made me feel constrained and unable to express myself freely. So I
-          decided to take a more relaxed approach, experimenting with random
-          doodles and sketches, including some oil paintings. Eventually, these
-          works were assembled into my first solo exhibition: 《Yizellow》
-          (《Myself》)in 2019.
+          &nbsp; &nbsp; &nbsp; &nbsp;Yizellow is a project based on the theme of
+          “The Basics of Styling”. Every artist has their own style, and the
+          process of finding that style requires deep exploration. During my
+          studies at art school, I realized that my motivation to create was
+          often too purposeful, which made me feel constrained and unable to
+          express myself freely. So I decided to take a more relaxed approach,
+          experimenting with random doodles and sketches, including some oil
+          paintings. Eventually, these works were assembled into my first solo
+          exhibition: 《Yizellow》 (《Myself》)in 2019.
         </p>
+      </section>
+      <section
+        class="w-full h-auto flex flex-row items-center justify-center bg-white p-[3vh] relative"
+      >
+        <div class="w-full h-[40vh]">
+          <img
+            class="w-full h-full object-contain"
+            v-bind:src="image[currentIndex]"
+          />
+        </div>
+        <div class="w-full top-1/2 flex flex-row justify-between absolute z-2">
+          <Icon
+            icon="material-symbols:arrow-back-2"
+            width="45"
+            class="cursor-pointer justify-self-end hover:scale-150 transition-transform duration-300"
+            @click="lastImg"
+            color="blue"
+          ></Icon>
+          <Icon
+            icon="material-symbols:arrow-back-2"
+            width="45"
+            class="cursor-pointer justify-self-end rotate-180 hover:scale-150 transition-transform duration-300"
+            @click="nextImg"
+            color="blue"
+          ></Icon>
+        </div>
+      </section>
+      <section
+        class="w-full h-auto flex flex-col items-center justify-center bg-[#6456ff] p-[3vh]"
+      >
+        <p class="my-[1vh] text-white text-xl poppins-medium">#A FEEDBACK</p>
+
+        <p
+          class="markazi-text text-white text-l text-start border-b-2 pb-[1vh] border-gray-600"
+        >
+          &nbsp; &nbsp; &nbsp; &nbsp; After the exhibition, an elder man told me
+          that many artists create what they lack, but he saw “pure happiness,
+          childishness and innocence” in my work. Indeed, what he said was
+          exactly what I was looking for in my work, and this has become my
+          rethinking of my creation.
+        </p>
+      </section>
+      <section
+        class="bg-white w-full h-auto flex items-center justify-start flex-col p-[3vh]"
+      >
+        <div
+          class="drop-shadow-xl py-[3vh] items-center justify-start flex-col bg-white"
+        >
+          <div class="flex flex-row items-center justify-center">
+            <a href="https://www.instagram.com/yizellow/">
+              <img
+                class="w-[4vh] mr-[3vh]"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+              />
+            </a>
+            <p class="my-5 self-start text-xl poppins-medium">HOW TO SHOW</p>
+          </div>
+          <p class="markazi-text text-l pr-[3vh] pl-[3vh]">
+            &nbsp; &nbsp; &nbsp; &nbsp;During the process of creating many
+            doodles, I began to think about how artists can show their work and
+            share it with more people. So, I created an Instagram account for
+            Yizellow to share my pieces. Interestingly, this account became the
+            only way to save some of my works after my hard drive broke, even
+            though some of the images were damaged.
+          </p>
+          <div class="w-full h-[40vh] bg-slate-300"></div>
+        </div>
+      </section>
+
+      <section class="w-full h-auto p-[6vh]">
+        <img
+          class="w-full h-auto object-cover object-center"
+          src="@/assets/img/ChipsImg/tattoo.gif"
+        />
+
+        <div
+          class="w-full h-auto p-[3vh] text-2xl border-2 flex flex-col items-center justify-center"
+        >
+          <p class="my-5 text-xl poppins-medium">About Tattoos</p>
+          <p class="markazi-text text-m">
+            The doodles of this project were favored by many people, and they
+            even wanted to make these pictures into tattoos, so I started
+            working as a tattooist. But as more and more people liked it, I
+            gradually professionalized the technique and even apprenticed at a
+            studio in Sydney, Australia. However, with a lot of practice, I came
+            to realize that tattooing was not the right direction for me, and I
+            felt a lack of freedom in it, so I decided to give it up, even
+            though being a tattooist could be very lucrative.
+          </p>
+        </div>
       </section>
     </main>
   </div>
