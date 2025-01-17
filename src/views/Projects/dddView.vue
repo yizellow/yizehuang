@@ -158,10 +158,10 @@ const openIntro = () => {
         <section class="w-full h-[40vh] relative bg-[#e8e7e6] z-0">
           <img
             src="https://cdna.artstation.com/p/assets/images/images/052/282/404/large/yize-huang-sde.jpg?1659416576"
-            class="w-auto h-full  opacity-90 right-0 absolute z-1"
+            class="w-auto h-full opacity-90 right-0 absolute z-1"
           />
           <div
-            class="h-full w-2/3 z-10 absolute flex flex-col items-start justify-center "
+            class="h-full w-2/3 z-10 absolute flex flex-col items-start justify-center"
           >
             <img
               src="https://cdnb.artstation.com/p/assets/images/images/052/282/401/large/yize-huang-ft.jpg?1659416553"
@@ -180,15 +180,16 @@ const openIntro = () => {
         </section>
         <section
           id="3"
-          class="section3 section2snap-center relative w-full h-screen bg-[#010e68]"
+          class="section3 section2snap-center relative w-full h-[35vh] bg-[#010f68] z-0"
         >
           <video
-            class="w-full h-auto"
+            class="w-full h-auto max-w-full max-h-full object-cover absolute z-10 bg-[#010e68]"
             src="@/assets/img/how-to-face-my-shadows.mp4"
             controls
             autoplay
             loop
             muted
+            playsinline
           ></video>
           <infoTag title="How to face my shadows?" subtle="The Crouching Boy" />
         </section>
@@ -206,7 +207,7 @@ const openIntro = () => {
             />
           </div>
 
-          <infoTag title="How to face my shadows?" />
+          <infoTag title="Design my room" />
         </section>
       </div>
 
@@ -312,19 +313,9 @@ p {
   .showIntro {
     top: 90%;
   }
-  .section2 {
-    height: auto;
-  }
-  .section3 {
-    height: 35vh;
-    background-color: gray;
-  }
+
   .section4 {
     height: 50vh;
-  }
-  .David {
-    width: 100%;
-    z-index: 200;
   }
 }
 </style>
