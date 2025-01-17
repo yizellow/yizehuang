@@ -27,6 +27,8 @@ const openInfo = () => {
 <template>
   <!--          content          -->
 
+
+  
   <div
     v-if="showInfo"
     class="box rounded backdrop-blur-sm absolute top-1/2 right-1 -translate-y-1/2 -translate-x-1/4 w-1/4 h-auto bg-green-400/60 p-4 z-10"
@@ -58,7 +60,7 @@ const openInfo = () => {
       icon="material-symbols:arrow-circle-left-rounded"
       width="23"
       color="white"
-      class="icon mr-2 opacity-70 cursor-pointer icon"
+      class="icon mr-2 opacity-70 cursor-pointer ="
     />
     <div class="text-green-400 opacity-80 text-2xl m-1 info">Info</div>
   </div>
@@ -80,18 +82,11 @@ const openInfo = () => {
 }
 
 @media (max-width: 480px) {
-  .info {
-    font-size: 1rem;
-  }
-  p {
-    font-size: 1rem;
-  }
+
   .icon {
     width: 20px;
   }
-  .pp {
-    font-size: 1.2rem;
-  }
+
   .tp {
     font-weight: 500;
     margin-left: 0.8rem;
