@@ -155,24 +155,24 @@ const openIntro = () => {
             subtle="Laocoon and his sons"
           />
         </section>
-        <section
-          id="2"
-          class="snap-center pr-[100px] relative w-full h-[40vh] overflow-hidden flex items-center justify-start bg-right bg-[#e5e4e1] z-10"
-          style="
-            background-image: url('https://cdna.artstation.com/p/assets/images/images/052/282/404/large/yize-huang-sde.jpg?1659416576');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100%;
-          "
-        >
+        <section class="w-full h-[40vh] relative bg-[#e8e7e6] z-0">
           <img
-            src="https://cdnb.artstation.com/p/assets/images/images/052/282/401/large/yize-huang-ft.jpg?1659416553"
-            class="cursor-pointer w-[15vh] drop-shadow-md opacity-90"
+            src="https://cdna.artstation.com/p/assets/images/images/052/282/404/large/yize-huang-sde.jpg?1659416576"
+            class="w-auto h-full  opacity-90 right-0 absolute z-1"
           />
-          <img
-            src="https://cdna.artstation.com/p/assets/images/images/052/282/402/large/yize-huang-new-whole.jpg?1659416565"
-            class="cursor-pointer w-[15vh] drop-shadow-md opacity-90"
-          />
+          <div
+            class="h-full w-2/3 z-10 absolute flex flex-col items-start justify-center "
+          >
+            <img
+              src="https://cdnb.artstation.com/p/assets/images/images/052/282/401/large/yize-huang-ft.jpg?1659416553"
+              class="h-1/2 drop-shadow-md opacity-90 p-[1.5vh]"
+            />
+            <img
+              src="https://cdna.artstation.com/p/assets/images/images/052/282/402/large/yize-huang-new-whole.jpg?1659416565"
+              class="h-1/2 drop-shadow-md opacity-90 p-[1.5vh]"
+            />
+          </div>
+
           <infoTag
             title="Republic China and Its Dick_David"
             class="absolute z-30"
@@ -215,7 +215,7 @@ const openIntro = () => {
       <!--         tags              -->
       <div
         v-if="showIntro"
-        class="backdrop-blur-sm fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[94vw] max-h-[83vh] bg-white/60 z-10 overflow-scroll	"
+        class="backdrop-blur-sm fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[94vw] max-h-[60vh] bg-white/60 z-10 overflow-scroll"
       >
         <Icon
           icon="material-symbols:close-rounded"

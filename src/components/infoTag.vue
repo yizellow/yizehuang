@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from "vue";
 import { Icon } from "@iconify/vue";
+import { useMediaQuery } from "@vueuse/core";
+
 defineProps({
   title: String,
   subtle: String,
@@ -12,6 +14,9 @@ defineProps({
 //       front line “remains difficult” and certain areas “require constant renewal
 //       of resources of Ukrainian units” in a statement on Telegram Saturday
 //       morning.`;
+const isComputer = useMediaQuery("(min-width: 481px)");
+const isMobile = useMediaQuery("(max-width: 480px)");
+const showIntro = ref(true);
 
 const showInfo = ref(false);
 const canceledInfo = () => {
@@ -25,44 +30,84 @@ const openInfo = () => {
 };
 </script>
 <template>
-  <!--          content          -->
+  <div v-if="isComputer">
+    <!--          content          -->
+    <main>
+      <div
+        v-if="showInfo"
+        class="box rounded backdrop-blur-sm absolute top-1/2 right-1 -translate-y-1/2 -translate-x-1/4 w-1/4 h-auto bg-green-400/60 p-4 z-10"
+      >
+        <Icon
+          icon="material-symbols:close-rounded"
+          width="23"
+          class="xx cursor-pointer justify-self-end m-0 hover:scale-150 transition-transform duration-300"
+          @click="canceledInfo"
+        />
 
+        <h1 class="poppins-medium text-gray-700 text-center text-base tp">
+          {{ title }}<br />
+          {{ subtle }}
+        </h1>
+        <p class="markazi-text text-purple-900 my-3 text-2xl text-left ml-3 pp">
+          {{ content }}
+        </p>
+      </div>
+      <!--            tags              -->
 
-  
-  <div
-    v-if="showInfo"
-    class="box rounded backdrop-blur-sm absolute top-1/2 right-1 -translate-y-1/2 -translate-x-1/4 w-1/4 h-auto bg-green-400/60 p-4 z-10"
-  >
-    <Icon
-      icon="material-symbols:close-rounded"
-      width="23"
-      class="xx cursor-pointer justify-self-end m-0 hover:scale-150 transition-transform duration-300"
-      @click="canceledInfo"
-    />
-
-    <h1 class="poppins-medium text-gray-700 text-center text-base tp">
-      {{ title }}<br />
-      {{ subtle }}
-    </h1>
-    <p class="markazi-text text-purple-900 my-3 text-2xl text-left ml-3 pp">
-      {{ content }}
-    </p>
+      <div
+        id="tag"
+        class="hover:opacity-35 backdrop-blur-sm h-10 p-1 flex row items-center absolute top-3/4 right-8 -translate-y-1/2 z-10 cursor-pointer bg-white/5"
+        v-if="showInfoTag"
+        @click="openInfo"
+      >
+        <Icon
+          icon="material-symbols:arrow-circle-left-rounded"
+          width="23"
+          color="white"
+          class="icon mr-2 opacity-70 cursor-pointer ="
+        />
+        <div class="text-green-400 opacity-80 text-2xl m-1 info">Info</div>
+      </div>
+    </main>
   </div>
-  <!--            tags              -->
+  <div v-if="isMobile">
+    <main>
+      <div
+        v-if="showInfo"
+        class="rounded backdrop-blur-sm absolute top-1/2 right-1 -translate-y-1/2 -translate-x-1/4 max-w-2/3 h-auto bg-green-400/60 z-10"
+      >
+        <Icon
+          icon="material-symbols:close-rounded"
+          class="w-[4vw] h-auto justify-self-end"
+          @click="canceledInfo"
+        />
 
-  <div
-    id="tag"
-    class="hover:opacity-35 backdrop-blur-sm h-10 p-1 flex row items-center absolute top-3/4 right-8 -translate-y-1/2 z-10 cursor-pointer bg-white/5"
-    v-if="showInfoTag"
-    @click="openInfo"
-  >
-    <Icon
-      icon="material-symbols:arrow-circle-left-rounded"
-      width="23"
-      color="white"
-      class="icon mr-2 opacity-70 cursor-pointer ="
-    />
-    <div class="text-green-400 opacity-80 text-2xl m-1 info">Info</div>
+        <p
+          class="markazi-text text-gray-700 text-center text-m p-0 my-[1.5vh] mx-[1vh]"
+        >
+          {{ title }}<br />
+          {{ subtle }}
+        </p>
+        <p class="markazi-text text-purple-900 my-3 text-2xl text-left ml-3">
+          {{ content }}
+        </p>
+      </div>
+      <!--            tags              -->
+
+      <div
+        id="tag"
+        class="backdrop-blur-sm h-10 p-[1.5vh] flex row items-center absolute top-3/4 right-8 -translate-y-1/2 z-50 bg-white/5"
+        v-if="showInfoTag"
+        @click="openInfo"
+      >
+        <Icon
+          icon="material-symbols:arrow-circle-left-rounded"
+          color="white"
+          class="w-[4vw] h-auto mr-2 opacity-70 cursor-pointer ="
+        />
+        <div class="text-green-400 opacity-80 text-l info">Info</div>
+      </div>
+    </main>
   </div>
 </template>
 <style scoped>
@@ -82,18 +127,10 @@ const openInfo = () => {
 }
 
 @media (max-width: 480px) {
-
   .icon {
     width: 20px;
   }
 
-  .tp {
-    font-weight: 500;
-    margin-left: 0.8rem;
-    padding: 0;
-    text-align: left;
-    font-family: "roboto-light";
-  }
   .box {
     position: absolute;
     width: 50%;
