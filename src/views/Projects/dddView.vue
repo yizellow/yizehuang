@@ -215,7 +215,7 @@ const openIntro = () => {
       <!--         tags              -->
       <div
         v-if="showIntro"
-        class="backdrop-blur-sm fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[94vw] max-h-[94vh] bg-white/60 p-[3vh] z-10"
+        class="backdrop-blur-sm fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[94vw] max-h-[83vh] bg-white/60 z-10 overflow-scroll	"
       >
         <Icon
           icon="material-symbols:close-rounded"
@@ -225,16 +225,15 @@ const openIntro = () => {
           @click="canceledIntro"
         />
 
-        <h1 class="tt poppins-medium text-gray-800 text-center text-xl">
+        <p class="poppins-medium text-gray-800 text-center m-[1.5vh] text-m">
           3D Modeling, Experiment, Material and Light
-        </h1>
-        <p class="markazi-text text-gray-900 my-5 text-l">
+        </p>
+        <p class="markazi-text text-gray-900 text-m m-[1vh]">
           &nbsp; &nbsp; This is an experimental project created with Blender,
           aimed at exploring the interplay between materials, light, and shadow
           in 3D modeling. I am particularly captivated by the subtle
           interactions between light transmission, refraction, and material
           textures. These subtle changes show the unique charm of digital media.
-          <br />
           <br />
           &nbsp; &nbsp; During the creation process, I observed that objects
           made through 3D modeling often display a quality of "excessive
@@ -243,7 +242,7 @@ const openIntro = () => {
           features appear realistic, they simultaneously surpass the
           imperfections and randomness present in naturally occurring objects.
           <br />
-          <br />
+
           &nbsp; &nbsp;This not only gives the works a refined and surreal
           quality but also reminds me of the idealized characteristics found in
           classical realist sculptures. Combining this quality with classical
@@ -306,15 +305,6 @@ p {
     font-size: 1rem;
     line-height: 1.1rem;
     margin: auto 3px;
-  }
-  .tt {
-    width: full;
-    font-size: 0.8rem;
-    line-height: 1rem;
-    margin: auto 5px;
-    text-align: left;
-    padding-left: 0rem;
-    margin-bottom: 1rem;
   }
   .intro {
     font-size: 1rem;
