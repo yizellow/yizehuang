@@ -8,12 +8,7 @@ defineProps({
   subtle: String,
   content: String,
 });
-// const title = "#Plastic wrap protection";
-// const subtle = "Laocoon and his sons";
-// const content = `Ukraine’s Commander-in-Chief Oleksandr Syrskyi said the situation on the
-//       front line “remains difficult” and certain areas “require constant renewal
-//       of resources of Ukrainian units” in a statement on Telegram Saturday
-//       morning.`;
+
 const isComputer = useMediaQuery("(min-width: 481px)");
 const isMobile = useMediaQuery("(max-width: 480px)");
 const showIntro = ref(true);

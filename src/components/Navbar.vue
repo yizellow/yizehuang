@@ -1,8 +1,10 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import { useMediaQuery } from "@vueuse/core";
+
 </script>
 <template>
-  <div >
+  <div>
     <nav
       class="z-40 fixed top-0 left-0 right-0 flex flex-row w-full items-center justify-center h-14 drop-shadow-lg"
     >
@@ -10,6 +12,8 @@ import { RouterLink } from "vue-router";
       <RouterLink to="/"><div class="navtext">Home</div></RouterLink>
       <RouterLink to="/Project"><div class="navtext">Projects</div></RouterLink>
       <RouterLink to="/AboutMe"><div class="navtext">About Me</div></RouterLink>
+      <RouterLink to="/Member"><div class="navtext">Member</div></RouterLink>
+
       <!-- <RouterLink to="/Contact"><div class="navtext">Contact</div></RouterLink> -->
       <!-- <div class="navtext">Member</div> -->
     </nav>
