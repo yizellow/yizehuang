@@ -4,7 +4,6 @@ import { useRouter } from "vue-router";
 import Loading from "@/components/Loading.vue";
 import Navbar from "@/components/Navbar.vue";
 import NavbarMobile from "@/components/NavbarMobile.vue";
-import Login from "@/components/Login.vue";
 
 import { RouterView } from "vue-router";
 import { useMediaQuery } from "@vueuse/core";
@@ -29,7 +28,6 @@ onMounted(() => {
     <Loading />
   </div>
   <!--Login 組件 -->
-  <Login />
 
 
   <!-- 主頁內容 -->

@@ -12,7 +12,7 @@ defineProps({
 const isComputer = useMediaQuery("(min-width: 481px)");
 const isMobile = useMediaQuery("(max-width: 480px)");
 const showIntro = ref(true);
-
+//
 const showInfo = ref(false);
 const canceledInfo = () => {
   showInfoTag.value = true;

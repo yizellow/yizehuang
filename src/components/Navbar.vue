@@ -1,7 +1,19 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import { useMediaQuery } from "@vueuse/core";
+import Login from "@/views/Member/Login.vue";
+import { ref } from "vue";
 
+const navlog = ref(false);
+const openLog = () => {
+  if (!navlog) {
+    console.log("exit");
+    navlog.value = true;
+  } else if (navlog) {
+    navlog.value = true;
+    console.log("open log");
+  }
+};
 </script>
 <template>
   <div>
@@ -12,12 +24,10 @@ import { useMediaQuery } from "@vueuse/core";
       <RouterLink to="/"><div class="navtext">Home</div></RouterLink>
       <RouterLink to="/Project"><div class="navtext">Projects</div></RouterLink>
       <RouterLink to="/AboutMe"><div class="navtext">About Me</div></RouterLink>
-      <RouterLink to="/Member"><div class="navtext">Member</div></RouterLink>
-
-      <!-- <RouterLink to="/Contact"><div class="navtext">Contact</div></RouterLink> -->
-      <!-- <div class="navtext">Member</div> -->
+      <div class="navtext" id="Log" @click="openLog">Member</div>
     </nav>
   </div>
+  <Login v-if="navlog" />
 </template>
 
 <style scoped>

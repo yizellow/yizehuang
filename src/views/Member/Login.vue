@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import { Icon } from "@iconify/vue";
+import { useConfirmDialog } from "@vueuse/core";
 
 const image = [
   "https://cdnb.artstation.com/p/assets/images/images/082/332/429/large/yize-huang-img-0912.jpg?1732700966",
@@ -10,8 +11,15 @@ const image = [
   "https://cdna.artstation.com/p/assets/images/images/082/332/324/large/yize-huang-img-0911.jpg?1732700747",
 ];
 let currentIndex = ref(0);
-
 let intervalId = null;
+const log = ref(true); // 初始值設定為 true
+const navlog = ref(false);
+
+const closeLog = () => {
+  log.value = false; // 隱藏 log 視窗
+  console.log("remove sc");
+  navlog.value = false; // 隱藏 log 視窗
+};
 
 onMounted(() => {
   intervalId = setInterval(() => {
@@ -26,9 +34,11 @@ onUnmounted(() => {
 
 <template>
   <main
+    id="logg"
+    v-if="log"
     class="w-[100vw] h-full bg-green-400/90 fixed z-50 flex items-center justify-center"
   >
-    <div class="w-1/2 h-3/5 flex flex-row bg-white relative">
+    <div class="w-1/2 h-3/5 flex flex-row bg-white relative -translate-y-[5vh]">
       <section class="w-1/2 h-full absolute left-0 overflow-hidden">
         <transition name="blur-fade" mode="default">
           <img
@@ -42,11 +52,12 @@ onUnmounted(() => {
         <div class="max-h-1/4 grid">
           <Icon
             icon="material-symbols:close-rounded"
-            class="w-[2vw] h-auto justify-self-end flex-row items-self-start"
-            @click="canceledInfo"
+            color="gray"
+            class="w-[2.5vw] h-auto justify-self-end flex-row items-self-start icon"
+            @click="closeLog"
           />
           <p
-            class="text-2xl font-black justify-self-center items-self-start tracking-widest"
+            class="text-2xl text-gray-500 font-black justify-self-center items-self-start tracking-widest"
           >
             Log In
           </p>
@@ -56,58 +67,60 @@ onUnmounted(() => {
         >
           <input
             placeholder="Email"
-            class="border-2 w-3/4 h-[4vh] border-gray-200 m-[1vh] p-1 outline-[#8A2BE2] text-green-500 tracking-widest"
+            class="border-2 w-3/4 h-[4vh] border-gray-200 m-[1vh] p-1 outline-violet-500 text-green-500 tracking-widest"
           />
           <input
             placeholder="******"
-            class="border-2 w-3/4 h-[4vh] border-gray-200 m-[1vh] p-1 outline-[#8A2BE2] text-green-500 tracking-widest"
+            type="password"
+            class="border-2 w-3/4 h-[4vh] border-gray-200 m-[1vh] p-1 outline-violet-500 text-green-500 tracking-widest"
           />
         </div>
         <div
           class="flex flex-col w-full h-1/5 items-center justify-center mx-auto"
         >
           <span class="w-full h-1/2 flex justify-center items-start text-xs">
-            <p class="">The account is already registered. Please log in.</p>
+            <p
+              class="text-green-500 underline underline-offset-2 decoration-red-500"
+            >
+              The account is already registered. Please log in.
+            </p>
           </span>
           <span class="w-full h-1/2 flex flex-row items-center justify-center">
             <button
-              class="w-4/12 h-full rounded-lg bg-violet-500 text-white tracking-widest mx-1 text-m poppins-medium mr-[3vh]"
+              class="w-4/12 h-full rounded-lg bg-violet-500 text-white tracking-widest mx-1 text-m poppins-medium mr-[3vh] icon"
             >
               Sign up
             </button>
             <button
-              class="w-4/12 h-full rounded-lg bg-red-500 text-white tracking-widest mx-1 text-m poppins-medium"
+              class="w-4/12 h-full rounded-lg bg-red-500 text-white tracking-widest mx-1 text-m poppins-medium icon"
             >
               Log In
             </button>
           </span>
         </div>
-        <!-- <div
-          class="w-9/12 mx-auto my-[3vh] flex justify-center border-t-[1px] border-gray-400 bg-blue-400"
-        >
-          <p
-            class="text-xs relative block w-auto text-center bottom-4 my-[3vh] mx-[3vh] bg-white"
-          >
-            ssssss
-          </p>
-        </div> -->
 
-        <div class="w-3/4 h-1/5 bg-white p-[3vh] flex justify-between mx-auto">
+        <div
+          class="w-9/12 h-[6vh] mt-[3vh] mx-auto flex items-center justify-center border-gray-00 relative"
+        >
+          <div class="w-full border-t-[1px] border-gray-300 absolute"></div>
+          <p
+            class="text-xs block w-auto text-center px-[1vh] text-gray-400 bg-white absolute"
+          >
+            or sign up with
+          </p>
+        </div>
+
+        <div
+          class="w-3/4 h-1/5 p-[1vh] flex items-start justify-between mx-auto"
+        >
           <Icon
             icon="logos:google-icon"
-            class="w-[2.5vw] h-auto"
-            @click="canceledInfo"
+            class="w-[2.5vw] h-auto translate-y-[1vh] icon"
           />
-          <Icon
-            icon="logos:apple"
-            class="w-[2.5vw] h-auto opacity-75"
-            @click="canceledInfo"
-            op
-          />
+          <Icon icon="logos:apple" class="w-[2.5vw] h-auto opacity-75 icon" />
           <Icon
             icon="logos:facebook"
-            class="w-[2.5vw] h-auto"
-            @click="canceledInfo"
+            class="w-[2.5vw] h-auto translate-y-[1vh] icon"
           />
         </div>
       </section>
@@ -163,5 +176,17 @@ section {
   width: 100%;
   height: 100%;
   overflow: hidden; /* 防止圖片溢出 */
+}
+.icon {
+  transition: transform 0.3s ease; /* 設定平滑過渡效果 */
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: scale(1.1); /* 當游標在上面時放大 */
+}
+
+.icon:active {
+  transform: scale(1); /* 點擊時回到原始大小，視需求可調整 */
 }
 </style>
