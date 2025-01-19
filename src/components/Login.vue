@@ -56,13 +56,35 @@ onUnmounted(() => {
         >
           <input
             placeholder="Email"
-            class="border-2 w-3/4 h-[4vh] border-gray-200 m-[1vh] outline-[#8A2BE2] text-green-500"
+            class="border-2 w-3/4 h-[4vh] border-gray-200 m-[1vh] p-1 outline-[#8A2BE2] text-green-500 tracking-widest"
           />
           <input
             placeholder="******"
-            class="border-2 w-3/4 h-[4vh] border-gray-200 m-[1vh] outline-[#8A2BE2] text-green-500"
+            class="border-2 w-3/4 h-[4vh] border-gray-200 m-[1vh] p-1 outline-[#8A2BE2] text-green-500 tracking-widest"
           />
         </div>
+        <div
+          class="flex flex-col w-full h-1/4 items-center justify-center mx-auto"
+        >
+          <span class="w-full h-1/2 flex justify-center items-start text-xs">
+            <p class="">The account is already registered. Please log in.</p>
+          </span>
+          <span class="w-full h-1/2 flex flex-row items-center justify-center">
+            <button
+              class="w-4/12 h-full rounded-lg bg-violet-500 text-white tracking-widest mx-1 text-m poppins-medium mr-[3vh]"
+            >
+              Sign up
+            </button>
+            <button
+              class="w-4/12 h-full rounded-lg bg-red-500 text-white tracking-widest mx-1 text-m poppins-medium"
+            >
+              Log In
+            </button>
+          </span>
+        </div>
+        <!-- <div class="mx-auto my-1[vh] flex justify-center">
+          <p class="text-xs">ssssss</p>
+        </div> -->
       </section>
     </div>
   </main>
