@@ -28,7 +28,7 @@ onUnmounted(() => {
   <main
     class="w-[100vw] h-full bg-green-400/90 fixed z-50 flex items-center justify-center"
   >
-    <div class="w-1/2 h-1/2 flex flex-row bg-white relative">
+    <div class="w-1/2 h-3/5 flex flex-row bg-white relative">
       <section class="w-1/2 h-full absolute left-0 overflow-hidden">
         <transition name="blur-fade" mode="default">
           <img
@@ -46,7 +46,7 @@ onUnmounted(() => {
             @click="canceledInfo"
           />
           <p
-            class="text-xl poppins-medium justify-self-center items-self-start"
+            class="text-2xl font-black justify-self-center items-self-start tracking-widest"
           >
             Log In
           </p>
@@ -64,7 +64,7 @@ onUnmounted(() => {
           />
         </div>
         <div
-          class="flex flex-col w-full h-1/4 items-center justify-center mx-auto"
+          class="flex flex-col w-full h-1/5 items-center justify-center mx-auto"
         >
           <span class="w-full h-1/2 flex justify-center items-start text-xs">
             <p class="">The account is already registered. Please log in.</p>
@@ -82,9 +82,34 @@ onUnmounted(() => {
             </button>
           </span>
         </div>
-        <!-- <div class="mx-auto my-1[vh] flex justify-center">
-          <p class="text-xs">ssssss</p>
+        <!-- <div
+          class="w-9/12 mx-auto my-[3vh] flex justify-center border-t-[1px] border-gray-400 bg-blue-400"
+        >
+          <p
+            class="text-xs relative block w-auto text-center bottom-4 my-[3vh] mx-[3vh] bg-white"
+          >
+            ssssss
+          </p>
         </div> -->
+
+        <div class="w-3/4 h-1/5 bg-white p-[3vh] flex justify-between mx-auto">
+          <Icon
+            icon="logos:google-icon"
+            class="w-[2.5vw] h-auto"
+            @click="canceledInfo"
+          />
+          <Icon
+            icon="logos:apple"
+            class="w-[2.5vw] h-auto opacity-75"
+            @click="canceledInfo"
+            op
+          />
+          <Icon
+            icon="logos:facebook"
+            class="w-[2.5vw] h-auto"
+            @click="canceledInfo"
+          />
+        </div>
       </section>
     </div>
   </main>
