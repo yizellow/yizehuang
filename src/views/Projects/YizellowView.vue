@@ -5,7 +5,6 @@ import { useMediaQuery } from "@vueuse/core";
 
 const isComputer = useMediaQuery("(min-width: 481px)");
 const isMobile = useMediaQuery("(max-width: 480px)");
-
 const image = [
   "https://cdna.artstation.com/p/assets/images/images/082/626/586/large/yize-huang-pp3.jpg?1733473101",
   "https://cdnb.artstation.com/p/assets/images/images/082/626/611/large/yize-huang-j4.jpg?1733473161",

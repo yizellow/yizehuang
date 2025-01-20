@@ -47,6 +47,7 @@ watch(
     /></RouterLink>
   </main>
   <section v-if="menu">
+    <div class="navtext">Member</div>
     <RouterLink to="/"><div class="navtext">Home</div></RouterLink>
     <RouterLink to="/Project"><div class="navtext">Projects</div></RouterLink>
     <RouterLink to="/AboutMe"><div class="navtext">About Me</div></RouterLink>

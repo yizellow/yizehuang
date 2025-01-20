@@ -13,6 +13,13 @@ const image = [
 let currentIndex = ref(0);
 let intervalId = null;
 const log = ref(true); // 初始值設定為 true
+const navlog = ref(false);
+
+const closeLog = () => {
+  log.value = false; // 隱藏 log 視窗
+  console.log("remove sc");
+  navlog.value = false; // 隱藏 log 視窗
+};
 
 onMounted(() => {
   intervalId = setInterval(() => {
@@ -27,6 +34,7 @@ onUnmounted(() => {
 
 <template>
   <main
+    id="logg"
     v-if="log"
     class="w-[100vw] h-full bg-green-400/90 fixed z-50 flex items-center justify-center"
   >
@@ -52,7 +60,6 @@ onUnmounted(() => {
             class="text-2xl text-gray-500 font-black justify-self-center items-self-start tracking-widest"
           >
             Log In
-            <input class="w-10 h-1/2 bg-red-500" type="text" v-model="num" />
           </p>
         </div>
         <div

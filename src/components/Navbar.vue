@@ -4,14 +4,14 @@ import { useMediaQuery } from "@vueuse/core";
 import Login from "@/views/Member/Login.vue";
 import { ref } from "vue";
 
-const navlog = ref(false);
-const openLog = () => {
-  if (!navlog) {
-    console.log("exit");
-    navlog.value = true;
-  } else if (navlog) {
-    navlog.value = true;
-    console.log("open log");
+const log = ref(0);
+const changeLog = () => {
+  if (log.value === 0) {
+    log.value = 1;
+    console.log("change to 1");
+  } else if (log.value === 1) {
+    log.value = 0;
+    console.log("change to 0");
   }
 };
 </script>
@@ -24,10 +24,12 @@ const openLog = () => {
       <RouterLink to="/"><div class="navtext">Home</div></RouterLink>
       <RouterLink to="/Project"><div class="navtext">Projects</div></RouterLink>
       <RouterLink to="/AboutMe"><div class="navtext">About Me</div></RouterLink>
-      <div class="navtext" id="Log" @click="openLog">Member</div>
+      <div class="navtext" @click="changeLog">
+        <input type="text" class="w-10 h-3/4 bg-red-500" v-model="num" />
+      </div>
     </nav>
   </div>
-  <Login v-if="navlog" />
+  <Login v-show="log === 1" v-bind:data="num" />
 </template>
 
 <style scoped>
