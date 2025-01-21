@@ -3,14 +3,19 @@ import { ref, onMounted, onUnmounted } from "vue";
 import { Icon } from "@iconify/vue";
 import { useConfirmDialog } from "@vueuse/core";
 
-const emit = defineEmits(["close"]);
+const emit = defineEmits(["close", "closeMenu"]);
+
 const closeLog = () => {
   emit("close");
+};
+const Login = () => {
+  emit("close");
+  emit("closeMenu");
 };
 </script>
 
 <template>
-  <div class="w-full h-full flex flex-col bg-purple-500/80 p-[3vh]">
+  <div class="w-full h-full flex flex-col -translate-y-[10vh] p-[3vh]">
     <section class="w-full h-4/6 bg-white flex-col block overflow-hidden">
       <div class="max-h-1/4 grid">
         <Icon
@@ -54,11 +59,14 @@ const closeLog = () => {
           >
             Sign up
           </button>
-          <button
-            class="w-4/12 h-4/5 rounded-lg bg-red-500 text-white tracking-widest mx-1 text-m poppins-medium icon"
-          >
-            Log In
-          </button>
+          <RouterLink to="/Member/MemberPage" class="w-4/12 h-4/5 mx-1">
+            <button
+              @click="Login"
+              class="w-full h-full rounded-lg bg-red-500 text-white tracking-widest mx-1 text-m poppins-medium icon"
+            >
+              Log In
+            </button>
+          </RouterLink>
         </span>
       </div>
 

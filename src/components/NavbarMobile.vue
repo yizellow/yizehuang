@@ -37,6 +37,10 @@ const changeLog = () => {
 const closeLog = () => {
   log.value = 0;
 };
+const Login = () => {
+  close();
+  menu.value = false;
+};
 </script>
 <template>
   <main>
@@ -59,7 +63,7 @@ const closeLog = () => {
       ><img class="logo" src="../assets/img/logo.png"
     /></RouterLink>
   </main>
-  <section v-if="menu" class="relative z-10">
+  <section v-if="menu" class="relative z-10 backdrop-blur">
     <div class="navtext relative z-10" @click="changeLog">Member</div>
     <RouterLink to="/"
       ><div class="navtext" @click="close">Home</div></RouterLink
@@ -73,6 +77,7 @@ const closeLog = () => {
     <LoginMobile
       v-show="log === 1"
       @close="closeLog"
+      @closeMenu="Login"
       class="fixed top-[6vh] left-0 w-full h-[94vh] z-50 flex items-center justify-center"
     />
   </section>
@@ -125,7 +130,7 @@ section {
   z-index: 100;
   top: 6vh;
   padding-top: 3vh;
-  background-color: rgb(0, 223, 0, 0.85);
+  background-color: rgba(74, 222, 128, 0.5);
 }
 .navtext {
   font-family: "Poppins", sans-serif;

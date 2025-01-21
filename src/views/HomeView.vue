@@ -1,3 +1,41 @@
+<script setup>
+import { gsap } from "gsap";
+import { onMounted } from "vue";
+import { useMediaQuery } from "@vueuse/core";
+const isComputer = useMediaQuery("(min-width: 481px)");
+const isMobile = useMediaQuery("(max-width: 480px)");
+
+if (isComputer) {
+  onMounted(() => {
+    gsap.to("#overlay-dark", {
+      duration: 1.5,
+      top: "-100%",
+      ease: "power3.inOut",
+      delay: 4,
+    });
+    gsap.from(".divider", {
+      duration: 1,
+      scaleX: 0,
+      ease: "power3.inOut",
+      delay: 0.5,
+      stagger: {
+        amount: 1,
+      },
+    });
+
+    gsap.from(".row > .col", {
+      duration: 1,
+      opacity: 0,
+      y: 40,
+      ease: "power3.inOut",
+      delay: 2,
+      stagger: {
+        amount: 1.5,
+      },
+    });
+  });
+}
+</script>
 <template>
   <div v-if="isComputer">
     <main class="mainbox">
@@ -137,45 +175,6 @@
   </div>
 </template>
 
-<script setup>
-import { gsap } from "gsap";
-import { onMounted } from "vue";
-import { useMediaQuery } from "@vueuse/core";
-const isComputer = useMediaQuery("(min-width: 481px)");
-const isMobile = useMediaQuery("(max-width: 480px)");
-
-if (isComputer) {
-  console.log("sss");
-  onMounted(() => {
-    gsap.to("#overlay-dark", {
-      duration: 1.5,
-      top: "-100%",
-      ease: "power3.inOut",
-      delay: 4,
-    });
-    gsap.from(".divider", {
-      duration: 1,
-      scaleX: 0,
-      ease: "power3.inOut",
-      delay: 0.5,
-      stagger: {
-        amount: 1,
-      },
-    });
-
-    gsap.from(".row > .col", {
-      duration: 1,
-      opacity: 0,
-      y: 40,
-      ease: "power3.inOut",
-      delay: 2,
-      stagger: {
-        amount: 1.5,
-      },
-    });
-  });
-}
-</script>
 <style scoped>
 @media (min-width: 481px) {
   .note {
