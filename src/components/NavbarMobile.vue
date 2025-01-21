@@ -2,6 +2,7 @@
 import { RouterLink, useRouter } from "vue-router";
 import { Icon } from "@iconify/vue";
 import { ref, watch } from "vue";
+import LoginMobile from "@/views/Member/LoginMobile.vue";
 
 const cross = ref(false);
 const menusign = ref(true);
@@ -24,6 +25,18 @@ watch(
     close();
   }
 );
+
+const log = ref(0);
+const changeLog = () => {
+  if (log.value === 0) {
+    log.value = 1;
+  } else if (log.value === 1) {
+    log.value = 0;
+  }
+};
+const closeLog = () => {
+  log.value = 0;
+};
 </script>
 <template>
   <main>
@@ -46,11 +59,22 @@ watch(
       ><img class="logo" src="../assets/img/logo.png"
     /></RouterLink>
   </main>
-  <section v-if="menu">
-    <div class="navtext">Member</div>
-    <RouterLink to="/"><div class="navtext">Home</div></RouterLink>
-    <RouterLink to="/Project"><div class="navtext">Projects</div></RouterLink>
-    <RouterLink to="/AboutMe"><div class="navtext">About Me</div></RouterLink>
+  <section v-if="menu" class="relative z-10">
+    <div class="navtext relative z-10" @click="changeLog">Member</div>
+    <RouterLink to="/"
+      ><div class="navtext" @click="close">Home</div></RouterLink
+    >
+    <RouterLink to="/Project"
+      ><div @click="close" class="navtext">Projects</div></RouterLink
+    >
+    <RouterLink to="/AboutMe"
+      ><div @click="close" class="navtext">About Me</div></RouterLink
+    >
+    <LoginMobile
+      v-show="log === 1"
+      @close="closeLog"
+      class="fixed top-[6vh] left-0 w-full h-[94vh] z-50 flex items-center justify-center"
+    />
   </section>
 </template>
 <style scoped>

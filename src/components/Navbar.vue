@@ -8,11 +8,12 @@ const log = ref(0);
 const changeLog = () => {
   if (log.value === 0) {
     log.value = 1;
-    console.log("change to 1");
   } else if (log.value === 1) {
     log.value = 0;
-    console.log("change to 0");
   }
+};
+const closeLog = () => {
+  log.value = 0;
 };
 </script>
 <template>
@@ -24,12 +25,10 @@ const changeLog = () => {
       <RouterLink to="/"><div class="navtext">Home</div></RouterLink>
       <RouterLink to="/Project"><div class="navtext">Projects</div></RouterLink>
       <RouterLink to="/AboutMe"><div class="navtext">About Me</div></RouterLink>
-      <div class="navtext" @click="changeLog">
-        <input type="text" class="w-10 h-3/4 bg-red-500" v-model="num" />
-      </div>
+      <div class="navtext" @click="changeLog">Member</div>
     </nav>
   </div>
-  <Login v-show="log === 1" v-bind:data="num" />
+  <Login v-show="log === 1" :log="log" @close="closeLog" />
 </template>
 
 <style scoped>

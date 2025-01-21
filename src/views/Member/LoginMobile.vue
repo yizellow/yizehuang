@@ -3,129 +3,91 @@ import { ref, onMounted, onUnmounted } from "vue";
 import { Icon } from "@iconify/vue";
 import { useConfirmDialog } from "@vueuse/core";
 
-const image = [
-  "https://cdnb.artstation.com/p/assets/images/images/082/332/429/large/yize-huang-img-0912.jpg?1732700966",
-  "https://cdna.artstation.com/p/assets/images/images/082/332/328/large/yize-huang-img-0937.jpg?1732700755",
-  "https://cdna.artstation.com/p/assets/images/images/082/332/470/large/yize-huang-2024-11-27-5-48-00.jpg?1732701058",
-  "https://cdnb.artstation.com/p/assets/images/images/082/332/475/large/yize-huang-2024-11-27-5-47-42.jpg?1732701073",
-  "https://cdna.artstation.com/p/assets/images/images/082/332/324/large/yize-huang-img-0911.jpg?1732700747",
-];
-let currentIndex = ref(0);
-let intervalId = null;
-const log = ref(true); // 初始值設定為 true
-const navlog = ref(false);
-
+const emit = defineEmits(["close"]);
 const closeLog = () => {
-  log.value = false; // 隱藏 log 視窗
-  console.log("remove sc");
-  navlog.value = false; // 隱藏 log 視窗
+  emit("close");
 };
-
-onMounted(() => {
-  intervalId = setInterval(() => {
-    currentIndex.value = (currentIndex.value + 1) % image.length;
-  }, 6000);
-});
-
-onUnmounted(() => {
-  clearInterval(intervalId);
-});
 </script>
 
 <template>
-  <main
-    id="logg"
-    v-if="log"
-    class="w-[100vw] h-full bg-green-400/90 fixed z-50 flex items-center justify-center"
-  >
-    <div class="w-1/2 h-3/5 flex flex-row bg-white relative -translate-y-[5vh]">
-      <section class="w-1/2 h-full absolute left-0 overflow-hidden">
-        <transition name="blur-fade" mode="default">
-          <img
-            :key="currentIndex"
-            :src="image[currentIndex]"
-            class="w-full h-full object-cover object-center"
-          />
-        </transition>
-      </section>
-      <section class="w-1/2 h-full absolute right-0 bg-white flex-col block">
-        <div class="max-h-1/4 grid">
-          <Icon
-            icon="material-symbols:close-rounded"
-            color="gray"
-            class="w-[2.5vw] h-auto justify-self-end flex-row items-self-start icon"
-            @click="closeLog"
-          />
+  <div class="w-full h-full flex flex-col bg-purple-500/80 p-[3vh]">
+    <section class="w-full h-4/6 bg-white flex-col block overflow-hidden">
+      <div class="max-h-1/4 grid">
+        <Icon
+          icon="material-symbols:close-rounded"
+          color="gray"
+          class="w-[7vw] h-auto m-[0.8vh] justify-self-end flex-row items-self-start icon"
+          @click="closeLog"
+        />
+        <p
+          class="text-2xl text-gray-500 font-black justify-self-center items-self-start tracking-widest"
+        >
+          Log In
+        </p>
+      </div>
+      <div
+        class="flex flex-col w-full h-auto items-center justify-center my-[3vh]"
+      >
+        <input
+          placeholder="Email"
+          class="border-2 w-3/4 h-[4vh] border-gray-200 m-[1vh] p-1 outline-violet-500 text-green-500 tracking-widest"
+        />
+        <input
+          placeholder="******"
+          type="password"
+          class="border-2 w-3/4 h-[4vh] border-gray-200 m-[1vh] p-1 outline-violet-500 text-green-500 tracking-widest"
+        />
+      </div>
+      <div
+        class="flex flex-col w-full h-1/6 items-center justify-center mx-auto"
+      >
+        <span class="w-full h-1/2 flex justify-center items-start text-xs">
           <p
-            class="text-2xl text-gray-500 font-black justify-self-center items-self-start tracking-widest"
+            class="text-green-500 underline underline-offset-2 decoration-red-500"
+          >
+            The account is already registered. Please log in.
+          </p>
+        </span>
+        <span class="w-full h-1/2 flex flex-row items-center justify-center">
+          <button
+            class="w-4/12 h-4/5 rounded-lg bg-violet-500 text-white tracking-widest mx-1 text-m poppins-medium mr-[3vh] icon"
+          >
+            Sign up
+          </button>
+          <button
+            class="w-4/12 h-4/5 rounded-lg bg-red-500 text-white tracking-widest mx-1 text-m poppins-medium icon"
           >
             Log In
-          </p>
-        </div>
-        <div
-          class="flex flex-col w-full h-auto items-center justify-center my-[3vh]"
-        >
-          <input
-            placeholder="Email"
-            class="border-2 w-3/4 h-[4vh] border-gray-200 m-[1vh] p-1 outline-violet-500 text-green-500 tracking-widest"
-          />
-          <input
-            placeholder="******"
-            type="password"
-            class="border-2 w-3/4 h-[4vh] border-gray-200 m-[1vh] p-1 outline-violet-500 text-green-500 tracking-widest"
-          />
-        </div>
-        <div
-          class="flex flex-col w-full h-1/5 items-center justify-center mx-auto"
-        >
-          <span class="w-full h-1/2 flex justify-center items-start text-xs">
-            <p
-              class="text-green-500 underline underline-offset-2 decoration-red-500"
-            >
-              The account is already registered. Please log in.
-            </p>
-          </span>
-          <span class="w-full h-1/2 flex flex-row items-center justify-center">
-            <button
-              class="w-4/12 h-full rounded-lg bg-violet-500 text-white tracking-widest mx-1 text-m poppins-medium mr-[3vh] icon"
-            >
-              Sign up
-            </button>
-            <button
-              class="w-4/12 h-full rounded-lg bg-red-500 text-white tracking-widest mx-1 text-m poppins-medium icon"
-            >
-              Log In
-            </button>
-          </span>
-        </div>
+          </button>
+        </span>
+      </div>
 
-        <div
-          class="w-9/12 h-[6vh] mt-[3vh] mx-auto flex items-center justify-center border-gray-00 relative"
+      <div
+        class="w-9/12 h-[6vh] mt-[3vh] mx-auto flex items-center justify-center border-gray-00 relative"
+      >
+        <div class="w-full border-t-[1px] border-gray-300 absolute"></div>
+        <p
+          class="text-xs block w-auto text-center px-[1vh] text-gray-400 bg-white absolute"
         >
-          <div class="w-full border-t-[1px] border-gray-300 absolute"></div>
-          <p
-            class="text-xs block w-auto text-center px-[1vh] text-gray-400 bg-white absolute"
-          >
-            or sign up with
-          </p>
-        </div>
+          or sign up with
+        </p>
+      </div>
 
-        <div
-          class="w-3/4 h-1/5 p-[1vh] flex items-start justify-between mx-auto"
-        >
-          <Icon
-            icon="logos:google-icon"
-            class="w-[2.5vw] h-auto translate-y-[1vh] icon"
-          />
-          <Icon icon="logos:apple" class="w-[2.5vw] h-auto opacity-75 icon" />
-          <Icon
-            icon="logos:facebook"
-            class="w-[2.5vw] h-auto translate-y-[1vh] icon"
-          />
-        </div>
-      </section>
-    </div>
-  </main>
+      <div
+        class="w-3/4 h-auto p-[1vh] flex items-start justify-between mx-auto"
+      >
+        <Icon
+          icon="logos:google-icon"
+          class="w-[10vw] h-auto translate-y-[1vh] icon"
+        />
+        <Icon icon="logos:apple" class="w-[10vw] h-auto opacity-75 icon" />
+        <Icon
+          icon="logos:facebook"
+          class="w-[10vw] h-auto translate-y-[1vh] icon"
+        />
+      </div>
+    </section>
+  </div>
 </template>
 <style scoped>
 .poppins-medium {
@@ -158,25 +120,9 @@ onUnmounted(() => {
 }
 
 /* 確保圖片進入後的狀態 */
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transform-origin: center;
-  transform: scale(1); /* 縮小回原本尺寸 */
-  position: absolute; /* 疊層定位，避免切換空白 */
-  top: 0;
-  left: 0;
-}
 
 /* 父容器，確保圖片區域沒有空白 */
-section {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; /* 防止圖片溢出 */
-}
+
 .icon {
   transition: transform 0.3s ease; /* 設定平滑過渡效果 */
   cursor: pointer;

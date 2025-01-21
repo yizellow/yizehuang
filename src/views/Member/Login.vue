@@ -12,7 +12,6 @@ const image = [
 ];
 let currentIndex = ref(0);
 let intervalId = null;
-const log = ref(true); // 初始值設定為 true
 
 onMounted(() => {
   intervalId = setInterval(() => {
@@ -23,12 +22,20 @@ onMounted(() => {
 onUnmounted(() => {
   clearInterval(intervalId);
 });
+
+const props = defineProps({
+  log: Number,
+});
+const emit = defineEmits(["close"]);
+
+const closeLog = () => {
+  emit("close");
+};
 </script>
 
 <template>
   <main
-    v-if="log"
-    class="w-[100vw] h-full bg-green-400/90 fixed z-50 flex items-center justify-center"
+    class="w-full h-full bg-green-400/90 fixed z-[60] flex items-center justify-center"
   >
     <div class="w-1/2 h-3/5 flex flex-row bg-white relative -translate-y-[5vh]">
       <section class="w-1/2 h-full absolute left-0 overflow-hidden">
@@ -52,7 +59,6 @@ onUnmounted(() => {
             class="text-2xl text-gray-500 font-black justify-self-center items-self-start tracking-widest"
           >
             Log In
-            <input class="w-10 h-1/2 bg-red-500" type="text" v-model="num" />
           </p>
         </div>
         <div
@@ -84,11 +90,14 @@ onUnmounted(() => {
             >
               Sign up
             </button>
-            <button
-              class="w-4/12 h-full rounded-lg bg-red-500 text-white tracking-widest mx-1 text-m poppins-medium icon"
+            <RouterLink to="/Member/MemberPage" class="w-4/12 h-full mx-1"
+              ><button
+                @click="closeLog"
+                class="w-full h-full rounded-lg bg-red-500 text-white tracking-widest text-m poppins-medium icon"
+              >
+                Log In
+              </button></RouterLink
             >
-              Log In
-            </button>
           </span>
         </div>
 
