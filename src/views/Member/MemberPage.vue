@@ -1,8 +1,34 @@
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
+import { RouterLink, useRouter } from "vue-router";
 import { Icon } from "@iconify/vue";
-import { RouterLink } from "vue-router";
 import { useMediaQuery } from "@vueuse/core";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+
+const isLoggedIn = ref(false);
+const router = useRouter();
+
+
+let auth;
+onMounted(() => {
+  auth = getAuth();
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      isLoggedIn.value = true;
+    } else {
+      isLoggedIn.value = false;
+    }
+  });
+});
+
+const handleSignOut = () => {
+  signOut(auth).then(() => {
+    console.log("sign out succefully");
+    router.push("/");
+  });
+};
+
+//處理登出//
 
 const title = "";
 const note = ref("");
@@ -28,7 +54,7 @@ const isMobile = useMediaQuery("(max-width: 480px)");
 </script>
 <template>
   <div v-if="isComputer">
-    <main class="w-[100vw] h-[93vh] mt-[7vh]">
+    <main class="w-[100vw] h-[100vh]">
       <div
         v-if="noteTag"
         class="w-[25vw] h-[30vh] bg-green-400/80 fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fon"
@@ -53,6 +79,14 @@ const isMobile = useMediaQuery("(max-width: 480px)");
           src="https://cdna.artstation.com/p/assets/images/images/082/332/470/large/yize-huang-2024-11-27-5-48-00.jpg?1732701058"
           class="w-full h-full object-cover object-top absolute z-1"
         />
+        <button
+          class="w-[10vh] h-[10vh]"
+          @click="handleSignOut"
+          v-if="isLoggedIn"
+        >
+          Sign Out
+        </button>
+
         <div
           class="w-[30vw] h-[60vh] backdrop-blur-sm bg-white/70 border-green-300 border-2 flex flex-col justify-center items-center absolute z-2 top-[15vh] p-[3vh] left-[18vh] shadow-lg rounded-sm"
         >
@@ -72,6 +106,13 @@ const isMobile = useMediaQuery("(max-width: 480px)");
             class="icon w-3/12 h-4/12 text-lg mt-[6vh] border-2 border-purple-300 cursor-pointer navtext text-center text-gray-600 boder-2"
           >
             Submit
+          </button>
+          <button
+            @click="handleSignOut"
+            v-if="isLoggedIn"
+            class="icon w-3/12 h-4/12 text-lg mt-[6vh] border-2 border-purple-300 cursor-pointer navtext text-center text-gray-600 boder-2"
+          >
+            Sign Out
           </button>
         </div>
       </div>

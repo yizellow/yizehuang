@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+
 import HomeView from "@/views/HomeView.vue";
 import ProjectView from "@/views/ProjectView.vue";
 import AboutMeView from "@/views/AboutMe.vue";
@@ -59,6 +61,9 @@ const router = createRouter({
       path: "/Member/MemberPage",
       name: "MemberPage",
       component: MemberPageView,
+      meta: {
+        requiresAuth: true,
+      },
     },
     {
       path: "/:pathMatch(.*)*",
@@ -66,6 +71,19 @@ const router = createRouter({
       component: PageNotFoundView,
     },
   ],
+});
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some((record) => record.meta.requiresAuth)) {
+    if (getAuth().currentUser) {
+      next();
+    } else {
+      alert("You dont have access!");
+      next("/");
+    }
+  } else {
+    next();
+  }
 });
 
 export default router;

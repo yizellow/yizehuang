@@ -1,15 +1,23 @@
 <script setup>
-import { RouterLink } from "vue-router";
 import { useMediaQuery } from "@vueuse/core";
 import Login from "@/views/Member/Login.vue";
+import { RouterLink, useRouter } from "vue-router";
 import { ref } from "vue";
-
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 const log = ref(0);
+const router = useRouter();
+
 const changeLog = () => {
   if (log.value === 0) {
     log.value = 1;
   } else if (log.value === 1) {
     log.value = 0;
+  }
+  if (getAuth().currentUser) {
+    console.log("you alread log in");
+    router.push("/Member/MemberPage");
+  } else {
+    console.log("You dont have access!");
   }
 };
 const closeLog = () => {

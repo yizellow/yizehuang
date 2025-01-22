@@ -143,11 +143,10 @@ export default {
   }
 
   .wrapper {
-    margin-top: 56px;
     background: white;
     position: absolute;
     width: 100% !important;
-    height: 85vh;
+    height: 94vh;
     z-index: 2;
   }
 
