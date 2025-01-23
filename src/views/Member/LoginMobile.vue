@@ -1,7 +1,73 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+import { RouterLink, useRouter } from "vue-router";
 import { Icon } from "@iconify/vue";
 import { useConfirmDialog } from "@vueuse/core";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+} from "firebase/auth";
+
+const router = useRouter();
+const email = ref("");
+const password = ref("");
+const loginText = ref("");
+const cleanInput = () => {
+  password.value = "";
+  email.value = "";
+};
+
+const register = () => {
+  createUserWithEmailAndPassword(getAuth(), email.value, password.value)
+    .then((data) => {
+      console.log("successfully registered");
+      router.push("/Member/MemberPage");
+      closeLog();
+      Login();
+    })
+    .catch((error) => {
+      console.log(error.code);
+      cleanInput();
+      if (error.code == "auth/missing-password") {
+        loginText.value = "Please enter the password.";
+      } else if (error.code == "auth/missing-email") {
+        loginText.value = "Please enter the email.";
+      } else if (error.code == "auth/invalid-email") {
+        loginText.value = "Invalid email address.";
+      } else if (error.code == "auth/email-already-in-use") {
+        loginText.value = "The account is already registered. Please log in.";
+      } else if (error.code == "auth/weak-password") {
+        loginText.value = "Password should be at least 6 characters";
+      } else {
+        loginText.value = "Registration failed.";
+      }
+    });
+};
+const logIn = () => {
+  signInWithEmailAndPassword(getAuth(), email.value, password.value)
+    .then((data) => {
+      console.log("successfully log in");
+      router.push("/Member/MemberPage");
+      closeLog();
+      Login();
+    })
+    .catch((error) => {
+      console.log(error.code);
+      cleanInput();
+      if (error.code == "auth/invalid-email") {
+        loginText.value = "Invail email.";
+      } else if (error.code == "auth/invalid-credential") {
+        loginText.value = "Email or password is incorrect";
+      } else if (error.code == "auth/missing-password") {
+        loginText.value = "Please enter the password.";
+      } else {
+        loginText.value = "Login failed.";
+      }
+    });
+};
 
 const emit = defineEmits(["close", "closeMenu"]);
 
@@ -35,10 +101,12 @@ const Login = () => {
       >
         <input
           placeholder="Email"
+          v-model="email"
           class="border-2 w-3/4 h-[4vh] border-gray-200 m-[1vh] p-1 outline-violet-500 text-green-500 tracking-widest"
         />
         <input
           placeholder="******"
+          v-model="password"
           type="password"
           class="border-2 w-3/4 h-[4vh] border-gray-200 m-[1vh] p-1 outline-violet-500 text-green-500 tracking-widest"
         />
@@ -50,23 +118,22 @@ const Login = () => {
           <p
             class="text-green-500 underline underline-offset-2 decoration-red-500"
           >
-            The account is already registered. Please log in.
+            {{ loginText }}
           </p>
         </span>
         <span class="w-full h-1/2 flex flex-row items-center justify-center">
           <button
+            @click="register"
             class="w-4/12 h-4/5 rounded-lg bg-violet-500 text-white tracking-widest mx-1 text-m poppins-medium mr-[3vh] icon"
           >
             Sign up
           </button>
-          <RouterLink to="/Member/MemberPage" class="w-4/12 h-4/5 mx-1">
-            <button
-              @click="Login"
-              class="w-full h-full rounded-lg bg-red-500 text-white tracking-widest mx-1 text-m poppins-medium icon"
-            >
-              Log In
-            </button>
-          </RouterLink>
+          <button
+            @click="logIn"
+            class="w-4/12 h-4/5 mx-1 rounded-lg bg-red-500 text-white tracking-widest text-m poppins-medium icon"
+          >
+            Log In
+          </button>
         </span>
       </div>
 

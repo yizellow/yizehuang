@@ -8,7 +8,6 @@ import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 const isLoggedIn = ref(false);
 const router = useRouter();
 
-
 let auth;
 onMounted(() => {
   auth = getAuth();
@@ -79,13 +78,6 @@ const isMobile = useMediaQuery("(max-width: 480px)");
           src="https://cdna.artstation.com/p/assets/images/images/082/332/470/large/yize-huang-2024-11-27-5-48-00.jpg?1732701058"
           class="w-full h-full object-cover object-top absolute z-1"
         />
-        <button
-          class="w-[10vh] h-[10vh]"
-          @click="handleSignOut"
-          v-if="isLoggedIn"
-        >
-          Sign Out
-        </button>
 
         <div
           class="w-[30vw] h-[60vh] backdrop-blur-sm bg-white/70 border-green-300 border-2 flex flex-col justify-center items-center absolute z-2 top-[15vh] p-[3vh] left-[18vh] shadow-lg rounded-sm"
@@ -167,6 +159,13 @@ const isMobile = useMediaQuery("(max-width: 480px)");
             class="icon w-3/12 h-4/12 text-base mt-[6vh] border-2 border-purple-300 cursor-pointer navtext text-center text-gray-600 boder-2"
           >
             Submit
+          </button>
+          <button
+            @click="handleSignOut"
+            v-if="isLoggedIn"
+            class="icon w-3/12 h-4/12 text-lg mt-[6vh] border-2 border-purple-300 cursor-pointer navtext text-center text-gray-600 boder-2"
+          >
+            Sign Out
           </button>
         </div>
       </div>
