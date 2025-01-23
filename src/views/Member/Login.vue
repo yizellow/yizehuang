@@ -7,9 +7,23 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
+import { Result } from "postcss";
+import Note from "@/components/note.vue";
+
+const showNote = ref(false);
+const noteTitle = ref("");
+const noteText = ref("");
+
+const appleLogInIsNotReady = () => {
+  noteTitle.value = "Apple 登入功能尚未開放";
+  noteText.value = "Apple 登入功能尚未開放";
+  showNote.value = true;
+};
 
 const router = useRouter();
 const email = ref("");
@@ -67,7 +81,16 @@ const logIn = () => {
       }
     });
 };
-const signInWithGoogle = () => {};
+const signInWithGoogle = () => {
+  const provider = new GoogleAuthProvider();
+  signInWithPopup(getAuth(), provider)
+    .then((result) => {
+      console.log(result.user);
+      closeLog();
+      router.push("/Member/MemberPage");
+    })
+    .catch((error) => {});
+};
 
 const image = [
   "https://cdnb.artstation.com/p/assets/images/images/082/332/429/large/yize-huang-img-0912.jpg?1732700966",
@@ -102,6 +125,7 @@ const closeLog = () => {
   <main
     class="w-full h-full bg-green-400/90 fixed z-[60] flex items-center justify-center"
   >
+    <Note v-if="showNote" :title="123" :text="321" />
     <div class="w-1/2 h-3/5 flex flex-row bg-white relative -translate-y-[5vh]">
       <section class="w-1/2 h-full absolute left-0 overflow-hidden">
         <transition name="blur-fade" mode="default">
@@ -182,10 +206,15 @@ const closeLog = () => {
           class="w-3/4 h-1/5 p-[1vh] flex items-start justify-between mx-auto"
         >
           <Icon
+            @click="signInWithGoogle"
             icon="logos:google-icon"
             class="w-[2.5vw] h-auto translate-y-[1vh] icon"
           />
-          <Icon icon="logos:apple" class="w-[2.5vw] h-auto opacity-75 icon" />
+          <Icon
+            icon="logos:apple"
+            @click="appleLogInIsNotReady"
+            class="w-[2.5vw] h-auto opacity-75 icon"
+          />
           <Icon
             icon="logos:facebook"
             class="w-[2.5vw] h-auto translate-y-[1vh] icon"

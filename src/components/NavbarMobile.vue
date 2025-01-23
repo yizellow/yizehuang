@@ -3,6 +3,7 @@ import { RouterLink, useRouter } from "vue-router";
 import { Icon } from "@iconify/vue";
 import { ref, watch } from "vue";
 import LoginMobile from "@/views/Member/LoginMobile.vue";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 const cross = ref(false);
 const menusign = ref(true);
@@ -27,19 +28,28 @@ watch(
 );
 
 const log = ref(0);
-const changeLog = () => {
-  if (log.value === 0) {
-    log.value = 1;
-  } else if (log.value === 1) {
-    log.value = 0;
-  }
-};
+
 const closeLog = () => {
   log.value = 0;
 };
 const Login = () => {
   close();
   menu.value = false;
+};
+const changeLog = () => {
+  if (log.value === 0) {
+    log.value = 1;
+  } else if (log.value === 1) {
+    log.value = 0;
+  }
+  if (getAuth().currentUser) {
+    closeLog();
+    console.log("you alread log in");
+    router.push("/Member/MemberPage");
+    menu.value = false;
+  } else {
+    console.log("You dont have access!");
+  }
 };
 </script>
 <template>

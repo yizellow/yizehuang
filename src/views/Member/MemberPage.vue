@@ -102,7 +102,7 @@ const isMobile = useMediaQuery("(max-width: 480px)");
           <button
             @click="handleSignOut"
             v-if="isLoggedIn"
-            class="icon w-3/12 h-4/12 text-lg mt-[6vh] border-2 border-purple-300 cursor-pointer navtext text-center text-gray-600 boder-2"
+            class="icon w-3/12 h-4/12 text-base mt-[6vh] border-2 border-purple-300 cursor-pointer navtext text-center text-gray-600 boder-2"
           >
             Sign Out
           </button>
@@ -163,7 +163,7 @@ const isMobile = useMediaQuery("(max-width: 480px)");
           <button
             @click="handleSignOut"
             v-if="isLoggedIn"
-            class="icon w-3/12 h-4/12 text-lg mt-[6vh] border-2 border-purple-300 cursor-pointer navtext text-center text-gray-600 boder-2"
+            class="icon w-3/12 h-4/12 text-sm mt-[6vh] border-2 border-purple-300 cursor-pointer navtext text-center text-gray-600 boder-2"
           >
             Sign Out
           </button>

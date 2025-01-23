@@ -14,6 +14,7 @@ const changeLog = () => {
     log.value = 0;
   }
   if (getAuth().currentUser) {
+    closeLog();
     console.log("you alread log in");
     router.push("/Member/MemberPage");
   } else {
