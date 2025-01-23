@@ -7,15 +7,25 @@ import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 const isLoggedIn = ref(false);
 const router = useRouter();
-
+const userName = ref(""); // 用來存儲用戶名稱
+const userEmail = ref(""); // 用來存儲用戶電子郵件
+const userPhoto = ref("");
 let auth;
 onMounted(() => {
   auth = getAuth();
   onAuthStateChanged(auth, (user) => {
     if (user) {
       isLoggedIn.value = true;
+      userName.value = user.displayName || "Anonymous"; // 使用者名稱，默認為匿名
+      userEmail.value = user.email || "No Email"; // 使用者電子郵件，默認為空
+      userPhoto.value =
+        user.photoURL ||
+        "https://cdna.artstation.com/p/assets/images/images/081/859/742/large/yize-huang-2024-11-12-11-54-14.jpg?1731427197"; // 使用者大頭貼，默認為占位圖
     } else {
       isLoggedIn.value = false;
+      userName.value = "";
+      userEmail.value = "";
+      userPhoto.value = "";
     }
   });
 });
@@ -79,7 +89,7 @@ const isMobile = useMediaQuery("(max-width: 480px)");
           class="w-full h-full object-cover object-top absolute z-1"
         />
 
-        <div
+        <section
           class="w-[30vw] h-[60vh] backdrop-blur-sm bg-white/70 border-green-300 border-2 flex flex-col justify-center items-center absolute z-2 top-[15vh] p-[3vh] left-[18vh] shadow-lg rounded-sm"
         >
           <p
@@ -99,19 +109,33 @@ const isMobile = useMediaQuery("(max-width: 480px)");
           >
             Submit
           </button>
+        </section>
+        <section
+          class="w-[40vw] translate-x-1/2 right-1/2 h-[6vh] backdrop-blur-sm bg-purple-300/70 border-purple-300 border-2 flex flex-row justify-between items-center absolute z-2 bottom-[1vh] p-[3vh] shadow-lg rounded-sm"
+        >
+          <img
+            :src="userPhoto"
+            class="w-[4vh] h-[4vh] rounded-full border-2 border-green-300"
+          />
+          <p class="text-lg markazi-text text-center text-green-300">
+            Name:{{ userName }}
+          </p>
+          <p class="text-lg markazi-text text-center text-green-300">
+            Email:{{ userEmail }}
+          </p>
           <button
             @click="handleSignOut"
             v-if="isLoggedIn"
-            class="icon w-3/12 h-4/12 text-base mt-[6vh] border-2 border-purple-300 cursor-pointer navtext text-center text-gray-600 boder-2"
+            class="icon w-[6vh] h-[3vh] m-[1vh] text-sm border-2 border-green-300 cursor-pointer navtext text-center text-white boder-2 bg-purple-400/50"
           >
             Sign Out
           </button>
-        </div>
+        </section>
       </div>
     </main>
   </div>
   <div v-if="isMobile">
-    <main class="w-[100vw] h-[94vh] mt-[6vh]">
+    <main class="w-[100vw] h-[94vh] mt-[6vh] relative z-0">
       <div
         v-if="noteTag"
         class="w-[60vw] h-auto bg-green-400/80 fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -160,14 +184,29 @@ const isMobile = useMediaQuery("(max-width: 480px)");
           >
             Submit
           </button>
+        </div>
+        <section
+          class="w-[97vw] max-h-[16vh] backdrop-blur-sm bg-purple-300/70 border-2 flex flex-row justify-between items-center z-2 bottom-[1vh] p-[0.5vh] shadow-lg rounded-sm fixed mb-[2vh] z-1"
+        >
+          <img
+            :src="userPhoto"
+            class="w-[5vh] h-[5vh] rounded-full border-2 border-green-300"
+          />
+          <p class="text-xs markazi-text text-center text-green-300">
+            Name:{{ userName }}
+          </p>
+          <br />
+          <p class="text-xs markazi-text text-center text-green-300">
+            Email:{{ userEmail }}
+          </p>
           <button
             @click="handleSignOut"
             v-if="isLoggedIn"
-            class="icon w-3/12 h-4/12 text-sm mt-[6vh] border-2 border-purple-300 cursor-pointer navtext text-center text-gray-600 boder-2"
-          >
-            Sign Out
+            class="icon w-auto  text-[10px] border-2 border-red-300 cursor-pointer  text-center text-white bg-green-400/50"
+          ><p class="text-[8px]">
+            Sign Out</p>
           </button>
-        </div>
+        </section>
       </div>
     </main>
   </div>

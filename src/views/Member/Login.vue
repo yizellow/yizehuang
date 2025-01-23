@@ -11,6 +11,7 @@ import {
   signInWithPopup,
   onAuthStateChanged,
   signOut,
+  FacebookAuthProvider,
 } from "firebase/auth";
 import { Result } from "postcss";
 import Note from "@/components/note.vue";
@@ -20,9 +21,11 @@ const noteTitle = ref("");
 const noteText = ref("");
 
 const appleLogInIsNotReady = () => {
-  noteTitle.value = "Apple 登入功能尚未開放";
-  noteText.value = "Apple 登入功能尚未開放";
+  noteText.value = "Apple login function is not yet open.";
   showNote.value = true;
+};
+const closeNote = () => {
+  showNote.value = false;
 };
 
 const router = useRouter();
@@ -89,7 +92,22 @@ const signInWithGoogle = () => {
       closeLog();
       router.push("/Member/MemberPage");
     })
-    .catch((error) => {});
+    .catch((error) => {
+      loginText.value = error;
+    });
+};
+const signInWithFacebook = () => {
+  const provider = new FacebookAuthProvider();
+  signInWithPopup(getAuth(), provider)
+    .then((result) => {
+      console.log(result.user);
+      closeLog();
+      router.push("/Member/MemberPage");
+    })
+    .catch((error) => {
+      loginText.value = error;
+      console.error("Facebook Login Error:", error);
+    });
 };
 
 const image = [
@@ -125,7 +143,12 @@ const closeLog = () => {
   <main
     class="w-full h-full bg-green-400/90 fixed z-[60] flex items-center justify-center"
   >
-    <Note v-if="showNote" :title="123" :text="321" />
+    <Note
+      v-if="showNote"
+      :title="noteTitle"
+      :text="noteText"
+      @close="closeNote"
+    />
     <div class="w-1/2 h-3/5 flex flex-row bg-white relative -translate-y-[5vh]">
       <section class="w-1/2 h-full absolute left-0 overflow-hidden">
         <transition name="blur-fade" mode="default">
@@ -218,6 +241,7 @@ const closeLog = () => {
           <Icon
             icon="logos:facebook"
             class="w-[2.5vw] h-auto translate-y-[1vh] icon"
+            @click="signInWithFacebook"
           />
         </div>
       </section>

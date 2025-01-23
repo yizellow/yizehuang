@@ -7,9 +7,25 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
   onAuthStateChanged,
   signOut,
+  FacebookAuthProvider,
 } from "firebase/auth";
+import Note from "@/components/note.vue";
+
+const showNote = ref(false);
+const noteTitle = ref("");
+const noteText = ref("");
+
+const appleLogInIsNotReady = () => {
+  noteText.value = "Apple login function is not yet open.";
+  showNote.value = true;
+};
+const closeNote = () => {
+  showNote.value = false;
+};
 
 const router = useRouter();
 const email = ref("");
@@ -18,6 +34,33 @@ const loginText = ref("");
 const cleanInput = () => {
   password.value = "";
   email.value = "";
+};
+
+const signInWithGoogle = () => {
+  const provider = new GoogleAuthProvider();
+  signInWithPopup(getAuth(), provider)
+    .then((result) => {
+      console.log(result.user);
+      closeLog();
+      router.push("/Member/MemberPage");
+    })
+    .catch((error) => {
+      loginText.value = error;
+    });
+};
+
+const signInWithFacebook = () => {
+  const provider = new FacebookAuthProvider();
+  signInWithPopup(getAuth(), provider)
+    .then((result) => {
+      console.log(result.user);
+      closeLog();
+      router.push("/Member/MemberPage");
+    })
+    .catch((error) => {
+      loginText.value = error;
+      console.error("Facebook Login Error:", error);
+    });
 };
 
 const register = () => {
@@ -82,6 +125,12 @@ const Login = () => {
 
 <template>
   <div class="w-full h-full flex flex-col -translate-y-[10vh] p-[3vh]">
+    <Note
+      v-if="showNote"
+      :title="noteTitle"
+      :text="noteText"
+      @close="closeNote"
+    />
     <section class="w-full h-4/6 bg-white flex-col block overflow-hidden">
       <div class="max-h-1/4 grid">
         <Icon
@@ -154,11 +203,17 @@ const Login = () => {
         <Icon
           icon="logos:google-icon"
           class="w-[10vw] h-auto translate-y-[1vh] icon"
+          @click="signInWithGoogle"
         />
-        <Icon icon="logos:apple" class="w-[10vw] h-auto opacity-75 icon" />
+        <Icon
+          icon="logos:apple"
+          class="w-[10vw] h-auto opacity-75 icon"
+          @click="appleLogInIsNotReady"
+        />
         <Icon
           icon="logos:facebook"
           class="w-[10vw] h-auto translate-y-[1vh] icon"
+          @click="signInWithFacebook"
         />
       </div>
     </section>
