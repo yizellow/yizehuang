@@ -6,6 +6,7 @@ import jQuery from "jquery";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getDatabase,onValue, set, push, update } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,11 +17,14 @@ const firebaseConfig = {
   messagingSenderId: "55527157856",
   appId: "1:55527157856:web:65870cd87d9c5849761305",
   measurementId: "G-4H6HY92VH3",
+  databaseURL:
+    "https://yizehuang-9564c-default-rtdb.asia-southeast1.firebasedatabase.app/",
 };
 
 // 初始化 Firebase
 const firebaseApp = initializeApp(firebaseConfig);
 const analytics = getAnalytics(firebaseApp);
+const db = getDatabase(firebaseApp);
 
 // 創建 Vue app
 const app = createApp(App);

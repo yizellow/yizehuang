@@ -4,6 +4,10 @@ import { RouterLink, useRouter } from "vue-router";
 import { Icon } from "@iconify/vue";
 import { useMediaQuery } from "@vueuse/core";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import { getDatabase, onValue, set, push, update } from "firebase/database";
+import { ref as dbRef } from "firebase/database";
+
+//ref 沒有被登入
 
 const isLoggedIn = ref(false);
 const router = useRouter();
@@ -43,21 +47,37 @@ const title = "";
 const note = ref("");
 const noteTag = ref(false);
 const message = ref("");
+const db = getDatabase();
 
 const closeNote = () => {
   noteTag.value = false;
 };
+
 const submitMsg = () => {
   if (message.value.trim() === "") {
     note.value = "Please enter a message before submitting!";
     noteTag.value = true;
   } else {
-    note.value = "Successfully submitted!";
-
-    message.value = "";
-    noteTag.value = true;
+    const newMsgRef = push(dbRef(db, "messages_board"));
+    set(newMsgRef, {
+      text: message.value,
+      timestamp: Date.now(),
+      userName: userName.value || "Anonymous",
+      userEmail: userEmail.value || "No Email",
+    })
+      .then(() => {
+        note.value = "Successfully submitted!";
+        message.value = "";
+        noteTag.value = true;
+      })
+      .catch((error) => {
+        console.error("Error details:", error); // 添加更多錯誤日誌
+        note.value = "Failed to submit message: " + error.message;
+        noteTag.value = true;
+      });
   }
 };
+
 const isComputer = useMediaQuery("(min-width: 481px)");
 const isMobile = useMediaQuery("(max-width: 480px)");
 </script>
@@ -202,9 +222,9 @@ const isMobile = useMediaQuery("(max-width: 480px)");
           <button
             @click="handleSignOut"
             v-if="isLoggedIn"
-            class="icon w-auto  text-[10px] border-2 border-red-300 cursor-pointer  text-center text-white bg-green-400/50"
-          ><p class="text-[8px]">
-            Sign Out</p>
+            class="icon w-auto text-[10px] border-2 border-red-300 cursor-pointer text-center text-white bg-green-400/50"
+          >
+            <p class="text-[8px]">Sign Out</p>
           </button>
         </section>
       </div>
