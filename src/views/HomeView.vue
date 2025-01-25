@@ -262,7 +262,7 @@ if (isComputer) {
     position: absolute;
     width: 100vw;
     height: 50vh;
-    background: rgb(0, 223, 0);
+    background: #ad46ff;
     z-index: 2;
   }
 
@@ -319,7 +319,7 @@ if (isComputer) {
     align-items: center;
     justify-content: center;
     color: red;
-    background-color: rgb(75, 243, 103);
+    background-color: #00bd7d;
   }
   .note {
     display: flex;

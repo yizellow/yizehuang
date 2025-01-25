@@ -198,7 +198,7 @@ const isMobile = useMediaQuery("(max-width: 480px)");
     </main>
   </div>
   <div v-if="isMobile">
-    <main class="w-[100vw] h-[94vh] mt-[6vh] relative z-0">
+    <main class="device w-[100vw] h-[94vh] mt-[6vh] relative z-0">
       <div
         v-if="noteTag"
         class="w-[60vw] h-auto bg-green-400/80 fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -276,6 +276,10 @@ const isMobile = useMediaQuery("(max-width: 480px)");
 </template>
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Roboto&display=swap");
+html {
+  height: -webkit-fill-available;
+}
+
 
 .poppins-medium {
   font-family: "Poppins", sans-serif;
