@@ -158,61 +158,50 @@ const microphone = () => {
       </section>
     </main>
   </div>
+
   <div v-if="isMobile">
     <main>
-      <RouterLink to="/Project/Chips">
-        <div class="item">
-          <figure>
-            <img
-              src="https://cdna.artstation.com/p/assets/images/images/081/914/924/large/yize-huang-2024-11-11-8-47-48.jpg?1731558884"
-            />
-          </figure>
-          <p class="title">#Chips</p>
+      <section
+        class="w-full h-[8vh] fixed top-1/5 flex flex-row items-center justify-start p-[1vh]"
+      >
+        <div
+          class="opacity-90 w-full h-full p-1 border-2 bg-green-300 border-purple-500/30 flex justify-center items-center px-5"
+        >
+          <input
+            v-model="searchText"
+            class="w-5/6 h-full border-gray-400/50 px-3 border-2 tracking-widest text-purple-400 outline-1 outline-green-400/50 text-base"
+            placeholder="search here..."
+          />
+          <Icon
+            icon="bitcoin-icons:search-filled"
+            color="#a685ff"
+            class="opacity-80 w-[25px] h-auto mx-[0.8vh] justify-self-end flex-row items-self-start icon"
+            @click="filterProjects"
+          />
+          <Icon
+            icon="heroicons:microphone-solid"
+            color="#a159e8"
+            class="opacity-80 w-[25px] h-auto ml-[0.8vh] justify-self-end flex-row items-self-start icon"
+            @click="microphone"
+          />
         </div>
-      </RouterLink>
-      <RouterLink to="/Project/Yizellow">
-        <div class="item">
-          <figure>
-            <img
-              src="https://cdna.artstation.com/p/assets/images/images/082/626/578/large/yize-huang-jj6.jpg?1733473089"
-              alt=""
-            />
-          </figure>
-          <p class="title">#Yizellow</p>
-        </div>
-      </RouterLink>
-      <RouterLink to="/Project/ddd">
-        <div class="item">
-          <figure>
-            <img
-              src="https://cdnb.artstation.com/p/assets/images/images/082/499/223/large/yize-huang-2024-12-03-12-35-13.jpg?1733157350"
-              alt=""
-            />
-          </figure>
-          <p class="title">#3D Modeling</p>
-        </div>
-      </RouterLink>
-      <RouterLink to="/Project/FilmCamera"
-        ><div class="item">
-          <figure>
-            <img
-              src="https://cdna.artstation.com/p/assets/images/images/082/332/470/large/yize-huang-2024-11-27-5-48-00.jpg?1732701058"
-              alt=""
-            />
-          </figure>
-          <p class="title">#Travel and my film camera</p>
-        </div>
-      </RouterLink>
-      <div>
-        <div class="item">
-          <figure>
-            <img
-              src="https://cdna.artstation.com/p/assets/images/images/082/499/478/large/yize-huang-2024-12-03-12-39-17.jpg?1733157609"
-              alt=""
-            />
-          </figure>
-          <p class="title">#Light Installation &nbsp; &nbsp;(Upcoming...)</p>
-        </div>
+      </section>
+      <Note
+        v-if="showNote"
+        :title="noteTitle"
+        :text="noteText"
+        @close="closeNote"
+      />
+      <div class="w-full h-[8vh]"></div>
+      <div v-for="project in filteredProjects" :key="project.name">
+        <RouterLink :to="project.link">
+          <div class="item">
+            <div class="container">
+              <img :src="project.img" alt="project.name" />
+            </div>
+            <p class="title">{{ project.tag }}</p>
+          </div>
+        </RouterLink>
       </div>
     </main>
   </div>

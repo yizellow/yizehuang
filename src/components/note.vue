@@ -9,7 +9,7 @@
       @click="closeNote"
     />
     <p
-      class="title text-gray-500 poppins-medium font-black justify-self-center items-self-start tracking-widest"
+      class="title text-[#93f1b5] poppins-medium font-black justify-self-center items-self-start tracking-widest"
     >
       {{ title }}
     </p>
@@ -73,7 +73,7 @@ const closeNote = () => {
   }
 }
 @media (max-width: 480px) {
-    .www {
+  .www {
     width: 300px;
   }
   .cancel {
@@ -81,13 +81,12 @@ const closeNote = () => {
   }
 
   .title {
-    font-size:medium;
+    font-size: medium;
     text-align: center;
   }
   .text {
     font-size: small;
     text-align: center;
   }
-
 }
 </style>
