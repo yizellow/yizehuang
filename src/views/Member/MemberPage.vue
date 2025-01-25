@@ -14,6 +14,7 @@ const router = useRouter();
 const userName = ref(""); // 用來存儲用戶名稱
 const userEmail = ref(""); // 用來存儲用戶電子郵件
 const userPhoto = ref("");
+
 let auth;
 onMounted(() => {
   auth = getAuth();
@@ -54,28 +55,70 @@ const closeNote = () => {
 };
 
 const submitMsg = () => {
+  // 驗證訊息內容
+  const sanitizedEmail = userEmail.value
+    .replace(/[.#$[\]]/g, "_")
+    .replace("@", "_");
+
   if (message.value.trim() === "") {
     note.value = "Please enter a message before submitting!";
     noteTag.value = true;
-  } else {
-    const newMsgRef = push(dbRef(db, "messages_board"));
-    set(newMsgRef, {
-      text: message.value,
-      timestamp: Date.now(),
-      userName: userName.value || "Anonymous",
-      userEmail: userEmail.value || "No Email",
-    })
-      .then(() => {
-        note.value = "Successfully submitted!";
-        message.value = "";
-        noteTag.value = true;
-      })
-      .catch((error) => {
-        console.error("Error details:", error); // 添加更多錯誤日誌
-        note.value = "Failed to submit message: " + error.message;
-        noteTag.value = true;
-      });
+    return;
   }
+
+  // 取得資料庫實例
+  const db = getDatabase();
+
+  // 設定主要節點名稱
+  const mainNode = ref(""); // 使用 ref 來存儲主要節點名稱
+  const isMainNode = () => {
+    console.log(userName.value);
+    if (userName.value !== "Anonymous") {
+      mainNode.value = userName.value; // 如果 userName 有值，則使用 userName
+    } else if (userEmail.value !== "") {
+      mainNode.value = sanitizedEmail; // 如果 userName 為空，則使用 userEmail
+    } else {
+      mainNode.value = "Anonymous"; // 若兩者皆空，設為 Anonymous
+    }
+  };
+  isMainNode(); // 設定 mainNode 的值
+
+  // 獲取當前時間戳並格式化為可讀時間
+  const now = new Date();
+  const formattedDate = now.toLocaleString(); // 例如 "2025/1/24 下午8:46:19"
+
+  // 使用 ISO 字符串並格式化為節點名稱
+  const formattedKey = now
+    .toISOString() // 獲取 ISO 字符串
+    .replace(/T/, "_") // 替換日期與時間之間的 `T` 為 `_`
+    .replace(/:/g, "-") // 替換時間中的冒號 `:` 為 `-`
+    .replace(/\..+/, ""); // 去掉毫秒部分，最終結果為 "2025-01-24_20-46-19"
+
+  // 使用格式化時間戳作為節點名稱
+  const newMsgRef = dbRef(
+    db,
+    `messages_board/${mainNode.value}/${formattedKey}`
+  );
+
+  // 使用 `set()` 將資料儲存到資料庫
+  set(newMsgRef, {
+    text: message.value,
+    timestamp: formattedDate,
+    userName: userName.value || userEmail.value || "Anonymous", // 若 userName 空白則顯示 userEmail 或 Anonymous
+    userEmail: userEmail.value || "No Email",
+  })
+    .then(() => {
+      // 提交成功的回應
+      note.value = "Successfully submitted!";
+      message.value = ""; // 清空訊息輸入框
+      noteTag.value = true;
+    })
+    .catch((error) => {
+      // 錯誤處理
+      console.error("Error details:", error); // 輸出錯誤訊息
+      note.value = "Failed to submit message: " + error.message;
+      noteTag.value = true;
+    });
 };
 
 const isComputer = useMediaQuery("(min-width: 481px)");
@@ -146,7 +189,7 @@ const isMobile = useMediaQuery("(max-width: 480px)");
           <button
             @click="handleSignOut"
             v-if="isLoggedIn"
-            class="icon w-[6vh] h-[3vh] m-[1vh] text-sm border-2 border-green-300 cursor-pointer navtext text-center text-white boder-2 bg-purple-400/50"
+            class="icon w-[10vh] h-[5vh] m-[1vh] text-xs border-2 border-green-300 cursor-pointer navtext text-center text-white boder-2 bg-purple-400/50"
           >
             Sign Out
           </button>
