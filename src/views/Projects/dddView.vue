@@ -90,7 +90,7 @@ const openIntro = () => {
       <!--         tags              -->
       <div
         v-if="showIntro"
-        class="st backdrop-blur-sm fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2/4 h-auto bg-white/60 p-8 z-10"
+        class="st backdrop-blur-sm fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2/4 max-h-3/4 overflow-scroll bg-white/60 p-8 z-10"
       >
         <Icon
           icon="material-symbols:close-rounded"
@@ -288,6 +288,9 @@ p {
   font-style: normal;
 }
 @media (min-width: 481px) {
+  html {
+    height: -webkit-fill-available;
+  }
 }
 @media (max-width: 480px) {
   html {
