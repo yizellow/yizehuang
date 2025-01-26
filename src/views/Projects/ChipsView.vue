@@ -154,7 +154,7 @@ const nextImg = () => {
       >
         <p class="text-blue-700 text-2xl mr-10 mb-5 poppins-medium">Process</p>
 
-        <p class="text-white text-2xl markazi-text">
+        <p class="text-white text-[clamp(1rem,1.25rem,1.5rem)] markazi-text">
           During university, I was eager to collaborate with students from other
           departments, believing that interdisciplinary projects would challenge
           me. Collaborating with the dance department did just that. At the same
@@ -195,11 +195,13 @@ const nextImg = () => {
         </div>
       </div>
     </section>
-    <section class="w-full h-[692px] bg-white flex items-start justify-start">
-      <p class="my-3 ml-10 text-blue-500 text-2xl poppins-medium">
+    <section
+      class="w-full h-[65dvh] bg-white flex items-start justify-start relative"
+    >
+      <p class="mt-10 ml-10  text-blue-500 text-2xl poppins-medium">
         Game Walkthrough
       </p>
-      <div class="wrapper bg-white">
+      <div class="wrapper absolute bottom-[3dvh] bg-white">
         <div class="item text-2xl bg-white">
           <div
             class="w-1/2 h-full flex flex-col items-start justify-center p-20 bg-neutral-900"
