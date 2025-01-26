@@ -166,16 +166,177 @@ if (isComputer) {
 
   <div v-if="isMobile">
     <main>
-      <section class="note">
-        <p>
+      <section class="note poppins-medium bg-purple-600 opacity-65 ">
+        <p class=" text-green-300">
           The layout for tablets and mobile devices is currently being updated.
         </p>
+      </section>
+      <section class="w-[100dvw] h-auto fixed z-10 backdrop-blur-3xl"></section>
+      <div
+        id="overlay-light"
+        class="overlay opacity-85 backdrop-blur-3xl"
+      ></div>
+
+      <div id="overlay-dark" class="overlay opacity-85 backdrop-blur-3xl"></div>
+      <div class="content">
+        <div class="nav row">
+          <div class="col">(background)</div>
+          <div class="col">(contact)</div>
+          <div class="col">(My Passion)</div>
+          <div class="col">(skills)</div>
+        </div>
+        <div class="divider nav-divider"></div>
+        <div class="row">
+          <div class="col">Taipei National University</div>
+          <div class="col">whatsApp:</div>
+          <div class="col">Art History</div>
+          <div class="col">Front-End</div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col">of the Arts Fine Art Dept.</div>
+          <div class="col">+886</div>
+          <div class="col">Art Theory</div>
+          <div class="col">Vue</div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col">Major in Art History</div>
+          <div class="col">981488850</div>
+          <div class="col">Curating</div>
+          <div class="col">Blender</div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col">and Visual Culture</div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col">Unity</div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">Email:</div>
+          <div class="col">3D Modeling</div>
+          <div class="col"></div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">yize0926@gmail.com</div>
+          <div class="col"></div>
+          <div class="col">tailwinds</div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col">Ｗriting</div>
+          <div class="col">PS AE</div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col">Hualien Senior High School</div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col">AI PR</div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col">, Taiwan</div>
+          <div class="col"></div>
+          <div class="col">Literature</div>
+          <div class="col"></div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col">Science track</div>
+          <div class="col"></div>
+          <div class="col">Philosophy</div>
+          <div class="col"></div>
+        </div>
+        <div class="divider"></div>
+      </div>
+      <section class="w-[100dvw] h-[100dvh] fixed z-0 opacity-80">
+        <div class="w-full h-full group">
+          <div class="card w-[100dvw] h-1/4 flex items-center justify-center">
+            <div>
+              <p class="ban1 w-full h-full text-center text-[3rem] font-black">
+                RANDOM
+              </p>
+            </div>
+          </div>
+          <div class="card w-[100dvw] h-1/4">
+            <video
+              class="w-full h-full grayscale contrast-200 invert object-fill"
+              src="@/assets/img/loadingLogo.mp4"
+              autoplay
+              loop
+              muted
+            ></video>
+          </div>
+          <div class="card w-[100dvw] h-1/4 flex items-center justify-center">
+            <div>
+              <p class="ban w-full h-full text-center text-[3rem] font-black">
+                EVALUATION
+              </p>
+            </div>
+          </div>
+          <div class="card w-[100dvw] h-1/4">
+            <video
+              class="w-full h-full grayscale contrast-200 invert object-fill"
+              src="@/assets/img/loadingLogo.mp4"
+              autoplay
+              loop
+              muted
+            ></video>
+          </div>
+        </div>
+        <div class="w-full h-full group">
+          <div class="card w-[100dvw] h-1/4 flex items-center justify-center">
+            <div>
+              <p class="ban1 w-full h-full text-center text-[3rem] font-black">
+                RANDOM
+              </p>
+            </div>
+          </div>
+          <div class="card w-[100dvw] h-1/4">
+            <video
+              class="w-full h-full grayscale contrast-200 invert object-fill"
+              src="@/assets/img/loadingLogo.mp4"
+              autoplay
+              loop
+              muted
+            ></video>
+          </div>
+          <div class="card w-[100dvw] h-1/4 flex items-center justify-center">
+            <div>
+              <p class="ban w-full h-full text-center text-[3rem] font-black">
+                EVALUATION
+              </p>
+            </div>
+          </div>
+          <div class="card w-[100dvw] h-1/4">
+            <video
+              class="w-full h-full grayscale contrast-200 invert object-fill"
+              src="@/assets/img/loadingLogo.mp4"
+              autoplay
+              loop
+              muted
+            ></video>
+          </div>
+        </div>
       </section>
     </main>
   </div>
 </template>
 
 <style scoped>
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
 @media (min-width: 481px) {
   .note {
     width: 100vw;
@@ -311,21 +472,123 @@ if (isComputer) {
   }
 }
 @media (max-width: 480px) {
+  html {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+  }
   main {
-    margin-top: 6vh;
+    margin-top: 6dvh;
     width: 100%;
-    height: 94vh;
+    height: 94dvh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: red;
-    background-color: #00bd7d;
+  }
+
+  #overlay-light {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background: #adefc0;
+    z-index: 1;
+    backdrop-filter: blur(var(--blur-2xl)); /* 40px */
+  }
+
+  #overlay-dark {
+    position: absolute;
+    width: 100%;
+    height: 60dvh;
+    background: #ad46ff;
+    z-index: 2;
+  }
+
+  .content {
+    width: 100%;
+    height: 60vh;
+    padding: 4em 0;
+  }
+
+  .col {
+    font-size: 10px;
+  }
+  .content > * {
+    position: relative;
+    z-index: 3;
+    mix-blend-mode: difference;
+    color: #fff;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    margin: 0.2em 0;
+  }
+
+  .nav {
+    text-transform: uppercase;
+  }
+
+  .nav-divider {
+    margin-top: 1em;
+  }
+
+  .row {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    padding: 0.1em;
+  }
+
+  .row > .col {
+    position: relative;
+    flex: 1;
+  }
+
+  .row > .col:first-child {
+    flex: 2;
+  }
+
+  .ban1 {
+    text-align: center;
+    font-family: "Neue Montreal";
+    text-align: center;
+    letter-spacing: 4.3dvw;
+    color: white;
+    opacity: 0.8;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+  .ban {
+    text-align: center;
+    font-family: "Neue Montreal";
+    text-align: center;
+    letter-spacing: 1px;
+    color: white;
+    opacity: 0.8;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+  .group {
+    /* ... */
+    will-change: transform; /* 我們應該告訴瀏覽器我們要動畫化什麼。 */
+    animation: scrolling 30s linear infinite;
+  }
+
+  @keyframes scrolling {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
   .note {
+    position: fixed;
+    z-index: 5;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: rgb(237, 250, 243);
+    top: 10vh;
   }
   .note p {
     border: 1px solid blueviolet;
