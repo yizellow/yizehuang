@@ -166,8 +166,8 @@ if (isComputer) {
 
   <div v-if="isMobile">
     <main>
-      <section class="note poppins-medium bg-purple-600 opacity-65 ">
-        <p class=" text-green-300">
+      <section class="note poppins-medium bg-purple-600 opacity-65">
+        <p class="text-green-300">
           The layout for tablets and mobile devices is currently being updated.
         </p>
       </section>
@@ -488,7 +488,7 @@ if (isComputer) {
   #overlay-light {
     position: absolute;
     width: 100%;
-    height: auto;
+    height: 60dvh;
     background: #adefc0;
     z-index: 1;
     backdrop-filter: blur(var(--blur-2xl)); /* 40px */
@@ -516,6 +516,7 @@ if (isComputer) {
     z-index: 3;
     mix-blend-mode: difference;
     color: #fff;
+    backdrop-filter: blur(var(--blur-2xl)); /* 40px */
   }
 
   .divider {
