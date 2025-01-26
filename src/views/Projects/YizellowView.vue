@@ -82,7 +82,7 @@ const nextImg = () => {
           >
             <p class="my-5 text-gray-900 text-2xl poppins-medium">A FEEDBACK</p>
 
-            <p class="markazi-text text-gray-900 text-2xl">
+            <p class="markazi-text text-gray-900 text-clamp()2xl">
               After the exhibition, an elder man told me that many artists
               create what they lack, but he saw “pure happiness, childishness
               and innocence” in my work. Indeed, what he said was exactly what I
@@ -141,151 +141,168 @@ const nextImg = () => {
               the images were damaged.
             </p>
           </div>
-          <div
-            class="flex-wrap w-full h-full bg-lightgray-100 flex items-centers justify-center flex-row"
-          >
+          <div class="w-full h-auto grid grid-cols-4 gap-[3vh] p-[3vh]">
+      
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdna.artstation.com/p/assets/images/images/081/860/708/large/yize-huang-2024-11-13-12-21-14.jpg?1731428504"
-            /></a>
-
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdna.artstation.com/p/assets/images/images/081/859/726/large/yize-huang-2024-11-12-11-53-41.jpg?1731427170"
-            /></a>
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdnb.artstation.com/p/assets/images/images/081/859/885/large/yize-huang-2024-11-12-11-56-52.jpg?1731427388"
-            /></a>
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdnb.artstation.com/p/assets/images/images/081/859/881/large/yize-huang-2024-11-12-11-56-42.jpg?1731427382"
-            /></a>
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdnb.artstation.com/p/assets/images/images/081/859/877/large/yize-huang-2024-11-12-11-56-20.jpg?1731427372"
-            /></a>
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdnb.artstation.com/p/assets/images/images/081/859/869/large/yize-huang-2024-11-12-11-57-39.jpg?1731427360"
-            /></a>
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdna.artstation.com/p/assets/images/images/081/859/838/large/yize-huang-2024-11-12-11-56-29.jpg?1731427313"
-            /></a>
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdnb.artstation.com/p/assets/images/images/081/859/833/large/yize-huang-2024-11-12-11-55-38.jpg?1731427307"
-            /></a>
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdna.artstation.com/p/assets/images/images/081/859/824/large/yize-huang-2024-11-12-11-55-31.jpg?1731427298"
-            /></a>
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdnb.artstation.com/p/assets/images/images/081/859/817/large/yize-huang-2024-11-12-11-55-55.jpg?1731427285"
-            /></a>
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdna.artstation.com/p/assets/images/images/081/859/804/large/yize-huang-2024-11-12-11-56-03.jpg?1731427275"
-            /></a>
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdna.artstation.com/p/assets/images/images/081/859/730/large/yize-huang-2024-11-12-11-53-52.jpg?1731427178"
-            /></a>
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdna.artstation.com/p/assets/images/images/081/859/738/large/yize-huang-2024-11-12-11-54-01.jpg?1731427187"
-            /></a>
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdna.artstation.com/p/assets/images/images/081/859/742/large/yize-huang-2024-11-12-11-54-14.jpg?1731427197"
-            /></a>
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdna.artstation.com/p/assets/images/images/081/859/748/large/yize-huang-2024-11-12-11-54-25.jpg?1731427204"
-            /></a>
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdna.artstation.com/p/assets/images/images/081/859/764/large/yize-huang-2024-11-12-11-55-19.jpg?1731427221"
-            /></a>
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="drop-shadow object-cover aspect-square"
                 src="https://cdnb.artstation.com/p/assets/images/images/081/859/773/large/yize-huang-2024-11-12-11-55-05.jpg?1731427234"
-            /></a>
+              />
+            </a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
-                src="https://cdna.artstation.com/p/assets/images/images/081/859/778/large/yize-huang-2024-11-12-11-54-57.jpg?1731427242"
-            /></a>
-            <a href="https://www.instagram.com/yizellow/">
-              <img
-                class="doodleImg drop-shadow"
+                class="object-cover aspect-square drop-shadow"
                 src="https://cdnb.artstation.com/p/assets/images/images/081/859/781/large/yize-huang-2024-11-12-11-54-43.jpg?1731427250"
             /></a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="object-cover aspect-square drop-shadow"
                 src="https://cdna.artstation.com/p/assets/images/images/081/859/792/large/yize-huang-2024-11-12-11-55-45.jpg?1731427264"
             /></a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="object-cover aspect-square drop-shadow"
                 src="https://cdnb.artstation.com/p/assets/images/images/081/859/785/large/yize-huang-2024-11-12-11-54-33.jpg?1731427255"
             /></a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="object-cover aspect-square drop-shadow"
+                src="https://cdna.artstation.com/p/assets/images/images/081/859/778/large/yize-huang-2024-11-12-11-54-57.jpg?1731427242"
+            /></a>
+            <a href="https://www.instagram.com/yizellow/">
+              <img
+                class="object-cover aspect-square drop-shadow"
                 src="https://cdnb.artstation.com/p/assets/images/images/081/860/593/large/yize-huang-2024-11-13-12-18-39.jpg?1731428338"
             /></a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="object-cover aspect-square drop-shadow"
                 src="https://cdna.artstation.com/p/assets/images/images/081/860/596/large/yize-huang-2024-11-13-12-18-22.jpg?1731428344"
             /></a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="object-cover aspect-square drop-shadow"
                 src="https://cdna.artstation.com/p/assets/images/images/081/860/602/large/yize-huang-2024-11-13-12-18-08.jpg?1731428351"
             /></a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="object-cover aspect-square drop-shadow"
                 src="https://cdnb.artstation.com/p/assets/images/images/081/860/607/large/yize-huang-2024-11-13-12-17-50.jpg?1731428358"
             /></a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="object-cover aspect-square drop-shadow"
                 src="https://cdna.artstation.com/p/assets/images/images/081/860/614/large/yize-huang-2024-11-12-11-57-39.jpg?1731428368"
             /></a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="object-cover aspect-square drop-shadow"
                 src="https://cdna.artstation.com/p/assets/images/images/081/860/622/large/yize-huang-2024-11-12-11-57-21.jpg?1731428376"
             /></a>
             <a href="https://www.instagram.com/yizellow/">
               <img
-                class="doodleImg drop-shadow"
+                class="object-cover aspect-square drop-shadow"
                 src="https://cdnb.artstation.com/p/assets/images/images/081/860/625/large/yize-huang-2024-11-12-11-57-11.jpg?1731428384"
             /></a>
           </div>
+
+         
         </div>
       </section>
 
@@ -627,8 +644,8 @@ const nextImg = () => {
   }
 
   .doodleImg {
-    width: 250px;
-    height: 250px;
+    max-width: 250px;
+    max-height: 250px;
     margin: 20px;
     border-radius: 3px;
     overflow: hidden;

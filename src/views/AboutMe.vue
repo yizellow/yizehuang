@@ -128,7 +128,7 @@ export default {
 </template>
 
 <style>
-@media (min-width: 481px) {
+@media (min-width: 1025px) {
   * {
     margin: 0;
     padding: 0;
@@ -202,6 +202,93 @@ export default {
   a.aboutme {
     width: 30%;
     padding-right: 30px;
+    font-size: 1rem;
+  }
+
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rocinante Titling", Arial, Helvetica, sans-serif;
+  }
+
+  .iconTag {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+  }
+
+  .wrapper {
+    background: rgb(217, 217, 217);
+    position: absolute;
+    width: 100% !important;
+    height: 94dvh;
+    z-index: 2;
+  }
+
+  .about p {
+    width: 30%;
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    color: black;
+    margin: 1.6em;
+  }
+
+  .wrapper-img {
+    overflow: hidden;
+    position: absolute;
+    top: 15% !important;
+    right: 10%;
+    transform: translate(-50%, 0%);
+    width: 20%;
+    height: 60vh;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 1;
+  }
+
+  .sub-header {
+    position: absolute;
+    bottom: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .sub-header a {
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    color: black;
+  }
+
+  a.contact-link {
+    color: rgb(0, 223, 0);
+    letter-spacing: -3px;
+    font-family: "Rocinante Titling", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin-left: 1em;
+  }
+
+  a.aboutme {
+    width: 30%;
+    padding-right: 30px;
+    font-size: 1rem;
   }
 
   .loader {

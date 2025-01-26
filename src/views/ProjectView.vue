@@ -111,7 +111,7 @@ const microphone = () => {
 <template>
   <div v-if="isComputer">
     <main
-      class="scrollbar w-full h=[calc(100vh-60px)] mt-[56px] flex flex-col items-center justify-start relative"
+      class="scrollbar w-full h-[calc(100vh-60px)] mt-[56px] flex flex-col items-center justify-start relative"
     >
       <Note
         v-if="showNote"
@@ -144,7 +144,9 @@ const microphone = () => {
           />
         </div>
       </section>
-      <section class="w-auto h-[40vh] flex flex-row absolute left-0 top-1/4">
+      <section
+        class="w-auto min-h-[40dvh] flex flex-row absolute left-0 top-1/4"
+      >
         <div v-for="project in filteredProjects" :key="project.name">
           <RouterLink :to="project.link">
             <div class="item">
@@ -251,7 +253,7 @@ const microphone = () => {
     object-position: center;
   }
   .title {
-    font-size: 25px;
+    font-size: clamp(1rem, cal(1rem + 5dvh), 2rem);
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: 400;
