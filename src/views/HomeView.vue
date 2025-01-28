@@ -40,9 +40,7 @@ if (isComputer) {
   <div v-if="isComputer">
     <main class="mainbox">
       <section class="note flex items-center justify-center">
-        <p>
-          The layout for tablets and mobile devices is currently being updated.
-        </p>
+        <p>The layout for tablets is currently being updated.</p>
       </section>
       <section class="top">
         <div id="overlay-light" class="overlay"></div>
@@ -168,16 +166,13 @@ if (isComputer) {
     <main>
       <section class="note poppins-medium bg-purple-600 opacity-65">
         <p class="text-green-300">
-          The layout for tablets and mobile devices is currently being updated.
+          The layout for tablets is currently being updated.
         </p>
       </section>
-      <section class="w-[100dvw] h-auto fixed z-10 backdrop-blur-3xl"></section>
-      <div
-        id="overlay-light"
-        class="overlay opacity-85 backdrop-blur-3xl"
-      ></div>
+      <section class="w-[100dvw] h-auto fixed z-10"></section>
+      <div id="overlay-light" class="overlay opacity-85"></div>
 
-      <div id="overlay-dark" class="overlay opacity-85 backdrop-blur-3xl"></div>
+      <div id="overlay-dark" class="overlay opacity-85"></div>
       <div class="content">
         <div class="nav row">
           <div class="col">(background)</div>
@@ -222,31 +217,24 @@ if (isComputer) {
         </div>
         <div class="divider"></div>
         <div class="row">
-          <div class="col"></div>
+          <div class="col">Hualien Senior</div>
           <div class="col">yize0926@gmail.com</div>
           <div class="col"></div>
           <div class="col">tailwinds</div>
         </div>
         <div class="divider"></div>
         <div class="row">
-          <div class="col"></div>
+          <div class="col">High School</div>
           <div class="col"></div>
           <div class="col">Ｗriting</div>
           <div class="col">PS AE</div>
         </div>
         <div class="divider"></div>
         <div class="row">
-          <div class="col">Hualien Senior High School</div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col">AI PR</div>
-        </div>
-        <div class="divider"></div>
-        <div class="row">
           <div class="col">, Taiwan</div>
           <div class="col"></div>
           <div class="col">Literature</div>
-          <div class="col"></div>
+          <div class="col">AI PR</div>
         </div>
         <div class="divider"></div>
         <div class="row">
@@ -491,7 +479,6 @@ if (isComputer) {
     height: 60dvh;
     background: #adefc0;
     z-index: 1;
-    backdrop-filter: blur(var(--blur-2xl)); /* 40px */
   }
 
   #overlay-dark {
