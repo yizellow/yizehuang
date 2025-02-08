@@ -9,6 +9,7 @@ import dddView from "@/views/Projects/dddView.vue";
 import ChipsView from "@/views/Projects/ChipsView.vue";
 import YizellowView from "@/views/Projects/YizellowView.vue";
 import FilmCameraView from "@/views/Projects/FilmCameraView.vue";
+import chatPageView from "@/views/Projects/chatPageView.vue";
 import PageNotFoundView from "@/views/PageNotFound.vue";
 import MemberPageView from "@/views/Member/MemberPage.vue";
 
@@ -56,6 +57,11 @@ const router = createRouter({
       path: "/Project/FilmCamera",
       name: "FilmCamera",
       component: FilmCameraView,
+    },
+    {
+      path: "/Project/chatPage",
+      name: "chatPageView",
+      component: chatPageView,
     },
     {
       path: "/Member/MemberPage",
