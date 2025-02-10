@@ -1,0 +1,28 @@
+name: Deploy Vue Project
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      VITE_OPENAI_KEY: ${{ secrets.VITE_OPENAI_API_KEY }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build Project
+        run: yarn build

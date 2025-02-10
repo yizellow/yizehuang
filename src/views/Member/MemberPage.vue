@@ -99,11 +99,6 @@ const submitMsg = () => {
     db,
     `messages_board/${mainNode.value}/${formattedKey}`
   );
-  // const chatgpt = dbRef(db, `api`);
-
-  // set(chatgpt, {
-  //   chatgpt: "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",
-  // });
 
   // 使用 `set()` 將資料儲存到資料庫
   set(newMsgRef, {
